@@ -1,0 +1,2594 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+}
+
+
+body {
+  background-color: rgb(247, 238, 227);
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(3, 54, 38);
+}
+p{
+  color: #000;
+}
+
+/*menu bar*/
+.menu-btn {
+  position: absolute;
+  cursor: pointer;
+  right: 53px;
+  font-size: 1.5rem;
+  color: #ffffff;
+}
+
+/* lista */
+#buscador{
+  width: 30%;
+  position: absolute;
+  border-radius: 15px;
+  padding: 9px;
+  margin-top: 10px;
+  margin-left: 200px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-main {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #000;
+  display: flex;
+  z-index: 1000;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 10px;
+  margin-left: 46%;
+  align-items: center;
+  
+}
+
+.nav-menu li {
+  list-style: none;
+  
+}
+
+
+.nav-menu a {
+  text-decoration: none;
+  color: rgb(250, 248, 248);
+  padding: 10px;
+  transition: 0.3s;
+  font-family: 'Lucida Sans', Verdana, sans-serif;
+  font-size: 15px;
+}
+
+.nav-menu a:hover {
+   color: #FFC107;
+   background: #777777;
+}
+
+/* dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #111;
+  min-width: 180px;
+  padding: 5px 0;
+  border-radius: 4px;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 8px 15px;
+  color: #fff;
+}
+
+.dropdown-menu li a:hover {
+  background: #777777;
+}
+
+#TL{
+  margin-top: 20px;
+  margin-left: 20px;
+  color: rgb(3, 54, 38);
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+}
+/* Baner cars imagenes */
+.baner-one {
+  padding: 2%;
+  margin-top:60px ;
+  background-color: rgb(245, 244, 237);
+  background: url(IglesiaSamiguel.png) no-repeat center/cover ;
+  height: 595px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  /* Transición suave */
+  transition: background-image 1s ease-in-out, filter 1s ease-in-out;
+  
+}
+
+#Title-baner {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 15px;
+  background: rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.60 );
+  color: rgb(250, 233, 201);
+  border-radius: 15px;
+  display: inline-block;
+
+ }
+ 
+/*Sección de Noticias Ilobasco*/
+.news-Ilobasco{
+    border-radius: 10px;
+    padding: 10px;
+    display: grid; /* es para el funionamiento de grid-template-columns*/
+    grid-template-columns: 1fr 1fr 1fr; /* es el numero de columnas de las seciones de cada noticia*/
+    gap: 1px; /* es un espaciado interno*/
+    margin: 80px 0;
+}
+.news-Ilobasco img{
+    border-radius: 10px;
+    width:100% ;
+    height: 390px;
+    
+}
+.news-Ilobasco div{
+    background-color: rgb(250, 228, 199);
+    margin: 10px;
+}
+.Contenedor_news{
+  padding: 10px;
+}
+.animar {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 3.10s ease;
+}
+
+.animar.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.btn {
+ background: #FFD700; /* Amarillo */
+ border: none;
+ padding: 15px 40px;
+ font-size: 15px;
+ font-weight: bold;
+ border-radius: 50px; /* Bordes redondeados */
+ cursor: pointer;
+ transition: 0.3s;
+}
+
+    .btn:hover {
+      background: #FFC107; /* Un amarillo más oscuro al pasar el mouse */
+      transform: scale(1.05);
+    }
+
+    /* Indicadores (paginación) */
+    .indicators {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .dot {
+      width: 40px;
+      height: 10px;
+      border-radius: 20px;
+      background: #333;
+      opacity: 0.5;
+      transition: 0.3s;
+    }
+
+    .active {
+      background: #FFD700; /* Amarillo cuando está activo */
+      opacity: 1;
+    }
+
+    .btnNew1{
+      background: #FFD700; /* Amarillo */
+      border: none;
+      padding: 15px 40px;
+      font-size: 11px;
+      font-weight: bold;
+      border-radius: 50px; /* Bordes redondeados */
+      cursor: pointer;
+      transition: 0.3s;
+      
+
+    }
+  .Positionbtn{
+    padding-left: 100px;
+    align-items: center;
+    height: 50px;
+  }
+  .Positionbtn a{
+    color:#000000;
+    text-decoration: none;
+  }
+  .btnNew1:hover{
+    background: #FFC107; /* Un amarillo más oscuro al pasar el mouse */
+    transform: scale(1.05);
+
+  }
+
+/*Sección de Actividades*/
+.News-Activades {
+  margin: 20px;
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 25px; 
+} 
+
+.Contenedor_Actividades {
+  background-color: rgb(250, 228, 199);
+  border-radius: 20px;
+  height: 380px;
+  max-height: 400px;
+  overflow: hidden; /* evita que sobresalgan las imágenes */
+}
+
+.positionActividad_Text {
+   padding: 8px;
+   
+}
+.positionActividad_Text h4{
+   position: absolute;
+   
+}
+
+.Contenedor_Actividades p {
+  color: #000;
+  font-size: 14px;
+}
+
+.Imagen_contenedor {
+  position: relative;
+  width: 100%;
+  height: 220px; /* altura fija para todas las imágenes */
+}
+
+.News-Activades img {
+  width: 100%;
+  height: 100%;        /* fuerza que todas llenen el contenedor */
+  object-fit: cover;   /* recorta o expande proporcionalmente */
+  border-radius: 20px;
+}
+.title_Actividades{
+  padding-left: 20px;
+  color: rgb(3, 54, 38);
+}
+/* Ventanas de Actividades */
+
+#InfArtice1 {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#contenido {
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+
+#InfArtice1.activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#InfArtice1.activo #contenido {
+  transform: translateX(0);
+}
+
+#InfArtice1 {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.50);
+  opacity: 0;
+  pointer-events: none; /* evita clics cuando está oculto */
+   transition: opacity 0.49s ease; /* transición de fondo */
+}
+
+/* Contenedor de la ventana */
+#contenido {
+  width: 60%;
+  background: rgb(250, 233, 201);
+  height: 100%;
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column; 
+  transform: translateX(-100%); /* empieza oculto a la izquierda */
+  transition: transform 1.10s ease; /* animación suave al deslizar */
+}
+
+/* Cuando se activa la ventana */
+#InfArtice1.activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#InfArtice1.activo #contenido {
+  transform: translateX(0); /* se desliza a la vista */
+}
+
+/* Header tipo barra de sistema */
+.Info-header {
+  background: #FFD700; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px; 
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  cursor: default;
+  border-bottom: 1px solid #ccc; 
+}
+.Info-header span{
+  margin-left: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+/*Ventana 1*/
+
+    .Carrusel-Imagenes {
+      position: relative;
+      width: 60%;
+      margin: 10px;
+      height: 260px;
+      margin-left: 19.6%;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* Mantener tu tamaño de imagen */
+    .Carrusel-Imagenes img {
+      width: 100%;
+      height: 260px;
+      border-radius: 8px;
+    }
+
+    /* Slides en fila */
+    .slidesImg {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+      height: 100%;
+    }
+
+    .Img-slide {
+      min-width: 100%;
+      height: 100%;
+    }
+
+     #imagen1{
+      background: url(Helicondia.png);
+      background-size: cover;
+      background-position: center;
+      
+    }
+    #imagen2{
+      background: url(Baner2.jpg);
+      background-size: cover;
+      background-position: center;
+      
+    }
+    #imagen3{
+      background: url(Baner.jpg);
+      background-size: cover;
+      background-position: center;
+      
+    }
+
+    /* Botones */
+    .previo, .siguiente {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.7);
+      color: #FFD700;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .previo { left: 10px; }
+    .siguiente { right: 10px; }
+
+    /* Indicadores */
+    .Indicadores-cars {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+    .Indicadores-cars span {
+      width: 12px;
+      height: 12px;
+      background: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+     .dohtV1.active {
+      background: #FFC107;
+    }
+ 
+.icono1{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  
+}
+
+/* Botón de cierre */
+#closeVen1 {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.closeVen1:hover {
+  background: black;
+  color: white;
+  border-radius: 4px;
+}
+
+/* Contenido de la ventana */
+#contenido p{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0; 
+  padding: 12px; 
+  flex: 1; 
+  overflow-y: auto; 
+}
+
+#Title{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 
+  'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding-left: 12px;
+  padding-top: 8px;
+}
+.contenido-Text{
+  border: 1px solid rgb(204, 204, 204);
+  margin-block: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  border-radius: 8px;
+
+}
+
+/*Ventana 2*/
+#InfArtice2 {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.1s ease;
+}
+
+#contenido2 {
+  transform: translateX(-100%);
+ 
+}
+
+#InfArtice2.activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#InfArtice2.activo #contenido2 {
+  transform: translateX(0);
+}
+
+#InfArtice2 {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.50);
+  opacity: 0;
+  pointer-events: none; /* evita clics cuando está oculto */
+  transition: opacity 0.49s ease; /* transición de fondo */
+}
+
+/* Contenedor de la ventana */
+#contenido2 {
+  width: 60%;
+  background: rgb(250, 233, 201);
+  height: 100%;
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column; 
+  transform: translateX(-100%); /* empieza oculto a la izquierda */
+  transition: transform 1.10s ease; /* animación suave al deslizar */
+}
+
+/* Cuando se activa la ventana */
+#InfArtice2.activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#InfArtice2.activo #contenido2 {
+  transform: translateX(0); /* se desliza a la vista */
+}
+
+/* Header tipo barra de sistema */
+.Info-header2 {
+  background: #FFD700; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px; 
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  cursor: default;
+  border-bottom: 1px solid #ccc; 
+}
+.Info-header2 span{
+  margin-left: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+    .Carrusel-Imagenes2 {
+      position: relative;
+      width: 60%;
+      margin: 10px;
+      height: 260px;
+      margin-left: 19.6%;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* Mantener tu tamaño de imagen */
+    .Carrusel-Imagenes2 img {
+      width: 100%;
+      height: 260px;
+      border-radius: 8px;
+    }
+
+    /* Slides en fila */
+    .slidesImg2 {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+      height: 100%;
+    }
+
+    .Img-slide2 {
+      min-width: 100%;
+      height: 100%;
+    }
+
+     #imagenV1{
+      background: url(SantoPecadoLocal.jpg);
+      background-size: cover;
+      background-position: center;
+      
+    }
+    #imagenV2{
+      background: url(CafeSanpecado.png);
+      background-size: cover;
+      background-position: center;
+      
+    }
+    #imagenV3{
+      background: url(CaféPecado.png);
+      background-size: cover;
+      background-position: center;
+      
+    }
+
+    /* Botones */
+    .previo2, .siguiente2 {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.7);
+      color: #FFD700;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .previo2 { left: 10px; }
+    .siguiente2 { right: 10px; }
+
+    /* Indicadores */
+    .Indicadores-cars2 {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+    .Indicadores-cars2 span {
+      width: 12px;
+      height: 12px;
+      background: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+     .dohtV2.active {
+      background: #FFC107;
+    }
+ 
+
+/* Botón de cierre */
+#closeVen2 {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.closeVen2:hover {
+  background: black;
+  color: white;
+  border-radius: 4px;
+}
+
+/* Contenido de la ventana */
+#contenido2 p{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0; 
+  padding: 12px; 
+  flex: 1; 
+  overflow-y: auto; 
+}
+
+#Title2{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 
+  'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding-left: 12px;
+  padding-top: 8px;
+}
+.contenido-Text2{
+  border: 1px solid rgb(204, 204, 204);
+  margin-block: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  border-radius: 8px;
+
+}
+.icono2{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  
+}
+
+/*Ventana 3*/
+#InfArtice3 {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#contenido3 {
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+
+#InfArtice3.activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#InfArtice3.activo #contenido3 {
+  transform: translateX(0);
+}
+
+#InfArtice3 {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.50);
+  opacity: 0;
+  pointer-events: none; /* evita clics cuando está oculto */
+  transition: opacity 0.49s ease; /* transición de fondo */
+}
+
+/* Contenedor de la ventana */
+#contenido3 {
+  width: 60%;
+  background: rgb(250, 233, 201);
+  height: 100%;
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column; 
+  transform: translateX(-100%); /* empieza oculto a la izquierda */
+  transition: transform 1.10s ease; /* animación suave al deslizar */
+}
+
+/* Cuando se activa la ventana */
+#InfArtice3.activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#InfArtice3.activo #contenido3 {
+  transform: translateX(0); /* se desliza a la vista */
+}
+
+/* Header tipo barra de sistema */
+.Info-header3 {
+  background: #FFD700; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px; 
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  cursor: default;
+  border-bottom: 1px solid #ccc; 
+}
+.Info-header3 span{
+  margin-left: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+    .Carrusel-Imagenes3 {
+      position: relative;
+      width: 60%;
+      margin: 10px;
+      height: 260px;
+      margin-left: 19.6%;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* Mantener tu tamaño de imagen */
+    .Carrusel-Imagenes3 img {
+      width: 100%;
+      height: 260px;
+      border-radius: 8px;
+    }
+
+    /* Slides en fila */
+    .slidesImg3 {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+      height: 100%;
+    }
+
+    .Img-slide3 {
+      min-width: 100%;
+      height: 100%;
+    }
+
+     #imagen3V1{
+      background: url(SantoPecadoLocal.jpg);
+      background-size: cover;
+      background-position: center;
+      
+    }
+    #imagen3V2{
+      background: url(CafeSanpecado.png);
+      background-size: cover;
+      background-position: center;
+      
+    }
+    #imagen3V3{
+      background: url(CaféPecado.png);
+      background-size: cover;
+      background-position: center;
+      
+    }
+
+    /* Botones */
+    .previo3, .siguiente3 {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.7);
+      color: #FFD700;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .previo3 { left: 10px; }
+    .siguiente3 { right: 10px; }
+
+    /* Indicadores */
+    .Indicadores-cars3 {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+    .Indicadores-cars3 span {
+      width: 12px;
+      height: 12px;
+      background: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+     .dohtV3.active {
+      background: #FFC107;
+    }
+ 
+
+/* Botón de cierre */
+#closeVen3 {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.closeVen3:hover {
+  background: black;
+  color: white;
+  border-radius: 4px;
+}
+
+/* Contenido de la ventana */
+#contenido3 p{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0; 
+  padding: 12px; 
+  flex: 1; 
+  overflow-y: auto; 
+}
+
+#Title3{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 
+  'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding-left: 12px;
+  padding-top: 8px;
+}
+.contenido-Text3{
+  border: 1px solid rgb(204, 204, 204);
+  margin-block: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  border-radius: 8px;
+
+}
+.icono3{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  
+}
+
+
+/*Ventana 4*/
+#InfArtice4 {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#contenido4 {
+  transform: translateX(-100%);
+  transition: transform 0.9s ease;
+}
+
+#InfArtice4.activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#InfArtice4.activo #contenido4 {
+  transform: translateX(0);
+}
+
+#InfArtice4 {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.50);
+  opacity: 0;
+  pointer-events: none; /* evita clics cuando está oculto */
+  transition: opacity 0.49s ease; /* transición de fondo */
+}
+
+/* Contenedor de la ventana */
+#contenido4 {
+  width: 60%;
+  background: rgb(250, 233, 201);
+  height: 100%;
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column; 
+  transform: translateX(-100%); /* empieza oculto a la izquierda */
+  transition: transform 1.10s ease; /* animación suave al deslizar */
+}
+
+/* Cuando se activa la ventana */
+#InfArtice4.activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#InfArtice4.activo #contenido4 {
+  transform: translateX(0); /* se desliza a la vista */
+}
+
+/* Header tipo barra de sistema */
+.Info-header4 {
+  background: #FFD700; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px; 
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  cursor: default;
+  border-bottom: 1px solid #ccc; 
+}
+.Info-header4 span{
+  margin-left: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+    .Carrusel-Imagenes4 {
+      position: relative;
+      width: 60%;
+      margin: 10px;
+      height: 260px;
+      margin-left: 19.6%;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* Mantener tu tamaño de imagen */
+    .Carrusel-Imagenes4 img {
+      width: 100%;
+      height: 260px;
+      border-radius: 8px;
+    }
+
+    /* Slides en fila */
+    .slidesImg4 {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+      height: 100%;
+    }
+
+    .Img-slide4 {
+      min-width: 100%;
+      height: 100%;
+    }
+
+     #imagen4V1{
+      background: url(SantoPecadoLocal.jpg);
+      background-size: cover;
+      background-position: center;
+      
+    }
+    #imagen4V2{
+      background: url(CafeSanpecado.png);
+      background-size: cover;
+      background-position: center;
+      
+    }
+    #imagen4V3{
+      background: url(CaféPecado.png);
+      background-size: cover;
+      background-position: center;
+      
+    }
+
+    /* Botones */
+    .previo4, .siguiente4 {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.7);
+      color: #FFD700;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .previo4 { left: 10px; }
+    .siguiente4 { right: 10px; }
+
+    /* Indicadores */
+    .Indicadores-cars4 {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+    .Indicadores-cars4 span {
+      width: 12px;
+      height: 12px;
+      background: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+     .dohtV4.active {
+      background: #FFC107;
+    }
+ 
+
+/* Botón de cierre */
+#closeVen4 {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.closeVen4:hover {
+  background: black;
+  color: white;
+  border-radius: 4px;
+}
+
+/* Contenido de la ventana */
+#contenido4 p{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0; 
+  padding: 12px; 
+  flex: 1; 
+  overflow-y: auto; 
+}
+
+#Title4{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 
+  'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding-left: 12px;
+  padding-top: 8px;
+}
+.contenido-Text4{
+  border: 1px solid rgb(204, 204, 204);
+  margin-block: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  border-radius: 8px;
+
+}
+.icono4{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  
+}
+
+/*Ventana 5*/
+#InfArtice5 {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#contenido5 {
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+
+#InfArtice5.activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#InfArtice5.activo #contenido {
+  transform: translateX(0);
+}
+
+#InfArtice5 {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.50);
+  opacity: 0;
+  pointer-events: none; /* evita clics cuando está oculto */
+  transition: opacity 0.49s ease; /* transición de fondo */
+}
+
+/* Contenedor de la ventana */
+#contenido5 {
+  width: 60%;
+  background: rgb(250, 233, 201);
+  height: 100%;
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column; 
+  transform: translateX(-100%); /* empieza oculto a la izquierda */
+  transition: transform 1.10s ease; /* animación suave al deslizar */
+}
+
+/* Cuando se activa la ventana */
+#InfArtice5.activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#InfArtice5.activo #contenido5 {
+  transform: translateX(0); /* se desliza a la vista */
+}
+
+/* Header tipo barra de sistema */
+.Info-header5 {
+  background: #FFD700; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px; 
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  cursor: default;
+  border-bottom: 1px solid #ccc; 
+}
+.Info-header5 span{
+  margin-left: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+    .Carrusel-Imagenes5 {
+      position: relative;
+      width: 60%;
+      margin: 10px;
+      height: 260px;
+      margin-left: 19.6%;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* Mantener tu tamaño de imagen */
+    .Carrusel-Imagenes5 img {
+      width: 100%;
+      height: 260px;
+      border-radius: 8px;
+    }
+
+    /* Slides en fila */
+    .slidesImg5 {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+      height: 100%;
+    }
+
+    .Img-slide5 {
+      min-width: 100%;
+      height: 100%;
+    }
+
+     #imagen1V5{
+      background: url(SantoPecadoLocal.jpg);
+      background-size: cover;
+      background-position: center;
+      
+    }
+    #imagen1V5{
+      background: url(CafeSanpecado.png);
+      background-size: cover;
+      background-position: center;
+      
+    }
+    #imagen1V5{
+      background: url(CaféPecado.png);
+      background-size: cover;
+      background-position: center;
+      
+    }
+
+    /* Botones */
+    .previo5, .siguiente5 {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.7);
+      color: #FFD700;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .previo5 { left: 10px; }
+    .siguiente5 { right: 10px; }
+
+    /* Indicadores */
+    .Indicadores-cars5 {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+    .Indicadores-cars5 span {
+      width: 12px;
+      height: 12px;
+      background: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+     .dohtV5.active {
+      background: #FFC107;
+    }
+ 
+
+/* Botón de cierre */
+#closeVen5 {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.closeVen5:hover {
+  background: black;
+  color: white;
+  border-radius: 4px;
+}
+
+/* Contenido de la ventana */
+#contenido5 p{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0; 
+  padding: 12px; 
+  flex: 1; 
+  overflow-y: auto; 
+}
+
+#Title5{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 
+  'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding-left: 12px;
+  padding-top: 8px;
+}
+.contenido-Text5{
+  border: 1px solid rgb(204, 204, 204);
+  margin-block: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  border-radius: 8px;
+
+}
+.icono5{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  
+}
+
+/*Ventana 6*/
+#InfArtice6 {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#contenido6 {
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+
+#InfArtice6.activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#InfArtice6.activo #contenido6 {
+  transform: translateX(0);
+}
+
+#InfArtice6 {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.50);
+  opacity: 0;
+  pointer-events: none; /* evita clics cuando está oculto */
+  transition: opacity 0.49s ease; /* transición de fondo */
+}
+
+/* Contenedor de la ventana */
+#contenido6 {
+  width: 60%;
+  background: rgb(250, 233, 201);
+  height: 100%;
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column; 
+  transform: translateX(-100%); /* empieza oculto a la izquierda */
+  transition: transform 1.10s ease; /* animación suave al deslizar */
+}
+
+/* Cuando se activa la ventana */
+#InfArtice6.activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#InfArtice6.activo #contenido6 {
+  transform: translateX(0); /* se desliza a la vista */
+}
+/* Header tipo barra de sistema */
+.Info-header6 {
+  background: #FFD700; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px; 
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  cursor: default;
+  border-bottom: 1px solid #ccc; 
+}
+.Info-header6 span{
+  margin-left: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+    .Carrusel-Imagenes6 {
+      position: relative;
+      width: 60%;
+      margin: 10px;
+      height: 260px;
+      margin-left: 19.6%;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* Mantener tu tamaño de imagen */
+    .Carrusel-Imagenes6 img {
+      width: 100%;
+      height: 260px;
+      border-radius: 8px;
+    }
+
+    /* Slides en fila */
+    .slidesImg6 {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+      height: 100%;
+    }
+
+    .Img-slide6 {
+      min-width: 100%;
+      height: 100%;
+    }
+
+     #imagen1V6{
+      background: url(SantoPecadoLocal.jpg);
+      background-size: cover;
+      background-position: center;
+      
+    }
+    #imagen1V6{
+      background: url(CafeSanpecado.png);
+      background-size: cover;
+      background-position: center;
+      
+    }
+    #imagen1V6{
+      background: url(CaféPecado.png);
+      background-size: cover;
+      background-position: center;
+      
+    }
+
+    /* Botones */
+    .previo6, .siguiente6 {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.7);
+      color: #FFD700;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .previo6 { left: 10px; }
+    .siguiente6 { right: 10px; }
+
+    /* Indicadores */
+    .Indicadores-cars6 {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+    .Indicadores-cars6 span {
+      width: 12px;
+      height: 12px;
+      background: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+     .dohtV6.active {
+      background: #FFC107;
+    }
+ 
+
+/* Botón de cierre */
+#closeVen6 {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.closeVen6:hover {
+  background: black;
+  color: white;
+  border-radius: 4px;
+}
+
+/* Contenido de la ventana */
+#contenido6 p{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0; 
+  padding: 12px; 
+  flex: 1; 
+  overflow-y: auto; 
+}
+
+#Title6{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 
+  'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding-left: 12px;
+  padding-top: 8px;
+}
+.contenido-Text6{
+  border: 1px solid rgb(204, 204, 204);
+  margin-block: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  border-radius: 8px;
+
+}
+.icono6{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  
+}
+
+/*Ventana 7*/
+#InfArtice7 {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#contenido7 {
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+
+#InfArtice7.activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#InfArtice7.activo #contenido {
+  transform: translateX(0);
+}
+
+#InfArtice7 {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.50);
+  opacity: 0;
+  pointer-events: none; /* evita clics cuando está oculto */
+  transition: opacity 0.49s ease; /* transición de fondo */
+}
+
+/* Contenedor de la ventana */
+#contenido7 {
+  width: 60%;
+  background: rgb(250, 233, 201);
+  height: 100%;
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column; 
+  transform: translateX(-100%); /* empieza oculto a la izquierda */
+  transition: transform 1.10s ease; /* animación suave al deslizar */
+}
+
+/* Cuando se activa la ventana */
+#InfArtice7.activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#InfArtice7.activo #contenido7 {
+  transform: translateX(0); /* se desliza a la vista */
+}
+
+/* Header tipo barra de sistema */
+.Info-header7 {
+  background: #FFD700; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px; 
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  cursor: default;
+  border-bottom: 1px solid #ccc; 
+}
+.Info-header7 span{
+  margin-left: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+    .Carrusel-Imagenes7 {
+      position: relative;
+      width: 60%;
+      margin: 10px;
+      height: 260px;
+      margin-left: 19.6%;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* Mantener tu tamaño de imagen */
+    .Carrusel-Imagenes7 img {
+      width: 100%;
+      height: 260px;
+      border-radius: 8px;
+    }
+
+    /* Slides en fila */
+    .slidesImg7 {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+      height: 100%;
+    }
+
+    .Img-slide7 {
+      min-width: 100%;
+      height: 100%;
+    }
+
+     #imagen1V7{
+      background: url(SantoPecadoLocal.jpg);
+      background-size: cover;
+      background-position: center;
+      
+    }
+    #imagen2V7{
+      background: url(CafeSanpecado.png);
+      background-size: cover;
+      background-position: center;
+      
+    }
+    #imagen3V7{
+      background: url(CaféPecado.png);
+      background-size: cover;
+      background-position: center;
+      
+    }
+
+    /* Botones */
+    .previo7, .siguiente7 {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.7);
+      color: #FFD700;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .previo7 { left: 10px; }
+    .siguiente7 { right: 10px; }
+
+    /* Indicadores */
+    .Indicadores-cars7 {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+    .Indicadores-cars7 span {
+      width: 12px;
+      height: 12px;
+      background: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+     .dohtV7.active {
+      background: #FFC107;
+    }
+ 
+
+/* Botón de cierre */
+#closeVen7 {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.closeVen7:hover {
+  background: black;
+  color: white;
+  border-radius: 4px;
+}
+
+/* Contenido de la ventana */
+#contenido7 p{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0; 
+  padding: 12px; 
+  flex: 1; 
+  overflow-y: auto; 
+}
+
+#Title7{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 
+  'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding-left: 12px;
+  padding-top: 8px;
+}
+.contenido-Text7{
+  border: 1px solid rgb(204, 204, 204);
+  margin-block: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  border-radius: 8px;
+
+}
+.icono7{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  
+}
+
+/*Ventana 8*/
+#InfArtice8 {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+#contenido8 {
+  transform: translateX(-100%);
+  transition: transform 0.4s ease;
+}
+
+#InfArtice8.activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#InfArtice8.activo #contenido8 {
+  transform: translateX(0);
+}
+
+#InfArtice8 {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.50);
+  opacity: 0;
+  pointer-events: none; /* evita clics cuando está oculto */
+  transition: opacity 0.49s ease; /* transición de fondo */
+}
+
+/* Contenedor de la ventana */
+#contenido8 {
+  width: 60%;
+  background: rgb(250, 233, 201);
+  height: 100%;
+  overflow: hidden; 
+  display: flex;
+  flex-direction: column; 
+  transform: translateX(-100%); /* empieza oculto a la izquierda */
+  transition: transform 1.10s ease; /* animación suave al deslizar */
+}
+
+/* Cuando se activa la ventana */
+#InfArtice8.activo {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#InfArtice8.activo #contenido8 {
+  transform: translateX(0); /* se desliza a la vista */
+}
+
+/* Header tipo barra de sistema */
+.Info-header8 {
+  background: #FFD700; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 8px; 
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  cursor: default;
+  border-bottom: 1px solid #ccc; 
+}
+.Info-header8 span{
+  margin-left: 30px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+    .Carrusel-Imagenes8 {
+      position: relative;
+      width: 60%;
+      margin: 10px;
+      height: 260px;
+      margin-left: 19.6%;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    /* Mantener tu tamaño de imagen */
+    .Carrusel-Imagenes8 img {
+      width: 100%;
+      height: 260px;
+      border-radius: 8px;
+    }
+
+    /* Slides en fila */
+    .slidesImg8 {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+      height: 100%;
+    }
+
+    .Img-slide8 {
+      min-width: 100%;
+      height: 100%;
+    }
+
+     #imagen1V8{
+      background: url(SantoPecadoLocal.jpg);
+      background-size: cover;
+      background-position: center;
+      
+    }
+    #imagen2V8{
+      background: url(CafeSanpecado.png);
+      background-size: cover;
+      background-position: center;
+      
+    }
+    #imagen3V8{
+      background: url(CaféPecado.png);
+      background-size: cover;
+      background-position: center;
+      
+    }
+
+    /* Botones */
+    .previo8, .siguiente8 {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.7);
+      color: #FFD700;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .previo8 { left: 10px; }
+    .siguiente8 { right: 10px; }
+
+    /* Indicadores */
+    .Indicadores-cars8 {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+    .Indicadores-cars8 span {
+      width: 12px;
+      height: 12px;
+      background: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+    }
+     .dohtV8.active {
+      background: #FFC107;
+    }
+ 
+
+/* Botón de cierre */
+#closeVen8 {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.closeVen8:hover {
+  background: black;
+  color: white;
+  border-radius: 4px;
+}
+
+/* Contenido de la ventana */
+#contenido8 p{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0; 
+  padding: 12px; 
+  flex: 1; 
+  overflow-y: auto; 
+}
+
+#Title8{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 
+  'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding-left: 12px;
+  padding-top: 8px;
+}
+.contenido-Text8{
+  border: 1px solid rgb(204, 204, 204);
+  margin-block: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+  border-radius: 8px;
+
+}
+.icono8{
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+  
+}
+
+/* Botones*/
+.btnNew2{
+  position: absolute;
+  background: #FFD700; 
+  border: none;
+  padding: 10px 30px;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 50px; 
+  cursor: pointer;
+  transition: 0.3s;
+  
+}
+.btnNew2 a{
+ text-decoration: none;
+ color: #000;
+}
+.btnNew2:hover{
+ background: #FFC107; /* Un amarillo más oscuro al pasar el mouse */
+ transform: scale(1.02);
+}
+.Positionbtn2{
+  margin-top: 90px;
+  margin-left: 74px;
+  
+  height: 95%;
+}
+.Imagen_contenedor{
+  position: relative;
+}
+.Megusta-btn{
+  position: absolute;
+  top: 12px;
+  right: 15px;
+  font-size: 30px;
+  color: #ffffff;
+  background-color:transparent;
+  border: none;
+  cursor: pointer;
+}
+.Megusta-btn:hover{
+   
+   transform: scale(1.05);
+   
+}
+.calificación{
+  position: absolute;
+  margin-top: 19px;
+  padding-block: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.calificación i{
+  font-size: 20px;
+  padding: 2px;
+}
+.calificación p{
+  font-size: 15px;
+  padding: 2px;
+}
+#Estrellas-Megusta{
+   color: rgb(6, 160, 32);
+   font-size: 23px;
+}
+/*Activida 2*/
+.calificación2{
+  position: absolute;
+  margin-top: 19px;
+  padding-block: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.calificación2 i{
+  font-size: 20px;
+  padding: 2px;
+}
+.calificación2 p{
+  font-size: 15px;
+  padding: 2px;
+}
+#Estrellas-Megusta2{
+   color: rgb(6, 160, 32);
+   
+   font-size: 23px;
+}
+
+/*Activida 3*/
+.calificación3{
+  position: absolute;
+  margin-top: 19px;
+  padding-block: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.calificación3 i{
+  font-size: 20px;
+  padding: 2px;
+}
+.calificación3 p{
+  font-size: 15px;
+  padding: 2px;
+}
+#Estrellas-Megusta3{
+   color: rgb(6, 160, 32);
+   
+   font-size: 23px;
+}
+/*Activida 4*/
+.calificación4{
+  position: absolute;
+  margin-top: 19px;
+  padding-block: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.calificación4 i{
+  font-size: 20px;
+  padding: 2px;
+}
+.calificación4 p{
+  font-size: 15px;
+  padding: 2px;
+}
+#Estrellas-Megusta4{
+   color: rgb(6, 160, 32);
+   
+   font-size: 23px;
+}
+
+/*Activida 5*/
+.calificación5{
+  position: absolute;
+  margin-top: 19px;
+  padding-block: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.calificación5 i{
+  font-size: 20px;
+  padding: 2px;
+}
+.calificación5 p{
+  font-size: 15px;
+  padding: 2px;
+}
+#Estrellas-Megusta5{
+   color: rgb(6, 160, 32);
+   
+   font-size: 23px;
+}
+/*Activi 6*/
+.calificación6{
+  position: absolute;
+  margin-top: 19px;
+  padding-block: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.calificación6 i{
+  font-size: 20px;
+  padding: 2px;
+}
+.calificación6 p{
+  font-size: 15px;
+  padding: 2px;
+}
+#Estrellas-Megusta6{
+   color: rgb(6, 160, 32);
+   
+   font-size: 23px;
+}
+
+
+/*Activida 7*/
+.calificación7{
+  position: absolute;
+  margin-top: 19px;
+  padding-block: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.calificación7 i{
+  font-size: 20px;
+  padding: 2px;
+}
+.calificación7 p{
+  font-size: 15px;
+  padding: 2px;
+}
+#Estrellas-Megusta7{
+   color: rgb(6, 160, 32);
+   
+   font-size: 23px;
+}
+
+/*Activida 8*/
+.calificación8{
+  position: absolute;
+  margin-top: 19px;
+  padding-block: 10px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.calificación8 i{
+  font-size: 20px;
+  padding: 2px;
+}
+.calificación8 p{
+  font-size: 15px;
+  padding: 2px;
+}
+#Estrellas-Megusta8{
+   color: rgb(6, 160, 32);
+   
+   font-size: 23px;
+}
+
+.Megusta-btn.active i{
+   color:#ff0040;
+   transition: 0.3s;
+}
+#Megusta{
+  background-color: transparent;
+}
+#Megusta2{
+  background-color: transparent;
+}
+/*Sección de Fichas Informativas Turisticas y logisticas*/
+#Title-1{
+  margin-left: 20px;
+  color: rgb(3, 54, 38);
+}
+.carousel {
+      position: relative;
+      width: 460px;
+      height: 580px;
+      overflow: hidden;
+      border-radius: 2px;
+    }
+    #Ficha1{
+      background: url(Tiestos.png);
+      background-size: cover;
+      background-position: center;
+      
+    }
+    #Ficha2{
+      background: url(Artisan.png);
+      background-size: cover;
+      background-position: center;
+      
+    }
+    #Ficha3{
+      background: url(CafeSanpecado.png);
+      background-size: cover;
+      background-position: center;
+      
+    }
+
+    .slidesh {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+      height: 100%;
+    }
+
+    /* Flechas */
+    .contenedor_FichasIF{
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      border-radius: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: #272727;
+    }
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.6);
+      color: white;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .prev { left: 10px; }
+    .next { right: 10px; }
+
+    /* Indicadores */
+    .dotsh {
+      text-align: center;
+      position: absolute;
+      bottom: 15px;
+      width: 100%;
+    }
+    .doth {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      background: white;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .doth.active {
+      background: #FFC107;
+    }
+   
+
+
+
+/*Noticias Ilobasco Artesanias*/
+.News_Artesanias{
+  margin-left:20px ;
+  margin-right: 20px ;
+  margin-block: 20px;
+  border-radius: 25px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.header_Artesanias{
+  border-top-left-radius: 25px;
+  border-end-start-radius: 25px;
+  background: url(ArtesaniasLocal.png) no-repeat center/cover;
+  height: 400px;
+}
+.Articulo_Artesanias, h3 p{
+  padding: 30px;
+  text-justify: distribute;
+}
+.Articulo_Artesanias p{
+  padding-top: 10px;
+}
+.btnArtesanias{
+  background-color:#000000;
+  border: none;
+  padding: 8px 50px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 60px;
+  cursor: pointer;
+  transition: 0.3s;
+
+}
+.btnArtesanias:hover{
+ background: #242323; /* Un negro más claro al pasar el mouse */
+ transform: scale(1.02);
+}
+.btnArtesanias{
+  align-items: center;
+  height: 35px;
+}
+.btnArtesanias a{  
+  text-decoration: none;
+  color: #ffffff;
+
+}
+.Text_Artesanias{
+  padding-top: 12%;
+}
+.Articulo_Artesanias{
+  background-color: rgb(250, 228, 199);
+  border-top-right-radius: 25px;
+  border-end-end-radius: 25px;
+  height: 400px;
+}
+.title_Artesanias{
+  padding-left: 20px;
+  color: rgb(3, 54, 38);
+}
+/*Foter de la pagina o piede de pagina*/
+.footer-link{
+  width: 100%;
+  height: 300;
+  background-color: black;
+  
+}
+.footer-contenedor{
+ display: grid;
+ grid-template-columns: repeat(4, 1fr);
+ gap:10px ;/* Espaciado en tre columnas*/
+ align-items:flex-start ;
+ justify-content: center;
+}
+.footer-contenedor{
+  padding: 20px;
+  text-align: center;
+
+}
+.footer-contenedor ul li{
+line-height: 2.8;/*Ancho de lineas*/
+text-decoration: none;
+
+}
+.footer{
+  border: #2f3640;
+  color: #616161;
+  padding: 20px 0;
+  text-align: center;
+  padding-bottom: 20px;
+  opacity: .4;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+.footer-contenedor a{
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/*Iniciar login*/
+#Img_seccion{
+  display:flex;
+  cursor: pointer;
+  width: 19px;
+  height: 25px;
+  position:absolute;
+  margin-block-end: 5px;
+  margin-left: 5px;
+}
+#Img_seccion:hover{
+   transform: scale(1.03)
+}
+/* ====== ESTILOS DEL MODAL LOGIN ====== */
+ .modal {
+  display: none; /* oculto por defecto */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* oscurece el fondo */
+  
+}
+
+.modal-content {
+  background: #fff;
+  margin: 3% 28.6% auto;
+  border-radius: 6px;
+  height: 520px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+  overflow: hidden; /* evita que el header sobresalga */
+  position: relative;  
+}
+.modal.activo .modal-content{
+  transform: translateY(0); /* baja suavemente */
+  }
+
+/* Barra de título estilo ventana */
+.modal-header {
+  background: #e5e9f0; /* color típico de ventana */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  cursor: default;
+}
+.modal-content{
+  width: 550px;
+}
+#Inf-sesión{
+  margin-top: 15px;
+  margin-left: 26px;
+}
+#Inf-sesión h3{
+  padding-block-end: 8px;
+  color: rgb(34, 34, 107);
+  
+}
+#Inf-sesión p{
+  padding-top: 8px;
+  padding-block-end: 12px;
+  font-size: 14px;
+  width: 90%;
+  color: #616161;
+}
+#Inf-sesión hr{
+  max-width: 495px;
+}
+.Vmodal-registro{
+  display: flex;
+  gap: 5px;
+  margin-top: 6px;
+  
+}
+
+.Vmodal-registro h4{
+  color:rgb(0, 0, 0);
+  font-weight: bold;
+  text-decoration:underline;
+}
+.Vmodal-registro h4:hover{
+  color: rgb(24, 24, 87);
+
+}
+.modal-sesión{
+  display: none;
+  border: 1px solid rgb(238, 238, 238);
+  width: 490px;
+  padding-top: 8px;
+  padding-left: 5px;
+  padding-inline-end: 8px;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+  margin-inline-end: 70px;
+}
+
+#menu-login {
+  color: rgb(74, 74, 197);
+  margin-left: 30px;
+  margin-top: 10px;
+  font-size: 14px;
+  cursor: pointer;
+}
+#menu-login p{
+  color: rgb(74, 74, 197);
+  font-size: 15px;
+  cursor: pointer;
+  padding-left: 2px;
+}
+
+.modal-content h2{
+  text-align: center;
+  margin-top:15px ;
+  
+}
+.modal-title {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.modal-header .icono {
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+}
+
+/* Botón cerrar */
+.close {
+  font-size: 20px;
+  cursor: pointer;
+  padding: 10px 11px;
+  padding-right: 16px;
+  padding-left: 16px;
+}
+
+.close:hover {
+  background: rgb(216, 6, 6);
+  color: white;
+}
+
+/* Cuerpo */
+.modal-body {
+  padding: 0px;
+  text-align: center;
+}
+
+.modal-body input[type="text"],
+.modal-body input[type="password"], .modal-body input[type="email"] {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.btn-submit {
+  width: 90%;
+  background: #FFC107;
+  color: #050505;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 18px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background: #f5b904;
+}
+
+/* Botón de Iniciar sesión en Footer */
+.btnFooter {
+  display: flex;
+  align-items: center;   
+  justify-content: center; 
+  gap: 8px;  
+
+  height: 45px;
+  padding: 0 18px;
+  background-color: #000000;
+  border: none;
+  border-radius: 28px;
+
+  font-size: 13px;
+  font-weight: bold;
+  color: #ffffff;
+
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btnFooter:hover {
+  background: #242323;
+}
+
+.Text_btn {
+  display: flex;
+  align-items: center;  
+  gap: 6px;
+}
+
+.Text_btn a {
+  font-size: 14px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.btnFooter a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.btn_social_sección{
+  background-color: #FFC107;
+  padding: 5px;
+  display: grid;
+  grid-template-columns: 1fr ;
+}
+.btn_Position{
+  padding-left: 83.5%;
+}
+
+ /*Social media*/
+    .social{
+        margin: 1px;
+    }
+    .social p{
+        text-align: center;
+        font-size: 18px;
+        margin-bottom: 20px;
+        color: #ffffff;
+    }
+    .links{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .links a{
+        margin: 0 20px;
+    }
+    .links  a li{
+        font-size: 2rem;
+        color:#ffffff;
+
+    }

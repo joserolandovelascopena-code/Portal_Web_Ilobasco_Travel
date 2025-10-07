@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gastronomia</title>
+    <link rel="stylesheet" href="StyleGastrono.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="nav-main">
+      <!-- buscador -->
+      <input
+        type="text"
+        id="buscador"
+        placeholder="Buscar..."
+        onkeyup="buscar()"
+      />
+      <ul class="nav-menu">
+        <!-- enlaces visibles -->
+        <li>
+          <a
+            href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/Home%20Travel.html"
+            >Home</a
+          >
+        </li>
+        <li><a href="#">Historia</a></li>
+        <li><a href="#">Cultura</a></li>
+        <li><a href="#">Artesanías</a></li>
+        <li><a href="#">Comercio local</a></li>
+
+        <!-- menú desplegable -->
+        <li class="dropdown">
+          <a href="#" id="verMas">Más ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Sitios turísticos</a></li>
+            <li><a href="#">Festividades</a></li>
+            <li><a href="#">Hospedaje</a></li>
+            <li><a href="#">Guía practica</a></li>
+            <li>
+              <a
+                href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/ContactoIlobascoTRV.html"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <div class="menu-btn">
+          <i class="fas fa-bars"></i>
+        </div>
+      </ul>
+    </nav>
+    <div class="Contenedorgastronomico">
+      <hr class="line-menu" />
+      <h2 class="title-ilobasco">Gastronomia</h2>
+      <section class="news-gastronomia">
+        <div id="Seccion">
+          <img src="Gastronomia.png" alt="imagen comida" />
+          <div class="contenedor-gastronomia">
+            <h3>Pupusas</h3>
+            <p>
+              Auténticas pupusas salvadoreñas, rebueltas relenas de frijoles,
+              quesillo, chillarron, de frijol con queso rellenas con frijoles,
+              quesillo, y más.
+            </p>
+          </div>
+          <div class="pusition-btnGTNM">
+            <button class="btn-Gastro" onclick="nextSlide()">
+              <a href="#">Leer más</a>
+            </button>
+          </div>
+        </div>
+        <div id="Seccion">
+          <img src="polloGisa.png" alt="imagen comida" />
+          <div class="contenedor-gastronomia">
+            <h3>Pollo Guisado</h3>
+            <p>
+              Sumérgete en el sabor de nuestra receta tradicional de pollo
+              guisado, Jugosas piezas de pollo se bañan en una rica salsa casera
+              con papas, zanahorias.
+            </p>
+          </div>
+          <div class="pusition-btnGTNM">
+            <button class="btn-Gastro" onclick="nextSlide()">
+              <a href="#">Leer más</a>
+            </button>
+          </div>
+        </div>
+        <div id="Seccion">
+          <img src="SopaTortillas.png" alt="imagen comida" />
+          <div class="contenedor-gastronomia">
+            <h3>Sopa de Tortilla</h3>
+            <p>
+              Un clásico mexicano que reconforta el alma. Nuestra sopa de
+              tortilla es una deliciosa combinación de caldo de tomate y chile
+              pasilla, con tiras crujientes de tortilla.
+            </p>
+          </div>
+          <div class="pusition-btnGTNM">
+            <button class="btn-Gastro" onclick="nextSlide()">
+              <a href="#">Leer más</a>
+            </button>
+          </div>
+        </div>
+        <div id="Seccion">
+          <img src="Hamburguesa.png" alt="imagen comida" />
+          <div class="contenedor-gastronomia">
+            <h3>Hamburguesa y Papas Fritas</h3>
+            <p>
+              Disfruta del placer sencillo y delicioso de nuestra 'Clásica
+              Americana'. Una jugosa hamburguesa de carne 100% de res,
+            </p>
+          </div>
+          <div class="pusition-btnGTNM">
+            <button class="btn-Gastro" onclick="nextSlide()">
+              <a href="#">Leer más</a>
+            </button>
+          </div>
+        </div>
+        <div id="Seccion">
+          <img src="Gastronomia.png" alt="imagen comida" />
+          <div class="contenedor-gastronomia">
+            <h3>Pupusas</h3>
+            <p>
+              Auténticas pupusas salvadoreñas, rebueltas relenas de frijoles,
+              quesillo, chillarron, de frijol con queso rellenas con frijoles,
+              quesillo, y más.
+            </p>
+          </div>
+          <div class="pusition-btnGTNM">
+            <button class="btn-Gastro" onclick="nextSlide()">
+              <a href="#">Leer más</a>
+            </button>
+          </div>
+        </div>
+        <div id="Seccion">
+          <img src="polloGisa.png" alt="imagen comida" />
+          <div class="contenedor-gastronomia">
+            <h3>Pollo Guisado</h3>
+            <p>
+              Sumérgete en el sabor de nuestra receta tradicional de pollo
+              guisado, Jugosas piezas de pollo se bañan en una rica salsa casera
+              con papas, zanahorias.
+            </p>
+          </div>
+          <div class="pusition-btnGTNM">
+            <button class="btn-Gastro" onclick="nextSlide()">
+              <a href="#">Leer más</a>
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="footer-link">
+      <section class="btn_social_sección">
+        <div class="btn_Position">
+          <button class="btnFooter">
+            <span class="Text_btn">
+              <i class="fa-solid fa-user"></i>
+              <!-- Ícono de usuario -->
+              <a href="#">LOGIN</a>
+            </span>
+          </button>
+        </div>
+      </section>
+      <footer class="footer-contenedor">
+        <ul>
+          <li>
+            <a href="#"><h3>Title one</h3></a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+        </ul>
+        <!--Footer 2-->
+        <ul>
+          <li>
+            <a href="#"><h3>Title one</h3></a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+        </ul>
+        <!--Footer 3-->
+        <ul>
+          <li>
+            <a href="#"><h3>Title one</h3></a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+        </ul>
+        <!--footer 4-->
+        <ul>
+          <li>
+            <a href="#"><h3>Title one</h3></a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+        </ul>
+      </footer>
+      <!--Redes sociales-->
+      <section class="social">
+        <div class="links">
+          <a href="#"><li class="fab fa-facebook-f"></li></a>
+          <a href="#"><li class="fab fa-instagram"></li></a>
+          <a href="#"> <li class="fab fa-whatsapp"></li></a>
+        </div>
+      </section>
+      <footer class="footer">
+        <h3>El sitio Tec Copyright ©</h3>
+      </footer>
+    </div>
+    <script src="ActividaGastrono.js"></script>
+  </body>
+</html>
