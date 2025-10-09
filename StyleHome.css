@@ -3101,7 +3101,7 @@ ul {
   margin-top:60px ;
   background: url(IglesiaSamiguel.png) no-repeat center/cover ;
   height: 595px;
-  width: 510px;
+  width: 100%;
   
 }
 
@@ -3155,12 +3155,11 @@ ul {
       border-radius: 50px; /* Bordes redondeados */
       cursor: pointer;
       transition: 0.3s;
-      
-
     }
   .Positionbtn{
     align-items: center;
     height: 50px;
+    
   }
   .Positionbtn a{
     color:#000000;
@@ -3221,8 +3220,6 @@ ul {
   max-height: 400px;
 }
 
-
-
 .positionActividad_Text {
    padding: 8px;
    
@@ -3231,7 +3228,8 @@ ul {
    position: absolute;
    font-size: 15px;
    max-width: 198px;
-   margin-top: -14px;
+   margin-top: -70px;
+   font-size: 12px;
    
 }
 
@@ -3355,49 +3353,93 @@ ul {
   
 }
 .rating1 {
-  font-size: 14px;
+  font-size: 12px;
+ 
 }
 .rating2 {
-  font-size: 14px;
+  font-size: 12px;
+
 }
 .rating3 {
-  font-size: 14px;
+  font-size: 12px;
+ 
 }
 .rating4 {
-  font-size: 14px;
+  font-size: 12px;
+ 
 }
 .rating5 {
-  font-size: 14px;
+  font-size: 12px;
+
 }
 .rating6 {
-  font-size: 14px;
+  font-size: 12px;
+  
 }
 .rating7 {
- font-size: 14px;
+ font-size: 12px;
+ 
 }
 .rating8 {
-  font-size: 14px;
+  font-size: 12px;
+}
+.calificación1 {
+  margin-top: -60px;
+}
+.calificación2 {
+  margin-top: -60px;
+}
+.calificación3 {
+  margin-top: -60px;
+}
+.calificación4 {
+  margin-top: -60px;
+}
+.calificación5 {
+  margin-top: -60px;
+}
+.calificación6 {
+  margin-top: -60px;
+}
+.calificación7 {
+  margin-top: -60px;
+}
+.calificación8 {
+  margin-top: -60px;
 }
 
 .contenido-Text h4{
-  padding: 10px;
+  font-size: 12px;
+  margin-top: -72px
 }
 
 .contenido-Text p{
   padding: 18;
 }
+.calificación p,
+.calificación2 p,
+.calificación3 p,
+.calificación4 p,
+.calificación5 p,
+.calificación6 p,
+.calificación7 p,
+.calificación8 p{
+  font-size: 13px;
+}
 
 
 /* Botones*/
 .btnNew2{
-  padding: 10px 18px;
+  padding: 6px 14px;
   font-size: 10px;
+}
+.btnNew2 a{
+  font-size: 7px;
 }
 
 .Positionbtn2{
-  margin-top: 90px;
-  margin-left: 60px;
-  
+  margin-top: 0px;
+  margin-left: 65px;
   height: 95%;
 }
 .title_Actividades{
