@@ -108,69 +108,62 @@ const ventanaArtice1 = document.getElementById('ventanaArtice1');
 const InfArtice1 = document.getElementById('InfArtice1');
 const closeVen1 = document.getElementById('closeVen1');
 
-// Abrir ventana
 ventanaArtice1.addEventListener("click", (e) => {
   e.preventDefault();
   InfArtice1.classList.add("activo");
+  document.body.style.overflow = "hidden"; // bloquear scroll de fondo
 });
 
-// Cerrar ventana
 closeVen1.addEventListener("click", () => {
   InfArtice1.classList.remove("activo");
+  document.body.style.overflow = ""; // restaurar scroll de fondo
 });
 
-// Cerrar al dar clic en el fondo oscuro
 InfArtice1.addEventListener("click", (e) => {
   if (e.target === InfArtice1) {
     InfArtice1.classList.remove("activo");
+    document.body.style.overflow = "";
   }
 });
 
+// Carrusel
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelector(".slidesImg");
+  const slideItems = document.querySelectorAll(".Img-slide");
+  const prevBtn = document.querySelector(".previo");
+  const nextBtn = document.querySelector(".siguiente");
+  const dots = document.querySelectorAll(".dohtV1");
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const slides = document.querySelector(".slidesImg");
-    const slideItems = document.querySelectorAll(".Img-slide");
-    const prevBtn = document.querySelector(".previo");
-    const nextBtn = document.querySelector(".siguiente");
-    const dots = document.querySelectorAll(".dohtV1");
+  let index = 0;
+  const totalSlides = slideItems.length;
 
-    let index = 0;
-    const totalSlides = slideItems.length;
+  function mostrarSlide(i) {
+    if (i >= totalSlides) index = 0;
+    if (i < 0) index = totalSlides - 1;
+    slides.style.transform = `translateX(-${index * 100}%)`;
 
-    // Función para mostrar el slide actual
-    function mostrarSlide(i) {
-      // Si nos pasamos del final, reiniciar
-      if (i >= totalSlides) index = 0;
-      if (i < 0) index = totalSlides - 1;
+    dots.forEach(dot => dot.classList.remove("active"));
+    dots[index].classList.add("active");
+  }
 
-      // Mover el contenedor con transform
-      slides.style.transform = `translateX(-${index * 100}%)`;
-
-      // Actualizar indicadores
-      dots.forEach(dot => dot.classList.remove("active"));
-      dots[index].classList.add("active");
-    }
-
-    // Botones siguiente y previo
-    nextBtn.addEventListener("click", () => {
-      index++;
-      mostrarSlide(index);
-    });
-
-    prevBtn.addEventListener("click", () => {
-      index--;
-      mostrarSlide(index);
-    });
-
-    // Indicadores (puntos)
-    dots.forEach((dot, i) => {
-      dot.addEventListener("click", () => {
-        index = i;
-        mostrarSlide(index);
-      });
-    });
-
+  nextBtn.addEventListener("click", () => {
+    index++;
+    mostrarSlide(index);
   });
+
+  prevBtn.addEventListener("click", () => {
+    index--;
+    mostrarSlide(index);
+  });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener("click", () => {
+      index = i;
+      mostrarSlide(index);
+    });
+  });
+});
+
 
 //Ventana 2
 
@@ -758,19 +751,22 @@ document.querySelector(".menu-btn").addEventListener("click", () => {
 const modal = document.getElementById("loginModal");
 const openBtn = document.getElementById("openLogin");
 const closeBtn = document.getElementById("closeModal");
+const ocultarV = document.querySelector(".Vmodal-registro");
 
 
 openBtn.addEventListener("click", () => {
-  modal.style.display = "block";
-  abrirModal(); 
+  modal.classList.add("show");
+  abrirModal();
 });
 
-
-
-
 closeBtn.addEventListener("click", () => {
-modal.style.display = "none";
-  cerrarModal(); 
+  modal.classList.remove("show");
+  cerrarModal();
+});
+
+ocultarV.addEventListener("click", () => {
+  modal.classList.remove("show");
+  cerrarModal();
 });
 
 function abrirModal() {
@@ -794,6 +790,9 @@ document.addEventListener('DOMContentLoaded', () => {
   VmodalHelp.addEventListener('click', () => {
     Vinf_help.style.display = (Vinf_help.style.display === "block") ? "none" : "block";
   });
+  VmodalHelp.addEventListener('click', () => {
+  Vinf_help.classList.toggle("show");
+});
 });
 
 //down chveron
@@ -801,6 +800,72 @@ function Chevron_down_up() {
   const icon = document.getElementById("chevron");
   icon.classList.toggle("fa-chevron-down");
   icon.classList.toggle("fa-chevron-up");
+  VmodalHelp.addEventListener('click', () => {
+  Vinf_help.classList.toggle("show");
+  
+});
 }
 
-//
+const form = modal.querySelector("form");
+const loader = document.getElementById("loader");
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault(); // evitar recarga
+  loader.style.display = "block"; // mostrar loader
+
+  // Simular proceso de envío
+  setTimeout(() => {
+    loader.style.display = "none";
+    alert("Has hiniciado sesión"); // reemplaza con lógica real
+    modal.classList.remove("show");
+    cerrarModal();
+  }, 2000);
+});
+
+
+//Registro
+document.querySelector(".Vmodal-registro").addEventListener("click", () => {
+  document.querySelector(".nav-menu").classList.toggle("show");
+});
+
+const modal2 = document.getElementById("RegistroModal");
+const openBtn2 = document.querySelector(".Vmodal-registro");
+const closeBtn2 = document.getElementById("closeModal2");
+
+
+openBtn2.addEventListener("click", () => {
+  modal2.classList.add("show");
+  abrirModal2();
+});
+
+closeBtn2.addEventListener("click", () => {
+  modal2.classList.remove("show");
+  cerrarModal2();
+});
+
+
+function abrirModal2() {
+  document.body.style.overflow = "hidden";
+}
+
+function cerrarModal2() {
+  document.body.style.overflow = "auto";
+}
+
+const form2 = modal2.querySelector("form");
+const loader2 = document.getElementById("loader2");
+
+form2.addEventListener("submit", (e) => {
+  e.preventDefault(); // evitar recarga
+  loader2.style.display = "block"; // mostrar loader
+
+  // Simular proceso de envío
+  setTimeout(() => {
+    loader2.style.display = "none";
+    alert("Cuenta creada"); // reemplaza con lógica real
+    modal2.classList.remove("show");
+    cerrarModal2();
+  }, 2000);
+});
+
+
