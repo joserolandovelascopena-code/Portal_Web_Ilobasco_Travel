@@ -310,7 +310,6 @@ ul {
   width: 60%;
   background: rgb(255, 255, 255);
   height: 100%;
-  max-height: 100vh;
   display: flex;
   flex-direction: column;
   transform: translateX(-100%);
@@ -3181,14 +3180,48 @@ ul {
   grid-template-columns: 1fr 1fr;
   gap: 15px; 
 } 
-
 .Contenedor_Actividades {
-  background-color: rgb(250, 228, 199);
+  border-radius: 20px;
+  height: 280px;
+  max-height: 300px;
+}
+.Contenedor_Actividades2 {
+  border-radius: 20px;
+  height: 3280px;
+  max-height: 300px;
+}
+.Contenedor_Actividades3 {
+  border-radius: 20px;
+  height: 280px;
+  max-height: 300px;
+}
+.Contenedor_Actividades4 {
+  border-radius: 20px;
+  height: 280px;
+  max-height: 300px;
+}
+.Contenedor_Actividades5 {
   border-radius: 20px;
   height: 380px;
   max-height: 400px;
-  overflow: hidden; /* evita que sobresalgan las imágenes */
 }
+.Contenedor_Actividades6 {
+  border-radius: 20px;
+  height: 380px;
+  max-height: 400px;
+}
+.Contenedor_Actividades7 {
+  border-radius: 20px;
+  height: 380px;
+  max-height: 400px;
+}
+.Contenedor_Actividades8 {
+  border-radius: 20px;
+  height: 380px;
+  max-height: 400px;
+}
+
+
 
 .positionActividad_Text {
    padding: 8px;
@@ -3215,7 +3248,7 @@ ul {
 
 .News-Activades img {
   width: 100%;
-  height: 200px;        /* fuerza que todas llenen el contenedor */
+  height: 150px;        /* fuerza que todas llenen el contenedor */
   object-fit: cover;   /* recorta o expande proporcionalmente */
   border-radius: 20px;
 }
@@ -3227,26 +3260,13 @@ ul {
 
 
 /* Ventanas de Actividades */
-#InfArtice1 {
-  position: fixed;
-  inset: 0;
-  z-index: 1000;
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.5s ease;
-  display: flex;
-  justify-content: flex-start;
-  align-items: stretch;
-}
+
 
 /* Contenedor del contenido del modal */
 #contenido {
   width: 100%; 
+  height: 100%;
 }
-
-
-
 .mapa {
   width: 98%;
   aspect-ratio: 16/9;
@@ -3262,18 +3282,11 @@ ul {
   display: block;
 }
 
-body.modal-abierto {
-  overflow: hidden;
-}
-
-.contenido-Text p{
-  font-size: 13px;
-}
 
 /* Header tipo barra de sistema */
-.Info-header {
-
-  padding: 2px 2px; 
+.Info-header{
+  background-color: #ffffff;
+  padding: 2px 6px; 
   font-family: Arial, sans-serif;
   font-size: 12px;
 }
@@ -3281,7 +3294,6 @@ body.modal-abierto {
   margin-left: 26px;
 }
 /*Ventana 1*/
-
     .Carrusel-Imagenes {
       position: relative;
       width: 92%;
@@ -3314,23 +3326,18 @@ body.modal-abierto {
   position: absolute;
   width: 16px;
   height: 16px;
-  margin-left: 8px;
+  margin-left: 9px;
   
 }
 
 /* Botón de cierre */
 #closeVen1 {
-  font-size: 16px;
+  font-size: 19px;
   cursor: pointer;
   padding: 1px 2px;
   margin-right: 10px;
 }
 
-.closeVen1:hover {
-  background: black;
-  color: white;
-  border-radius: 4px;
-}
 
 /* Contenido de la ventana */
 #contenido p{
@@ -3342,21 +3349,44 @@ body.modal-abierto {
 }
 
 #Title{
-  font-size: 16px;
+  font-size: 18px;
   padding-left: 14px;
   padding-block-end: 5px;
   
 }
+.rating1 {
+  font-size: 14px;
+}
+.rating2 {
+  font-size: 14px;
+}
+.rating3 {
+  font-size: 14px;
+}
+.rating4 {
+  font-size: 14px;
+}
+.rating5 {
+  font-size: 14px;
+}
+.rating6 {
+  font-size: 14px;
+}
+.rating7 {
+ font-size: 14px;
+}
+.rating8 {
+  font-size: 14px;
+}
 
 .contenido-Text h4{
   padding: 10px;
-  font-size: 14px;
-
 }
-.text-Ubcación{
-  font-size: 14px;
 
+.contenido-Text p{
+  padding: 18;
 }
+
 
 /* Botones*/
 .btnNew2{
@@ -3436,6 +3466,6 @@ body.modal-abierto {
   border-radius: 0px;
   width: 600%;
   height: 100%;
-  
 }
+
 }
