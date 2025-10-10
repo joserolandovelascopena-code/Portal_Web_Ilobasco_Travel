@@ -3025,8 +3025,19 @@ text-decoration: none;
 
     }
 
-@media (max-width: 480px){
+@media (max-width: 470px){
   /*Menu*/
+  #contenido {
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#InfArtice1.activo #contenido {
+  opacity: 1;
+  transform: scale(1);
+}
+
 .menu-btn {
   position: absolute;
   cursor: pointer;
@@ -3100,7 +3111,7 @@ ul {
 .baner-one {
   margin-top:60px ;
   background: url(IglesiaSamiguel.png) no-repeat center/cover ;
-  height: 595px;
+  height: 410px;
   width: 100%;
   
 }
@@ -3113,7 +3124,7 @@ ul {
     border-radius: 10px;
     padding: 10px;
     display: grid; 
-    grid-template-columns: 1fr ; 
+    grid-template-columns: 1fr; 
     gap: 10px; 
     margin: 20px 0;
 }
@@ -3121,7 +3132,10 @@ ul {
     border-radius: 10px;
     width:100% ;
     height: 390px;
-    
+}
+.news-Ilobasco p {
+  padding: 4px;
+
 }
 .news-Ilobasco div{
     background-color: rgb(250, 228, 199);
@@ -3145,11 +3159,15 @@ ul {
       opacity: 0.5;
       transition: 0.3s;
     }
+    .active {
+      background: #FFD700; /* Amarillo cuando está activo */
+      opacity: 1;
+    }
 
     .btnNew1{
       background: #FFD700; /* Amarillo */
       border: none;
-      margin-left: 14%;
+      margin-left: 1%;
       font-size: 11px;
       font-weight: bold;
       border-radius: 50px; /* Bordes redondeados */
@@ -3181,12 +3199,12 @@ ul {
 } 
 .Contenedor_Actividades {
   border-radius: 20px;
-  height: 280px;
+  height: 265px;
   max-height: 300px;
 }
 .Contenedor_Actividades2 {
   border-radius: 20px;
-  height: 3280px;
+  height: 280px;
   max-height: 300px;
 }
 .Contenedor_Actividades3 {
@@ -3215,11 +3233,15 @@ ul {
   max-height: 400px;
 }
 .Contenedor_Actividades8 {
+  overflow: hidden auto;
   border-radius: 20px;
   height: 380px;
   max-height: 400px;
 }
+.positionActividad_Text{
+  width: 100%;
 
+}
 .positionActividad_Text {
    padding: 8px;
    
@@ -3232,7 +3254,11 @@ ul {
    font-size: 12px;
    
 }
-
+.contenido-Text{
+ margin-top: 30px;
+  max-height: 100%;
+  overflow: none;
+}
 .Contenedor_Actividades p {
   color: #000;
   font-size: 14px;
@@ -3266,8 +3292,7 @@ ul {
   height: 100%;
 }
 .mapa {
-  width: 98%;
-  aspect-ratio: 16/9;
+  width: 96%;
   overflow: hidden;
   border-radius: 8px;
   margin: 0 20px 20px 20px;
@@ -3283,6 +3308,7 @@ ul {
 
 /* Header tipo barra de sistema */
 .Info-header{
+  width: 100%;
   background-color: #ffffff;
   padding: 2px 6px; 
   font-family: Arial, sans-serif;
@@ -3294,7 +3320,7 @@ ul {
 /*Ventana 1*/
     .Carrusel-Imagenes {
       position: relative;
-      width: 92%;
+      width: 90%;
       margin: 10px;
       height: 300px;
       margin-left: 20px;
@@ -3376,6 +3402,10 @@ ul {
   font-size: 12px;
   
 }
+.rating {
+ font-size: 12px;
+ 
+}
 .rating7 {
  font-size: 12px;
  
@@ -3384,39 +3414,41 @@ ul {
   font-size: 12px;
 }
 .calificación1 {
-  margin-top: -60px;
+  margin-top: -46px;
 }
 .calificación2 {
-  margin-top: -60px;
+  margin-top: -46px;
 }
 .calificación3 {
-  margin-top: -60px;
+  margin-top: -46px;
 }
 .calificación4 {
-  margin-top: -60px;
+  margin-top: -46px;
+  
 }
 .calificación5 {
-  margin-top: -60px;
+  margin-top: -46px;
 }
 .calificación6 {
-  margin-top: -60px;
+  margin-top: -46px;
 }
 .calificación7 {
-  margin-top: -60px;
+  margin-top: -46px;
 }
 .calificación8 {
-  margin-top: -60px;
+  margin-top: -46px;
 }
 
 .contenido-Text h4{
   font-size: 12px;
-  margin-top: -72px
+  
+ 
 }
 
 .contenido-Text p{
-  padding: 18;
+  padding: 18px;
 }
-.calificación p,
+.calificación1 p,
 .calificación2 p,
 .calificación3 p,
 .calificación4 p,
@@ -3424,7 +3456,7 @@ ul {
 .calificación6 p,
 .calificación7 p,
 .calificación8 p{
-  font-size: 13px;
+  font-size: 11px;
 }
 
 
@@ -3438,8 +3470,8 @@ ul {
 }
 
 .Positionbtn2{
-  margin-top: 0px;
-  margin-left: 65px;
+  margin-block: -2px;
+  margin-left: 56px;
   height: 95%;
 }
 .title_Actividades{
