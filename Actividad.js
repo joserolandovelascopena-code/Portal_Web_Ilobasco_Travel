@@ -14,6 +14,27 @@ document.addEventListener("click", (e) => {
   }
 });
 
+//Menu de un movil
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.getElementById("Menu-movil");
+  const closeBtn = document.getElementById("Close_memu_movil");
+  const navMenu = document.querySelector(".nav-main > .nav-menu"); // apunta solo al menú principal
+  const headerMovil = document.getElementById("header-movil");
+
+  // Abrir menú
+  menuBtn.addEventListener("click", () => {
+    navMenu.classList.add("active");
+    headerMovil.classList.add("active");
+  });
+
+  // Cerrar menú
+  closeBtn.addEventListener("click", () => {
+    navMenu.classList.remove("active");
+    headerMovil.classList.remove("active");
+  });
+});
+
+
 //buscador
 
 function buscar() {
@@ -752,6 +773,7 @@ const modal = document.getElementById("loginModal");
 const openBtn = document.getElementById("openLogin");
 const closeBtn = document.getElementById("closeModal");
 const ocultarV = document.querySelector(".Vmodal-registro");
+
 
 
 openBtn.addEventListener("click", () => {
