@@ -5,10 +5,13 @@
 
 }
 
-
+@font-face {
+  font-family: 'Inter';
+  src: url('fonts/Inter-Regular.ttf');
+}
 body {
   background-color: rgb(247, 238, 227);
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:'Inter','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: rgb(3, 54, 38);
 }
 p{
@@ -17,13 +20,25 @@ p{
 
 /*menu bar*/
 .menu-btn {
-  position: absolute;
+  position: fixed;
   cursor: pointer;
-  right: 53px;
+  right: 30px;
   font-size: 1.5rem;
   color: #ffffff;
+  z-index: 10001;
+  margin-top: -44px;
+  
 }
+#movil-hr{
+  opacity: 0;
 
+}
+#header-movil{
+  display: none;
+}
+.Mas-enlaces{
+  display: none;
+}
 /* lista */
 #buscador{
   width: 30%;
@@ -31,7 +46,7 @@ p{
   border-radius: 15px;
   padding: 9px;
   margin-top: 10px;
-  margin-left: 200px;
+  margin-left: 180px;
 }
 
 ul {
@@ -54,7 +69,7 @@ ul {
 .nav-menu {
   display: flex;
   gap: 10px;
-  margin-left: 46%;
+  margin-left: 44%;
   align-items: center;
   
 }
@@ -2551,7 +2566,7 @@ text-decoration: none;
 .modal {
   display: none;
   position: fixed;
-  z-index: 1000;
+  z-index: 1002;
   left: 0;
   top: 0;
   width: 100%;
@@ -3038,13 +3053,6 @@ text-decoration: none;
   transform: scale(1);
 }
 
-.menu-btn {
-  position: absolute;
-  cursor: pointer;
-  right: 53px;
-  color: #ffffff;
-}
-
 /* lista */
 #buscador{
   width: 18%;
@@ -3052,7 +3060,7 @@ text-decoration: none;
   border-radius: 15px;
   padding: 9px;
   margin-top: 10px;
-  margin-left: 69px;
+  margin-left: 76%;
 }
 
 ul {
@@ -3063,30 +3071,131 @@ ul {
 
 .nav-main {
   position: fixed;
+  display: flex;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 60px;
-  background-color: #000;
-  display: flex;
+  width: 86%;
+  height: 100%;
+  background-color: transparent;
   z-index: 1000;
+}
+/*menu*/
+#buscador  {
+  display: block;
+  opacity: 1;
+
+}
+
+/* Ocultar menú por defecto */
+.nav-main ul {
+  display: none;
+}
+
+/* Mostrar cuando esté activo */
+.nav-main ul.active {
+  display: block;
+}
+
+/* Ocultar encabezado móvil al inicio */
+#header-movil {
+  display: none;
+}
+
+/* Mostrar encabezado móvil cuando esté activo */
+#header-movil.active {
+  display: block;
+}
+
+
+.nav-main li{
+  margin-block-end: 10px;
+  
 }
 
 .nav-menu {
-  display: flex;
-  gap: 5px;
-  margin-left: 26.5%;
+  padding-top: 190px;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-block-end: 15px;
+  background-color: #ffffff;
+  height: 100%;
+  width: 86%;
+  position: fixed;
 }
 
 .nav-menu a {
   text-decoration: none;
-  color: rgb(250, 248, 248);
-  padding: 10px;
+  color: rgb(5, 5, 5);
   transition: 0.3s;
-  font-family: 'Lucida Sans', Verdana, sans-serif;
-  font-size: 15px;
+  font-family:  'Inter' ,'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 
+  'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 14px;
+}
+.dropdown-menu li a {
+  display: block;
+  padding: 1px 4px;
+  color: black;
 }
 
+#Menu-movil{
+  position: fixed;
+  background-color:black ;
+  margin-top: -60px;
+  z-index: 1000;
+  width:100%;
+  margin-right: 200px;
+  height: 60px;
+  color: white;
+}
+#header-movil{
+  position: fixed;
+  z-index: 10000;
+  background-color: #037251;
+  width: 86%;
+  padding-left: 0; 
+}
+.closeMenu-movil{
+  color: white;
+  font-size: 30px;
+  padding-left: 93%;
+  padding-right: 30px;
+  padding-top: 2px;
+  padding-block-end: 2px;
+  height: 18px;
+}
+.closeMenu-movil:hover{
+  color: #e7ad00;;
+
+}
+.Mas-enlaces{
+  display: block;
+  color: #000;
+}
+
+#movil-hr{
+  margin-left: 9px;
+  max-width: 96%;
+  margin-block-end: 10px;
+  opacity: 1;
+
+}
+.menu-btn{
+   max-width: 100%;
+   left: 20px;
+   
+   color: white;
+}
+.menu-btn i {
+  display: block;
+  position: fixed;
+  cursor: pointer;
+  opacity: 1;
+  z-index: 1001;
+  font-size: 20px;
+  margin-top: 63px;
+  color: #ffffff;
+}
 /* dropdown */
 .dropdown {
   position: relative;
@@ -3097,11 +3206,62 @@ ul {
   position: absolute;
   top: 100%;
   left: 0;
-  background: #111;
+  background:white;
   min-width: 180px;
-  padding: 5px 0;
+  padding: 5px;
   border-radius: 4px;
 }
+.nav-menu a:hover {
+   color: #e7ad00;
+   background: #ffffff;
+}
+
+
+/* Botón de Iniciar sesión */
+.btnFooter {
+  display: flex;
+  position: fixed;
+  margin-top: -400px;
+  align-items: center;   
+  justify-content: center; 
+  gap: 8px;  
+
+  height: 39px;
+  width: 78%;
+  padding: 0 1px;
+  background-color: #037251;
+  border: none;
+  border-radius: 28px;
+
+  font-size: 13px;
+  font-weight: bold;
+  color: #ffffff;
+
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btnFooter:hover {
+  background: #4b4a4a;
+}
+
+.Text_btn {
+  display: flex;
+  align-items: center;  
+  gap: 6px;
+}
+
+.Text_btn a {
+  font-size: 14px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.btnFooter a {
+  text-decoration: none;
+  color: #ffffff;
+}
+/*News Ilobasco*/
 
 #TL{
   font-size: 25px;
@@ -3109,10 +3269,12 @@ ul {
 }
 /* Baner cars imagenes */
 .baner-one {
-  margin-top:60px ;
+  margin-top: 60px ;
   background: url(IglesiaSamiguel.png) no-repeat center/cover ;
   height: 410px;
   width: 100%;
+  padding-left: 0;
+  margin-left: 0;
   
 }
 
@@ -3124,7 +3286,7 @@ ul {
     border-radius: 10px;
     padding: 10px;
     display: grid; 
-    grid-template-columns: 1fr; 
+    grid-template-columns: 1fr ; 
     gap: 10px; 
     margin: 20px 0;
 }
@@ -3132,6 +3294,8 @@ ul {
     border-radius: 10px;
     width:100% ;
     height: 390px;
+    padding-left: 0;
+    margin-left: 0;
 }
 .news-Ilobasco p {
   padding: 4px;
@@ -3167,7 +3331,7 @@ ul {
     .btnNew1{
       background: #FFD700; /* Amarillo */
       border: none;
-      margin-left: 1%;
+      margin-left:10% ;
       font-size: 11px;
       font-weight: bold;
       border-radius: 50px; /* Bordes redondeados */
@@ -3197,47 +3361,19 @@ ul {
   grid-template-columns: 1fr 1fr;
   gap: 15px; 
 } 
-.Contenedor_Actividades {
+.Contenedor_Actividades, 
+.Contenedor_Actividades2, 
+.Contenedor_Actividades3,
+.Contenedor_Actividades4,
+.Contenedor_Actividades5,
+.Contenedor_Actividades6,
+.Contenedor_Actividades7,
+.Contenedor_Actividades8{
   border-radius: 20px;
   height: 265px;
-  max-height: 300px;
-}
-.Contenedor_Actividades2 {
-  border-radius: 20px;
-  height: 280px;
-  max-height: 300px;
-}
-.Contenedor_Actividades3 {
-  border-radius: 20px;
-  height: 280px;
-  max-height: 300px;
-}
-.Contenedor_Actividades4 {
-  border-radius: 20px;
-  height: 280px;
-  max-height: 300px;
-}
-.Contenedor_Actividades5 {
-  border-radius: 20px;
-  height: 380px;
   max-height: 400px;
 }
-.Contenedor_Actividades6 {
-  border-radius: 20px;
-  height: 380px;
-  max-height: 400px;
-}
-.Contenedor_Actividades7 {
-  border-radius: 20px;
-  height: 380px;
-  max-height: 400px;
-}
-.Contenedor_Actividades8 {
-  overflow: hidden auto;
-  border-radius: 20px;
-  height: 380px;
-  max-height: 400px;
-}
+
 .positionActividad_Text{
   width: 100%;
 
@@ -3284,7 +3420,6 @@ ul {
 
 
 /* Ventanas de Actividades */
-
 
 /* Contenedor del contenido del modal */
 #contenido {
@@ -3378,64 +3513,17 @@ ul {
   padding-block-end: 5px;
   
 }
-.rating1 {
+.rating1,.rating2,
+.rating3,.rating4,
+.rating5,.rating6,
+.rating7,.rating8 {
   font-size: 12px;
- 
 }
-.rating2 {
-  font-size: 12px;
 
-}
-.rating3 {
-  font-size: 12px;
- 
-}
-.rating4 {
-  font-size: 12px;
- 
-}
-.rating5 {
-  font-size: 12px;
-
-}
-.rating6 {
-  font-size: 12px;
-  
-}
-.rating {
- font-size: 12px;
- 
-}
-.rating7 {
- font-size: 12px;
- 
-}
-.rating8 {
-  font-size: 12px;
-}
-.calificación1 {
-  margin-top: -46px;
-}
-.calificación2 {
-  margin-top: -46px;
-}
-.calificación3 {
-  margin-top: -46px;
-}
-.calificación4 {
-  margin-top: -46px;
-  
-}
-.calificación5 {
-  margin-top: -46px;
-}
-.calificación6 {
-  margin-top: -46px;
-}
-.calificación7 {
-  margin-top: -46px;
-}
-.calificación8 {
+.calificación1,.calificación2,
+.calificación3,.calificación4,
+.calificación5,.calificación6,
+.calificación7, .calificación8 {
   margin-top: -46px;
 }
 
@@ -3471,7 +3559,7 @@ ul {
 
 .Positionbtn2{
   margin-block: -2px;
-  margin-left: 56px;
+  margin-left: 64px;
   height: 95%;
 }
 .title_Actividades{
