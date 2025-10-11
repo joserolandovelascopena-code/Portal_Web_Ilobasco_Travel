@@ -11,8 +11,17 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <div id="Menu-movil">
+      <div class="menu-btn" onclick="abrirMenuMovil()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
     <nav class="nav-main">
       <input
         type="text"
@@ -20,7 +29,12 @@
         placeholder="Buscar..."
         onkeyup="buscar()"
       />
+      <div id="header-movil">
+        <span class="closeMenu-movil" id="Close_memu_movil">&times;</span>
+      </div>
+
       <ul class="nav-menu">
+        <hr id="movil-hr" />
         <!-- buscador -->
 
         <!-- enlaces visibles -->
@@ -28,7 +42,6 @@
         <li><a href="#">Cultura</a></li>
         <li><a href="#">Artesanías</a></li>
         <li><a href="#">Comercio Local</a></li>
-
         <!-- menú desplegable -->
         <li class="dropdown">
           <a href="#" id="verMas">Más ▾</a>
@@ -51,19 +64,26 @@
             </li>
           </ul>
         </li>
+        <hr id="movil-hr" />
+        <ul class="Mas-enlaces">
+          <li><a href="#">Foro</a></li>
+          <li><a href="#">Comentarios</a></li>
+          <li><a href="#">Ilobasco Travel</a></li>
+          <li><a>Atención al usuario:</a></li>
+          <li id="correo">
+            <a>joseroladovelascopeña@gmail.com</a>
+          </li>
+        </ul>
+
         <li>
-          <button class="btnFooter" id="openLogin" onclick="abrirModal()">
+          <button class="btnFooter" id="openLogin">
             <span class="Text_btn">
               <i class="fa-solid fa-user"></i>
               <!-- Ícono de usuario -->
-              LOGIN
+              Iniciar sesión
             </span>
           </button>
         </li>
-
-        <div class="menu-btn">
-          <i class="fas fa-bars"></i>
-        </div>
       </ul>
     </nav>
 
@@ -1085,15 +1105,7 @@
     </section>
     <div class="footer-link">
       <section class="btn_social_sección">
-        <div class="btn_Position">
-          <button class="btnFooter" id="openLogin" onclick="abrirModal()">
-            <span class="Text_btn">
-              <i class="fa-solid fa-user"></i>
-              <!-- Ícono de usuario -->
-              LOGIN
-            </span>
-          </button>
-        </div>
+        <p>Hola Chanchito Feliz</p>
       </section>
       <footer class="footer-contenedor">
         <ul>
