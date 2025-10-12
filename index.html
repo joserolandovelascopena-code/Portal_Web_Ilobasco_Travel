@@ -21,6 +21,7 @@
       <div class="menu-btn" onclick="abrirMenuMovil()">
         <i class="fas fa-bars"></i>
       </div>
+      <input type="text" id="buscador2" placeholder="Buscar..." />
     </div>
     <nav class="nav-main">
       <input
@@ -34,9 +35,6 @@
       </div>
 
       <ul class="nav-menu">
-        <hr id="movil-hr" />
-        <!-- buscador -->
-
         <!-- enlaces visibles -->
         <li><a href="#">Historia</a></li>
         <li><a href="#">Cultura</a></li>
@@ -64,16 +62,6 @@
             </li>
           </ul>
         </li>
-        <hr id="movil-hr" />
-        <ul class="Mas-enlaces">
-          <li><a href="#">Foro</a></li>
-          <li><a href="#">Comentarios</a></li>
-          <li><a href="#">Ilobasco Travel</a></li>
-          <li><a>Atención al usuario:</a></li>
-          <li id="correo">
-            <a>joseroladovelascopeña@gmail.com</a>
-          </li>
-        </ul>
 
         <li>
           <button class="btnFooter" id="openLogin">
@@ -86,6 +74,48 @@
         </li>
       </ul>
     </nav>
+
+    <!-- MODAL LATERAL (SOLO PARA MÓVILES) -->
+    <div id="modal-menu">
+      <div id="header-movil">
+        <span class="closeModal" id="closeModal">&times;</span>
+      </div>
+      <ul class="modal-nav">
+        <li>
+          <button class="btnsesión" id="openLogin">
+            <span class="Text_btn2">
+              <i class="fa-solid fa-user"></i>
+              <!-- Ícono de usuario -->
+              Iniciar sesión
+            </span>
+          </button>
+        </li>
+
+        <hr id="movil-hr2" />
+
+        <!-- copia el mismo contenido de nav-main -->
+        <li><a href="#">Historia</a></li>
+        <li><a href="#">Cultura</a></li>
+        <li><a href="#">Artesanías</a></li>
+        <li><a href="#">Comercio Local</a></li>
+
+        <li><a href="#">Gastronomía</a></li>
+        <li><a href="#">Sitios Turísticos</a></li>
+        <li><a href="#">Festividades</a></li>
+        <li><a href="#">Hospedajes</a></li>
+        <li><a href="#">Guía práctica</a></li>
+        <li><a href="#">Contacto</a></li>
+
+        <hr id="movil-hr2" />
+
+        <li><a href="#">Foro</a></li>
+        <li><a href="#">Comentarios</a></li>
+        <hr id="movil-hr2" />
+        <li><a href="#">Ilobasco Travel</a></li>
+        <li><a>Atención al usuario:</a></li>
+        <li id="correo"><a>joseroladovelascopeña@gmail.com</a></li>
+      </ul>
+    </div>
 
     <div class="contenedor">
       <main class="baner-one">
