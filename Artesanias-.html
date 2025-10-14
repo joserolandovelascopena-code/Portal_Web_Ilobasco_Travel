@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artesanías de Ilobasco</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="StyleArtesania.css" />
+  </head>
+
+  <body>
+    <div>
+      <div class="menu-btn" onclick="abrirMenuMovil()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+    <nav class="nav-main">
+      <input
+        type="text"
+        id="buscador"
+        placeholder="Buscar..."
+        onkeyup="buscar()"
+      />
+      <div id="header-movil">
+        <span class="closeMenu-movil" id="Close_memu_movil">&times;</span>
+      </div>
+
+      <ul class="nav-menu">
+        <!-- enlaces visibles -->
+        <li>
+          <a
+            href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/index.html"
+            >Home</a
+          >
+        </li>
+        <li><a href="#">Historia</a></li>
+        <li><a href="#">Cultura</a></li>
+        <li><a href="#">Comercio Local</a></li>
+        <!-- menú desplegable -->
+        <li class="dropdown">
+          <a href="#" id="verMas">Más ▾</a>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/Gastronom%C3%ADa.html"
+                >Gastronomía</a
+              >
+            </li>
+            <li><a href="#">Sitios Turísticos</a></li>
+            <li><a href="#">Festividades</a></li>
+            <li><a href="#">Hospedajes</a></li>
+            <li><a href="#">Guía práctica</a></li>
+            <li>
+              <a
+                href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/ContactoIlobascoTRV.html"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <button class="btnFooter" id="openLogin">
+            <span class="Text_btn">
+              <i class="fa-solid fa-user"></i>
+              <!-- Ícono de usuario -->
+              Iniciar sesión
+            </span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+    <div>
+      <header class="hero">
+        <div id="Title-baner">
+          <h1>Artesanías de Ilobasco</h1>
+          <p>El arte hecho a mano que da vida a nuestra cultura.</p>
+        </div>
+      </header>
+
+      <section class="info-box">
+        <h2>Tradición y Arte que Trasciende Generaciones</h2>
+        <p>
+          En Ilobasco, cada artesanía cuenta una historia. Las manos de los
+          artesanos transforman el barro, los pigmentos y la creatividad en
+          obras únicas que reflejan la identidad cultural salvadoreña. Estas
+          piezas no solo son decorativas, sino también parte de nuestras raíces
+          y costumbres.
+        </p>
+      </section>
+
+      <section class="artesanias">
+        <article class="item">
+          <img
+            src="Imagenes_Proyecto/Artesania_Tradicional.jpeg"
+            alt="tradicional"
+          />
+          <div class="info">
+            <h2>Cerámica Tradicional</h2>
+            <p>
+              Obras únicas modeladas con la técnica ancestral de los alfareros
+              de Ilobasco.
+            </p>
+          </div>
+        </article>
+
+        <article class="item">
+          <img
+            src="Imagenes_Proyecto/Figuras de Barro.jpeg"
+            alt="Figuras de barro"
+          />
+          <div class="info">
+            <h2>Figuras de Barro</h2>
+            <p>
+              Pequeñas piezas que representan nuestras costumbres y tradiciones.
+            </p>
+          </div>
+        </article>
+
+        <article class="item">
+          <img
+            src="Imagenes_Proyecto/Muñecas de barro.jpeg"
+            alt="Muñecas artesanales"
+          />
+          <div class="info">
+            <h2>Muñecas Artesanales</h2>
+            <p>
+              Hechas a mano con materiales naturales, llenas de color y detalles
+              únicos.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <h2 id="TL">Descubre Más Artesanías</h2>
+
+      <section class="Carrusel-Imagenes">
+        <div class="slidesImg">
+          <div class="Img-slide" id="imagen1"></div>
+          <div class="Img-slide" id="imagen2"></div>
+          <div class="Img-slide" id="imagen3"></div>
+        </div>
+        <button class="previo">&#10094;</button>
+        <button class="siguiente">&#10095;</button>
+        <div class="Indicadores-cars">
+          <span class="dohtV1 active"></span>
+          <span class="dohtV1"></span>
+          <span class="dohtV1"></span>
+        </div>
+      </section>
+      <h2 id="TL2">Artesanías, Joyería y Arte</h2>
+
+      <section class="artesanias">
+        <article class="item">
+          <img
+            src="Imagenes_Proyecto/Joyeria_Artesanal.jpeg"
+            alt="Joyería artesanal"
+          />
+          <div class="info">
+            <h2>Joyería Artesanal</h2>
+            <p>
+              Piezas elaboradas con amor y creatividad que reflejan el alma del
+              pueblo.
+            </p>
+          </div>
+        </article>
+
+        <article class="item">
+          <img
+            src="Imagenes_Proyecto/Pintura_Ilobasco.jpeg"
+            alt="Pinturas y cuadros"
+          />
+          <div class="info">
+            <h2>Pinturas y Cuadros Artesanales</h2>
+            <p>
+              Obras coloridas inspiradas en la vida cotidiana, la naturaleza y
+              la cultura local.
+            </p>
+          </div>
+        </article>
+
+        <article class="item">
+          <img
+            src="Imagenes_Proyecto/Tazas_de_Barro.jpeg"
+            alt="Tazas y utensilios de barro"
+          />
+          <div class="info">
+            <h2>Tazas y Utensilios de Barro</h2>
+            <p>
+              Hechos con técnicas tradicionales, ideales para conservar el sabor
+              auténtico de la comida.
+            </p>
+          </div>
+        </article>
+      </section>
+
+      <!--Footer Pie de pagína-->
+
+      <div class="footer-link">
+        <section class="btn_social_sección">
+          <button>Ilobasco Travel</button>
+        </section>
+        <footer class="footer-contenedor">
+          <ul>
+            <li>
+              <a href="#"><h3>Title one</h3></a>
+            </li>
+            <li>
+              <a href="#">Blokchain</a>
+            </li>
+            <li>
+              <a href="#">Blokchain</a>
+            </li>
+            <li>
+              <a href="#">Blokchain</a>
+            </li>
+            <li>
+              <a href="#">Blokchain</a>
+            </li>
+            <li>
+              <a href="#">Blokchain</a>
+            </li>
+            <li>
+              <a href="#">Blokchain</a>
+            </li>
+          </ul>
+          <!--Footer 2-->
+          <ul>
+            <li>
+              <a href="#"><h3>Title one</h3></a>
+            </li>
+            <li>
+              <a href="#">Blokchain</a>
+            </li>
+            <li>
+              <a href="#">Blokchain</a>
+            </li>
+            <li>
+              <a href="#">Blokchain</a>
+            </li>
+            <li>
+              <a href="#">Blokchain</a>
+            </li>
+            <li>
+              <a href="#">Blokchain</a>
+            </li>
+            <li>
+              <a href="#">Blokchain</a>
+            </li>
+          </ul>
+          <!--Footer 3-->
+          <ul>
+            <li>
+              <a href="#"><h3>Title one</h3></a>
+            </li>
+            <li>
+              <a href="#">Blokchain</a>
+            </li>
+            <li>
+              <a href="#">Blokchain</a>
+            </li>
+            <li>
+              <a href="#">Blokchain</a>
+            </li>
+            <li>
+              <a href="#">Blokchain</a>
+            </li>
+            <li>
+              <a href="#">Blokchain</a>
+            </li>
+            <li>
+              <a href="#">Blokchain</a>
+            </li>
+          </ul>
+          <!--footer 4-->
+          <ul>
+            <li>
+              <a href="#"><h3>Title one</h3></a>
+            </li>
+            <li>
+              <a href="#">Blokchain</a>
+            </li>
+            <li>
+              <a href="#">Blokchain</a>
+            </li>
+            <li>
+              <a href="#">Blokchain</a>
+            </li>
+            <li>
+              <a href="#">Blokchain</a>
+            </li>
+            <li>
+              <a href="#">Blokchain</a>
+            </li>
+            <li>
+              <a href="#">Blokchain</a>
+            </li>
+          </ul>
+        </footer>
+        <!--Redes sociales-->
+        <section class="social">
+          <div class="links">
+            <a href="#"><li class="fab fa-facebook-f"></li></a>
+            <a href="#"><li class="fab fa-instagram"></li></a>
+            <a href="#"> <li class="fab fa-whatsapp"></li></a>
+          </div>
+        </section>
+        <footer class="footer">
+          <h3>Ilobasco Travel Copyright©</h3>
+        </footer>
+      </div>
+    </div>
+
+    <!-- Modal iniciar sesión -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <!-- Encabezado estilo ventana -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <img src="Imagenes_Proyecto/icono.png" alt="icono" class="icono" />
+            <span>Login</span>
+          </div>
+          <span
+            onclick="CerrarOverlay(event)"
+            onclick="cerrarModal()"
+            class="close"
+            id="closeModal"
+            >&times;</span
+          >
+        </div>
+        <section id="Inf-sesión">
+          <h3>Inicio de sesión de usuarios</h3>
+          <hr />
+
+          <p>
+            Si tienes una cuenta, inicia sesión con tu correo electrónico o
+            numero de teléfono.
+          </p>
+        </section>
+        <div class="modal-body">
+          <form>
+            <input type="text" placeholder="Usuario" required /><br />
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="password" placeholder="Contraseña" required /><br />
+            <button type="submit" class="btn-submit">Iniciar sesión</button>
+          </form>
+        </div>
+        <nav id="menu-login">
+          <div class="Vmodal-registro" onclick="abrirModal2()">
+            <p>¿No tienes cuenta?</p>
+            <h4>Crear cuenta</h4>
+          </div>
+          <ul id="VmodalHelp">
+            <p>
+              ¿Necesitas ayuda?
+              <i
+                class="fas fa-chevron-down"
+                id="chevron"
+                onclick="Chevron_down_up()"
+              ></i>
+            </p>
+          </ul>
+          <div class="loader" id="loader"></div>
+
+          <ul class="modal-sesión">
+            <li><p>Olvidades tu Contraseña</p></li>
+            <li><p>Termios y condiciones</p></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!--Registrarse-->
+    <div id="RegistroModal" class="modal-registro">
+      <div class="modal-content2">
+        <div class="modal-header2">
+          <div class="modal-title2">
+            <img src="Imagenes_Proyecto/icono.png" alt="icono" class="icono" />
+            <span>Registro</span>
+          </div>
+          <span class="closeRegistro" id="closeModal2">&times;</span>
+        </div>
+        <section id="SPA">
+          <section id="Inf-sesión2">
+            <h3>Unete a Ilobasco Travel</h3>
+            <hr />
+
+            <p>
+              Descubre lo mejor de Ilobasco. Unete a nosotros, accede a rutas
+              únicas, recomendaciones, y una experiencia completa.<br />
+            </p>
+
+            <p id="enlace_Sesion">
+              Si ya tienes una cuenta inicia sesión con tu correo electrónico.
+            </p>
+          </section>
+          <div class="modal-body-Registro">
+            <form>
+              <label for="text">Ingresa tu nombre*</label>
+              <input type="text" placeholder="Nombre" required /><br />
+              <label for="usuario">Crea un nombre de usuario*</label>
+              <input type="text" placeholder="Usuario" required /><br />
+              <label for="email">Correo electrónico*</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                required
+              /><br />
+              <label for="tel">Teléfono*</label>
+              <input
+                type="tel"
+                id="telefono"
+                pattern="[0-9]{8,15}"
+                placeholder="Teléfono"
+                required
+              /><br />
+              <label for="password">Crea una contraseña*</label><br />
+              <input type="password" placeholder="Contraseña" required /><br />
+              <button type="submit" class="btn-submit2">Aceptar</button>
+            </form>
+            <div class="loader2" id="loader2"></div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <script src="ActividadArte.js"></script>
+  </body>
+</html>
