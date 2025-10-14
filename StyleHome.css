@@ -3368,7 +3368,9 @@ ul {
     margin-left: 0;
 }
 .news-Ilobasco p {
-  padding: 4px;
+  font-size: 14px;
+  padding: 0px;
+  padding-top: 5px;
 
 }
 .news-Ilobasco div{
@@ -3401,7 +3403,7 @@ ul {
     .btnNew1{
       background: #FFD700; /* Amarillo */
       border: none;
-      margin-left:10% ;
+      margin-left:4% ;
       font-size: 11px;
       font-weight: bold;
       border-radius: 50px; /* Bordes redondeados */
@@ -3583,7 +3585,7 @@ ul {
   padding-block-end: 5px;
   
 }
-.rating1,.rating2,
+.rating,.rating2,
 .rating3,.rating4,
 .rating5,.rating6,
 .rating7,.rating8 {
@@ -3629,7 +3631,7 @@ ul {
 
 .Positionbtn2{
   margin-block: -2px;
-  margin-left: 64px;
+  margin-left: 25%;
   height: 95%;
 }
 .title_Actividades{
