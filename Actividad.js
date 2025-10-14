@@ -14,6 +14,24 @@ document.addEventListener("click", (e) => {
   }
 });
 
+//Menu de un movil
+document.addEventListener("DOMContentLoaded", () => {
+  const menuBtn = document.querySelector(".menu-btn");
+  const closeModal = document.querySelector(".closeModal");
+  const modalMenu = document.getElementById("modal-menu");
+
+  // Abrir modal
+  menuBtn.addEventListener("click", () => {
+    modalMenu.classList.add("active");
+  });
+
+  // Cerrar modal
+  closeModal.addEventListener("click", () => {
+    modalMenu.classList.remove("active");
+  });
+});
+
+
 //buscador
 
 function buscar() {
@@ -38,19 +56,19 @@ let currentIndex = 0;
 const slides = [
   {
     text: "ILOBASCO, TRADICIÓN Y NATURALEZA EN UN SOLO  LUGAR",
-    image: "IglesiaSamiguel.png"
+    image: "Imagenes_Proyecto/IglesiaSamiguel.png"
   },
   {
     text: "DESCUBRE LA CULTURA Y EL ARTE DE ILOBASCO",
-    image: "Artesanias.png"
+    image: "Imagenes_Proyecto/Artesanias.png"
   },
   {
     text: "SABORES ÚNICOS EN LA GASTRONOMÍA LOCAL",
-    image: "Gastronomia.png"
+    image: "Imagenes_Proyecto/Gastronomia.png"
   },
   {
     text: "CONOCE LOS SITIOS TURÍSTICOS MÁS EMLEMÁTICOS",
-    image: "Helicondia.png"
+    image: "Imagenes_Proyecto/Helicondia.png"
   }
 ];
 

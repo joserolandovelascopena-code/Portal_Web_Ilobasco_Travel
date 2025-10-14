@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -1333,3 +1334,1441 @@
     <script src="Actividad.js"></script>
   </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ilobasco Travel.</title>
+    <!--EStilo de la pagina css-->
+    <link rel="stylesheet" href="StyleHome.css" />
+    <!--Iconos de redes socilaes-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="Menu-movil">
+      <div class="menu-btn" onclick="abrirMenuMovil()">
+        <i class="fas fa-bars"></i>
+      </div>
+      <input type="text" id="buscador2" placeholder="Buscar..." />
+    </div>
+    <nav class="nav-main">
+      <input
+        type="text"
+        id="buscador"
+        placeholder="Buscar..."
+        onkeyup="buscar()"
+      />
+      <div id="header-movil">
+        <span class="closeMenu-movil" id="Close_memu_movil">&times;</span>
+      </div>
+
+      <ul class="nav-menu">
+        <!-- enlaces visibles -->
+        <li><a href="#">Historia</a></li>
+        <li>
+          <a
+            href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/Artesanias-.html"
+            >Artesanías</a
+          >
+        </li>
+        <li><a href="#">Cultura</a></li>
+        <li><a href="#">Comercio Local</a></li>
+        <!-- menú desplegable -->
+        <li class="dropdown">
+          <a href="#" id="verMas">Más ▾</a>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/Gastronom%C3%ADa.html"
+                >Gastronomía</a
+              >
+            </li>
+            <li><a href="#">Sitios Turísticos</a></li>
+            <li><a href="#">Festividades</a></li>
+            <li><a href="#">Hospedajes</a></li>
+            <li><a href="#">Guía práctica</a></li>
+            <li>
+              <a
+                href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/ContactoIlobascoTRV.html"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <button class="btnFooter" id="openLogin">
+            <span class="Text_btn">
+              <i class="fa-solid fa-user"></i>
+              <!-- Ícono de usuario -->
+              Iniciar sesión
+            </span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- MODAL LATERAL (SOLO PARA MÓVILES) -->
+    <div id="modal-menu">
+      <div id="header-movil">
+        <span class="closeModal" id="closeModal3">&times;</span>
+      </div>
+      <ul class="modal-nav">
+        <li>
+          <button class="btnsesión" id="openLogin">
+            <span class="Text_btn2">
+              <i class="fa-solid fa-user"></i>
+              <!-- Ícono de usuario -->
+              Iniciar sesión
+            </span>
+          </button>
+        </li>
+
+        <hr id="movil-hr2" />
+
+        <!-- copia el mismo contenido de nav-main -->
+        <li><a href="#">Historia</a></li>
+        <li><a href="#">Cultura</a></li>
+        <li>
+          <a
+            href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/Artesanias-.html"
+            >Artesanías</a
+          >
+        </li>
+        <li><a href="#">Comercio Local</a></li>
+
+        <li>
+          <a
+            href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/Gastronom%C3%ADa.html"
+            >Gastronomía</a
+          >
+        </li>
+        <li><a href="#">Sitios Turísticos</a></li>
+        <li><a href="#">Festividades</a></li>
+        <li><a href="#">Hospedajes</a></li>
+        <li><a href="#">Guía práctica</a></li>
+        <li>
+          <a
+            href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/ContactoIlobascoTRV.html"
+            >Contacto</a
+          >
+        </li>
+
+        <hr id="movil-hr2" />
+
+        <li><a href="#">Foro</a></li>
+        <li><a href="#">Comentarios</a></li>
+        <hr id="movil-hr2" />
+        <li><a href="#">Ilobasco Travel</a></li>
+        <li><a>Atención al usuario:</a></li>
+        <li id="correo"><a>joseroladovelascopeña@gmail.com</a></li>
+      </ul>
+    </div>
+
+    <div class="contenedor">
+      <main class="baner-one">
+        <main id="Title-baner">
+          <h1>ILOBASCO, TRADICIÓN Y NATURALEZA EN UN SOLO LUGAR</h1>
+        </main>
+        <div class="indicators">
+          <div class="dot active"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+          <div class="dot"></div>
+        </div>
+      </main>
+      <h1 id="TL">Ilobasco Travel.</h1>
+      <div class="news-Ilobasco">
+        <div class="animar">
+          <img
+            src="Imagenes_Proyecto/IglesiaSamiguel.png"
+            alt="Iglesia de San Miguel Arcangel"
+          />
+          <div class="Contenedor_news">
+            <h3>Ilobasco se Prepara para Celebrar a San Miguel Arcángel</h3>
+            <p>
+              En Ilobasco se acercan las festividades en honor a San Miguel
+              Arcángel, patrono del municipio. Muy pronto, las calles se
+              llenarán de fe, tradición y alegría, donde la comunidad se une
+              para rendir homenaje con procesiones.
+            </p>
+          </div>
+          <div class="Positionbtn">
+            <button class="btnNew1" onclick="nextSlide()">
+              <a href="#">CONOCE MÁS</a>
+            </button>
+          </div>
+        </div>
+        <div class="animar">
+          <img
+            src="Imagenes_Proyecto/15Septiembre.jpg"
+            alt="15 de septiembre en Ilobasco"
+          />
+          <div class="Contenedor_news">
+            <h3>Desfile de 15 septiembre</h3>
+            <p>
+              Celebrando 204 años de Independencia, los estudiantes del
+              Instituto Católico Karol Wojtyla, junto a la banda de paz y las
+              ideas que llenan de vida las calles de Ilobasco, expresaron con
+              belleza y amor su fervor hacia la patria.
+            </p>
+          </div>
+          <div class="Positionbtn">
+            <button class="btnNew1" onclick="nextSlide()">
+              <a href="#">CONOCE MÁS</a>
+            </button>
+          </div>
+        </div>
+        <div class="animar">
+          <img src="Imagenes_Proyecto/Correo.png" alt="Desfile del correo" />
+          <div class="Contenedor_news">
+            <h3>Desfile del Correo en Ilobasco</h3>
+            <p>
+              Con gran entusiasmo se llevó a cabo en Ilobasco el tradicional
+              Desfile del Correo, dando inicio oficial a las fiestas patronales
+              en honor a San Miguel Arcángel. Entre música, coloridos trajes,
+              carros alegóricos y la alegría de la comunidad.
+            </p>
+          </div>
+          <div class="Positionbtn">
+            <button class="btnNew1" onclick="nextSlide()">
+              <a href="#">CONOCE MÁS</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2 class="title_Actividades">Actividades para tí.</h2>
+    <article id="InfArtice1">
+      <div id="contenido">
+        <div class="Info-header">
+          <div class="Info-title">
+            <img
+              src="Imagenes_Proyecto/Baner2.jpg"
+              alt="icono"
+              class="icono1"
+            />
+            <span>Heliconias</span>
+          </div>
+          <span class="closeVen1" id="closeVen1">&times;</span>
+        </div>
+
+        <!-- Solo esta parte tiene scroll -->
+        <div class="scroll-area">
+          <h3 id="Title">Información sobre el sitio Turístico:</h3>
+
+          <section class="Carrusel-Imagenes">
+            <div class="slidesImg">
+              <div class="Img-slide" id="imagen1"></div>
+              <div class="Img-slide" id="imagen2"></div>
+              <div class="Img-slide" id="imagen3"></div>
+            </div>
+            <button class="previo">&#10094;</button>
+            <button class="siguiente">&#10095;</button>
+            <div class="Indicadores-cars">
+              <span class="dohtV1 active"></span>
+              <span class="dohtV1"></span>
+              <span class="dohtV1"></span>
+            </div>
+          </section>
+
+          <div class="contenido-Text">
+            <h4>Artículo</h4>
+            <hr />
+            <p>
+              Al llegar al Jardín Heliconias en Ilobasco, te recibe un arco
+              natural de follaje verde intenso. Caminas por senderos suaves y
+              serenos, bordeados de heleconias que se elevan como esculturas
+              vivas. Los colores rojos intensos, naranjas, amarillos y verdes
+              contrastan contra hojas grandes, creando un juego de luz y sombra
+              que da vida al paisaje. <br /><br />El aire huele a humedad
+              tropical, tierra y flores. Se escuchan pájaros y el murmullo de
+              ramas moviéndose con la brisa. A cada paso, descubres detalles:
+              pequeñas flores colgantes, pétalos que parecen llamar tu atención,
+              insectos que revolotean curiosos.<br /><br />
+              Las heleconias, con sus formas únicas —algunas verticales, otras
+              arqueadas como alas, otras en racimos densos— crean rincones de
+              ensueño para fotos. Hay miradores, zonas con bancas rústicas y
+              todo pensado para que tu mirada viaje de flor en flor. Es fácil
+              olvidarse del mundo exterior cuando estás allí.
+              <br /><br />Además, el lugar se define como un espacio que desea
+              “ser único” más que compararse con otros destinos naturales.<br /><br />
+              Instagram También se le ubica en tramos de carretera cercano a
+              Ilobasco: “Heliconias del Bosque: Km 53” y “Portal Jardín
+              Heliconias: Km 49 ½ carretera a Ilobasco” Instagram Se menciona
+              que funciona como un ecoparque donde familias pueden venir a
+              disfrutar naturaleza y tranquilidad.
+            </p>
+          </div>
+
+          <div class="container-ubicación">
+            <h4 class="text-Ubcación">Ubicación</h4>
+            <div class="mapa">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3874.668306532012!2d-88.86980042593486!3d13.798858196204392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f635be10049202d%3A0x72851f43bfcef102!2sPortal%20Jard%C3%ADn%20Heliconias!5e0!3m2!1ses-419!2ssv!4v1759951746748!5m2!1ses-419!2ssv"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!--Ventana 2-->
+    <article id="InfArtice2">
+      <div id="contenido2">
+        <div class="Info-header2">
+          <div class="Info-title2">
+            <img
+              src="Imagenes_Proyecto/Baner2.jpg"
+              alt="icono"
+              class="icono2"
+            />
+            <span>Santo Pecado Bistró Café</span>
+          </div>
+          <span class="closeVen2" id="closeVen2">&times;</span>
+        </div>
+
+        <!-- Solo esta parte tiene scroll -->
+        <div class="scroll-area">
+          <h3 id="Title2">Información sobre el sitio Turístico:</h3>
+
+          <section class="Carrusel-Imagenes">
+            <div class="slidesImg2">
+              <div class="Img-slide2" id="imagenV1"></div>
+              <div class="Img-slide2" id="imagenV2"></div>
+              <div class="Img-slide2" id="imagenV3"></div>
+            </div>
+            <button class="previo2">&#10094;</button>
+            <button class="siguiente2">&#10095;</button>
+            <div class="Indicadores-cars2">
+              <span class="dohtV2 active"></span>
+              <span class="dohtV2"></span>
+              <span class="dohtV2"></span>
+            </div>
+          </section>
+
+          <div class="contenido-Text2">
+            <h4>Artículo</h4>
+            <hr />
+            <h4>
+              Santo Pecado Bistro Café: Sabor, estilo y tradición en el corazón
+              de Ilobasco
+            </h4>
+            <p>
+              En el centro de Ilobasco, Cabañas, se encuentra un rincón que
+              combina el encanto local con un toque de elegancia moderna: Santo
+              Pecado Bistro Café. Más que un restaurante, este espacio se ha
+              convertido en un punto de encuentro para quienes disfrutan de la
+              buena comida, el ambiente acogedor y una atención que invita a
+              quedarse. <br /><br />
+              sobre la Avenida Carlos Bonilla Sur, Barrio El Calvario, dentro de
+              la mini plaza comercial Chávez, Santo Pecado ofrece una
+              experiencia gastronómica que mezcla lo mejor de la cocina italiana
+              y salvadoreña. Su propuesta busca resaltar los sabores
+              tradicionales con un estilo contemporáneo, creando platillos que
+              sorprenden tanto por su sabor como por su presentación.
+            </p>
+
+            <h4>Horarios y atención</h4>
+            <p>
+              Santo Pecado abre sus puertas de lunes a domingo, de 11:30 a.m. a
+              8:30 p.m., ampliando su horario los fines de semana desde las 7:30
+              a.m. para servir desayunos. El restaurante se encuentra activo en
+              redes sociales, especialmente en Instagram y Facebook, donde
+              comparten novedades, promociones y fotografías de sus platos más
+              populares.
+            </p>
+          </div>
+
+          <div class="container-ubicación">
+            <h4 class="text-Ubcación">Ubicación</h4>
+            <div class="mapa">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3873.9875048359663!2d-88.852279!3d13.8397885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f635f5144dbb4e9%3A0xab7b202382433f8e!2sSanto%20pecado%20Bistr%C3%B3%20caf%C3%A9!5e0!3m2!1ses-419!2ssv!4v1760376113694!5m2!1ses-419!2ssv"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!--Ventana 3-->
+    <article id="InfArtice3">
+      <div id="contenido3">
+        <div class="Info-header3">
+          <div class="Info-title3">
+            <img
+              src="Imagenes_Proyecto/Baner2.jpg"
+              alt="icono"
+              class="icono3"
+            />
+            <span>Estadio Municipal</span>
+          </div>
+          <span class="closeVen3" id="closeVen3">&times;</span>
+        </div>
+
+        <!-- Solo esta parte tiene scroll -->
+        <div class="scroll-area">
+          <h3 id="Title2">Información sobre el sitio Turístico:</h3>
+
+          <section class="Carrusel-Imagenes">
+            <div class="slidesImg3">
+              <div class="Img-slide3" id="imagen3V1"></div>
+              <div class="Img-slide3" id="imagen3V2"></div>
+              <div class="Img-slide3" id="imagen3V3"></div>
+            </div>
+            <button class="previo3">&#10094;</button>
+            <button class="siguiente3">&#10095;</button>
+            <div class="Indicadores-cars3">
+              <span class="dohtV3 active"></span>
+              <span class="dohtV3"></span>
+              <span class="dohtV3"></span>
+            </div>
+          </section>
+
+          <div class="contenido-Text3">
+            <h4>Artículo</h4>
+            <hr />
+            <h4>El corazón deportivo de Ilobasco</h4>
+            <p>
+              El Estadio Municipal Mauricio Vides, ubicado en la ciudad de
+              Ilobasco, Cabañas, es uno de los principales espacios deportivos
+              de la zona y un símbolo del espíritu futbolero salvadoreño.
+            </p>
+            <p>
+              Con capacidad para cientos de aficionados, este estadio es sede de
+              entrenamientos, torneos locales y encuentros oficiales, además de
+              servir como punto de reunión para la comunidad deportiva. Su campo
+              de juego y graderíos han sido escenario de grandes emociones,
+              especialmente durante los partidos del equipo local.
+            </p>
+          </div>
+
+          <div class="container-ubicación">
+            <h4 class="text-Ubcación">Ubicación</h4>
+            <div class="mapa">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3873.906522946914!2d-88.857469125934!3d13.84464929513913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f635e9786c6038f%3A0x479660c62121256d!2sEstadio%20Municipal%20%22Mauricio%20Vides%22!5e0!3m2!1ses-419!2ssv!4v1760376234224!5m2!1ses-419!2ssv"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!--Ventana 4-->
+    <article id="InfArtice4">
+      <div id="contenido4">
+        <div class="Info-header4">
+          <div class="Info-title4">
+            <img
+              src="Imagenes_Proyecto/Baner2.jpg"
+              alt="icono"
+              class="icono4"
+            />
+            <span>Casa la Hacienda</span>
+          </div>
+          <span class="closeVen4" id="closeVen4">&times;</span>
+        </div>
+
+        <!-- Solo esta parte tiene scroll -->
+        <div class="scroll-area">
+          <h3 id="Title2">Información sobre el sitio Turístico:</h3>
+
+          <section class="Carrusel-Imagenes">
+            <div class="slidesImg4">
+              <div class="Img-slide4" id="imagen4V1"></div>
+              <div class="Img-slide4" id="imagen4V2"></div>
+              <div class="Img-slide4" id="imagen4V3"></div>
+            </div>
+            <button class="previo4">&#10094;</button>
+            <button class="siguiente4">&#10095;</button>
+            <div class="Indicadores-cars4">
+              <span class="dohtV4 active"></span>
+              <span class="dohtV4"></span>
+              <span class="dohtV4"></span>
+            </div>
+          </section>
+
+          <div class="contenido-Text4">
+            <h4>Artículo</h4>
+            <hr />
+            <h4>
+              Parque Acuático La Casa de la Hacienda: Diversión y descanso en
+              Ilobasco
+            </h4>
+            <p>
+              El Parque Acuático La Casa de la Hacienda es uno de los destinos
+              más visitados en Ilobasco, Cabañas, por quienes buscan
+              refrescarse, divertirse y pasar un día inolvidable en familia.
+            </p>
+            <p>
+              Rodeado de naturaleza, este parque ofrece piscinas para todas las
+              edades, áreas verdes, toboganes, zonas de descanso y un ambiente
+              familiar perfecto para disfrutar del clima cálido de la región.Su
+              ambiente combina la comodidad de un centro recreativo moderno con
+              el encanto natural del campo salvadoreño.
+            </p>
+            <p>
+              Además de sus atractivos acuáticos, el lugar cuenta con
+              restaurante, canchas y espacios para eventos, lo que lo convierte
+              en un punto ideal para celebraciones o fines de semana de
+              relajación.
+            </p>
+            <p>
+              Visitar La Casa de la Hacienda es vivir una experiencia llena de
+              alegría, agua y naturaleza, en uno de los rincones más acogedores
+              de Ilobasco.
+            </p>
+          </div>
+
+          <div class="container-ubicación">
+            <h4 class="text-Ubcación">Ubicación</h4>
+            <div class="mapa">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3873.897653021173!2d-88.87147092593396!3d13.845181595126748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f635c219e83cc1f%3A0x65ac8752681801dc!2sLa%20Casa%20de%20La%20Hacienda!5e0!3m2!1ses-419!2ssv!4v1760376332105!5m2!1ses-419!2ssv"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!--Ventana 5-->
+    <article id="InfArtice5">
+      <div id="contenido5">
+        <div class="Info-header5">
+          <div class="Info-title5">
+            <img
+              src="Imagenes_Proyecto/Baner2.jpg"
+              alt="icono"
+              class="icono5"
+            />
+            <span>Restaurante Tiestos</span>
+          </div>
+          <span class="closeVen5" id="closeVen5">&times;</span>
+        </div>
+
+        <!-- Solo esta parte tiene scroll -->
+        <div class="scroll-area">
+          <h3 id="Title2">Información sobre el sitio Turístico:</h3>
+
+          <section class="Carrusel-Imagenes">
+            <div class="slidesImg5">
+              <div class="Img-slide5" id="imagen1V5"></div>
+              <div class="Img-slide5" id="imagen2V5"></div>
+              <div class="Img-slide5" id="imagen3V5"></div>
+            </div>
+            <button class="previo5">&#10094;</button>
+            <button class="siguiente5">&#10095;</button>
+            <div class="Indicadores-cars5">
+              <span class="dohtV5 active"></span>
+              <span class="dohtV5"></span>
+              <span class="dohtV5"></span>
+            </div>
+          </section>
+
+          <div class="contenido-Text5">
+            <h4>Artículo</h4>
+            <hr />
+            <h4>
+              Restaurante Tiestos: Tradición y sabor auténtico en Ilobasco
+            </h4>
+            <p>
+              El Restaurante Tiestos, ubicado en Ilobasco, Cabañas, es un
+              espacio donde la gastronomía salvadoreña cobra vida en cada plato.
+              Reconocido por su ambiente rústico y acogedor, este restaurante
+              ofrece una experiencia que combina sabores tradicionales con un
+              toque casero y artesanal.
+            </p>
+            <p>
+              nombre refleja el espíritu del lugar: la cocina hecha con cariño,
+              al fuego lento y servida en tiestos, como dicta la costumbre
+              salvadoreña. En su menú destacan carnes asadas, sopas típicas,
+              antojitos y bebidas naturales, elaboradas con ingredientes frescos
+              y locales.
+            </p>
+          </div>
+
+          <div class="container-ubicación">
+            <h4 class="text-Ubcación">Ubicación</h4>
+            <div class="mapa">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3873.9904604039843!2d-88.8572543296435!3d13.839611065579366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f635ebda99831a7%3A0x1859753a3e888c1e!2sTiestos%20Restaurant!5e0!3m2!1ses-419!2ssv!4v1760376438462!5m2!1ses-419!2ssv"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!--Ventana 6-->
+    <article id="InfArtice6">
+      <div id="contenido6">
+        <div class="Info-header6">
+          <div class="Info-title6">
+            <img
+              src="Imagenes_Proyecto/Baner2.jpg"
+              alt="icono"
+              class="icono6"
+            />
+            <span>Restaurante El Volado:</span>
+          </div>
+          <span class="closeVen6" id="closeVen6">&times;</span>
+        </div>
+
+        <!-- Solo esta parte tiene scroll -->
+        <div class="scroll-area">
+          <h3 id="Title2">Información sobre el sitio Turístico:</h3>
+
+          <section class="Carrusel-Imagenes">
+            <div class="slidesImg6">
+              <div class="Img-slide6" id="imagen1V6"></div>
+              <div class="Img-slide6" id="imagen2V6"></div>
+              <div class="Img-slide6" id="imagen3V6"></div>
+            </div>
+            <button class="previo6">&#10094;</button>
+            <button class="siguiente6">&#10095;</button>
+            <div class="Indicadores-cars6">
+              <span class="dohtV6 active"></span>
+              <span class="dohtV6"></span>
+              <span class="dohtV6"></span>
+            </div>
+          </section>
+
+          <div class="contenido-Text6">
+            <h4>Artículo</h4>
+            <hr />
+            <h4>
+              Restaurante El Volado: Sabor, ambiente y buena vibra en Ilobasco
+            </h4>
+            <p>
+              El Volado, ubicado en Ilobasco, Cabañas, se ha convertido en uno
+              de los lugares preferidos por quienes buscan buen sabor, ambiente
+              juvenil y un servicio cercano. Con un estilo moderno y relajado,
+              El Volado combina la comida rápida con el toque especial de la
+              cocina salvadoreña.
+            </p>
+            <p>
+              Su menú incluye hamburguesas artesanales, papas especiales,
+              alitas, bebidas frías y postres caseros, todo preparado al momento
+              y con ingredientes frescos. Es el lugar ideal para pasar un rato
+              agradable con amigos, disfrutar música y saborear algo diferente
+              en un entorno cómodo y divertido.
+            </p>
+          </div>
+
+          <div class="container-ubicación">
+            <h4 class="text-Ubcación">Ubicación</h4>
+            <div class="mapa">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3873.9729042980416!2d-88.85392122593406!3d13.840664995232018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f635f0011d9d8db%3A0x6786266410700e12!2sEl%20Volado%20Restaurante!5e0!3m2!1ses-419!2ssv!4v1760376571853!5m2!1ses-419!2ssv"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!--Ventana 7-->
+    <article id="InfArtice7">
+      <div id="contenido7">
+        <div class="Info-header7">
+          <div class="Info-title7">
+            <img
+              src="Imagenes_Proyecto/Baner2.jpg"
+              alt="icono"
+              class="icono7"
+            />
+            <span>Centro Ilobasco</span>
+          </div>
+          <span class="closeVen7" id="closeVen7">&times;</span>
+        </div>
+
+        <!-- Solo esta parte tiene scroll -->
+        <div class="scroll-area">
+          <h3 id="Title2">Información sobre el sitio Turístico:</h3>
+
+          <section class="Carrusel-Imagenes">
+            <div class="slidesImg7">
+              <div class="Img-slide7" id="imagen1V7"></div>
+              <div class="Img-slide7" id="imagen2V7"></div>
+              <div class="Img-slide7" id="imagen3V7"></div>
+            </div>
+            <button class="previo7">&#10094;</button>
+            <button class="siguiente7">&#10095;</button>
+            <div class="Indicadores-cars7">
+              <span class="dohtV7 active"></span>
+              <span class="dohtV7"></span>
+              <span class="dohtV7"></span>
+            </div>
+          </section>
+
+          <div class="contenido-Text7">
+            <h4>Artículo</h4>
+            <hr />
+            <h4>Parque Central de Ilobasco: El alma de la ciudad</h4>
+            <p>
+              El Parque Central de Ilobasco es el punto más emblemático de esta
+              ciudad en el departamento de Cabañas. Rodeado de historia,
+              comercio y cultura, el parque es un espacio donde se mezcla la
+              vida cotidiana con el encanto de la arquitectura tradicional.
+            </p>
+            <p>
+              un lugar ideal para descansar, pasear o compartir en familia,
+              rodeado de jardines, bancos sombreados y una vista directa hacia
+              la iglesia parroquial, uno de los íconos del municipio. Además, es
+              el escenario de eventos culturales, celebraciones y ferias
+              artesanales que reflejan el espíritu alegre de los ilobasquenses.
+              Visitar el Parque Central de Ilobasco es conocer el corazón vivo
+              de la ciudad, donde cada rincón cuenta una historia.
+            </p>
+          </div>
+
+          <div class="container-ubicación">
+            <h4 class="text-Ubcación">Ubicación</h4>
+            <div class="mapa">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2004.3057026434449!2d-88.85042871365802!3d13.842358105820429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f635f8e6d0a8007%3A0x47f0645532203e7f!2sParque%20Central%20Ilobasco!5e0!3m2!1ses-419!2ssv!4v1760376707104!5m2!1ses-419!2ssv"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!--Ventana 8-->
+    <article id="InfArtice8">
+      <div id="contenido8">
+        <div class="Info-header8">
+          <div class="Info-title8">
+            <img
+              src="Imagenes_Proyecto/Baner2.jpg"
+              alt="icono"
+              class="icono8"
+            />
+            <span>JoseMar Restaurante</span>
+          </div>
+          <span class="closeVen8" id="closeVen8">&times;</span>
+        </div>
+
+        <!-- Solo esta parte tiene scroll -->
+        <div class="scroll-area">
+          <h3 id="Title2">Información sobre el sitio Turístico:</h3>
+
+          <section class="Carrusel-Imagenes">
+            <div class="slidesImg8">
+              <div class="Img-slide8" id="imagen1V8"></div>
+              <div class="Img-slide8" id="imagen2V8"></div>
+              <div class="Img-slide8" id="imagen3V8"></div>
+            </div>
+            <button class="previo8">&#10094;</button>
+            <button class="siguiente8">&#10095;</button>
+            <div class="Indicadores-cars8">
+              <span class="dohtV8 active"></span>
+              <span class="dohtV8"></span>
+              <span class="dohtV8"></span>
+            </div>
+          </section>
+
+          <div class="contenido-Text8">
+            <h4>Artículo</h4>
+            <hr />
+            <h4>JoseMar Restaurante: Un rincón de sabor en Ilobasco JoseMar</h4>
+            <p>
+              Restaurante es uno de los lugares más reconocidos en Ilobasco,
+              Cabañas, por su excelente comida y ambiente familiar. Ofrece una
+              amplia variedad de platillos típicos y caseros, elaborados con
+              ingredientes frescos y con el auténtico sabor salvadoreño que
+              encanta a locales y visitantes.
+            </p>
+            <p>
+              El restaurante destaca por su atención amable, precios accesibles
+              y porciones generosas, lo que lo convierte en un sitio ideal para
+              almuerzos, cenas o reuniones familiares. Su ambiente tranquilo y
+              cómodo lo hace perfecto para disfrutar de una comida relajada en
+              el corazón de Ilobasco.
+            </p>
+          </div>
+
+          <div class="container-ubicación">
+            <h4 class="text-Ubcación">Ubicación</h4>
+            <div class="mapa">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3873.9685714134166!2d-88.8542044259341!3d13.840925095225918!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f635ebd95cf103b%3A0x3f1e7e75f3efc1de!2sRestaurante%20Josemar%20Le%20Cordon%20Bleu!5e0!3m2!1ses-419!2ssv!4v1760376893087!5m2!1ses-419!2ssv"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!--Secciones mostradada al usurio-->
+    <section class="News-Activades">
+      <div>
+        <div class="Contenedor_Actividades">
+          <div class="Imagen_contenedor">
+            <button id="Megusta" class="Megusta-btn">
+              <i class="fa fa-heart" aria-hidden="true"></i>
+            </button>
+            <img
+              src="Imagenes_Proyecto/Helicondia.png"
+              alt="Actividades de Ilobasco"
+            />
+          </div>
+          <div class="positionActividad_Text">
+            <h4>Jardín de Helicondias</h4>
+
+            <div class="calificación1">
+              <samp id="Estrellas-Megusta1">
+                <p>Calificación:</p>
+                <div class="rating1">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </samp>
+
+              <p>
+                Comentarios:
+                <samp>
+                  <a href="#"><i class="fa fa-comment"></i></a
+                ></samp>
+              </p>
+            </div>
+          </div>
+          <section id="ventanaArtice1">
+            <div class="Positionbtn2">
+              <button class="btnNew2" onclick="nextSlide()">
+                <a href="#">CONOCE MÁS</a>
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div>
+        <div class="Contenedor_Actividades">
+          <div class="Imagen_contenedor">
+            <button id="Megusta2" class="Megusta-btn">
+              <i class="fa fa-heart" aria-hidden="true"></i>
+            </button>
+            <img
+              src="Imagenes_Proyecto/CaféPecado.png"
+              alt="Actividades de Ilobasco"
+            />
+          </div>
+          <div class="positionActividad_Text">
+            <h4>Santo Pecado Bistró Café</h4>
+            <div class="calificación2">
+              <samp id="Estrellas-Megusta2">
+                <p>Calificación:</p>
+                <div class="rating2">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </samp>
+
+              <p>
+                Comentarios:
+                <samp>
+                  <a href="#"><i class="fa fa-comment"></i></a
+                ></samp>
+              </p>
+            </div>
+          </div>
+          <section id="ventanaArtice2">
+            <div class="Positionbtn2">
+              <button class="btnNew2" onclick="nextSlide()">
+                <a href="#">CONOCE MÁS</a>
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div>
+        <div class="Contenedor_Actividades">
+          <div class="Imagen_contenedor">
+            <button id="Megusta3" class="Megusta-btn">
+              <i class="fa fa-heart" aria-hidden="true"></i>
+            </button>
+            <img
+              src="Imagenes_Proyecto/Estadio.jpeg"
+              alt="Actividades de Ilobasco"
+            />
+          </div>
+          <div class="positionActividad_Text">
+            <h4>Estadio Municipal Mauricio Vides</h4>
+            <div class="calificación3">
+              <samp id="Estrellas-Megusta3">
+                <p>Calificación:</p>
+                <div class="rating3">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </samp>
+
+              <p>
+                Comentarios:
+                <samp>
+                  <a href="#"><i class="fa fa-comment"></i></a
+                ></samp>
+              </p>
+            </div>
+          </div>
+          <section id="ventanaArtice3">
+            <div class="Positionbtn2">
+              <button class="btnNew2" onclick="nextSlide()">
+                <a href="#">CONOCE MÁS</a>
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div>
+        <div class="Contenedor_Actividades">
+          <div class="Imagen_contenedor">
+            <button id="Megusta4" class="Megusta-btn">
+              <i class="fa fa-heart" aria-hidden="true"></i>
+            </button>
+            <img
+              src="Imagenes_Proyecto/casaHacienda.jpg"
+              alt="Actividades de Ilobasco"
+            />
+          </div>
+          <div class="positionActividad_Text">
+            <h4>Parque Acuático La Casa de la...</h4>
+            <div class="calificación4">
+              <samp id="Estrellas-Megusta4">
+                <p>Calificación:</p>
+                <div class="rating4">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </samp>
+
+              <p>
+                Comentarios:
+                <samp>
+                  <a href="#"><i class="fa fa-comment"></i></a
+                ></samp>
+              </p>
+            </div>
+          </div>
+          <section id="ventanaArtice4">
+            <div class="Positionbtn2">
+              <button class="btnNew2" onclick="nextSlide()">
+                <a href="#">CONOCE MÁS</a>
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div>
+        <div class="Contenedor_Actividades">
+          <div class="Imagen_contenedor">
+            <button id="Megusta5" class="Megusta-btn">
+              <i class="fa fa-heart" aria-hidden="true"></i>
+            </button>
+            <img
+              src="Imagenes_Proyecto/ComidaTiestos.jpeg"
+              alt="Actividades de Ilobasco"
+            />
+          </div>
+          <div class="positionActividad_Text">
+            <h4>Restaurante Tiestos</h4>
+            <div class="calificación5">
+              <samp id="Estrellas-Megusta5">
+                <p>Calificación:</p>
+                <div class="rating">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </samp>
+
+              <p>
+                Comentarios:
+                <samp>
+                  <a href="#"><i class="fa fa-comment"></i></a
+                ></samp>
+              </p>
+            </div>
+          </div>
+          <section id="ventanaArtice5">
+            <div class="Positionbtn2">
+              <button class="btnNew2" onclick="nextSlide()">
+                <a href="#">CONOCE MÁS</a>
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div>
+        <div class="Contenedor_Actividades">
+          <div class="Imagen_contenedor">
+            <button id="Megusta6" class="Megusta-btn">
+              <i class="fa fa-heart" aria-hidden="true"></i>
+            </button>
+            <img
+              src="Imagenes_Proyecto/El bolado.jpeg"
+              alt="Actividades de Ilobasco"
+            />
+          </div>
+          <div class="positionActividad_Text">
+            <h4>Restaurante El Volado:</h4>
+            <div class="calificación6">
+              <samp id="Estrellas-Megusta6">
+                <p>Calificación:</p>
+                <div class="rating6">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </samp>
+
+              <p>
+                Comentarios:
+                <samp>
+                  <a href="#"><i class="fa fa-comment"></i></a
+                ></samp>
+              </p>
+            </div>
+          </div>
+          <section id="ventanaArtice6">
+            <div class="Positionbtn2">
+              <button class="btnNew2" onclick="nextSlide()">
+                <a href="#">CONOCE MÁS</a>
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div>
+        <div class="Contenedor_Actividades">
+          <div class="Imagen_contenedor">
+            <button id="Megusta7" class="Megusta-btn">
+              <i class="fa fa-heart" aria-hidden="true"></i>
+            </button>
+            <img
+              src="Imagenes_Proyecto/ParceCentral.jpg"
+              alt="Actividades de Ilobasco"
+            />
+          </div>
+          <div class="positionActividad_Text">
+            <h4>Parque central de Ilobasco</h4>
+            <div class="calificación7">
+              <samp id="Estrellas-Megusta7">
+                <p>Calificación:</p>
+                <div class="rating7">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </samp>
+
+              <p>
+                Comentarios:
+                <samp>
+                  <a href="#"><i class="fa fa-comment"></i></a
+                ></samp>
+              </p>
+            </div>
+          </div>
+          <section id="ventanaArtice7">
+            <div class="Positionbtn2">
+              <button class="btnNew2" onclick="nextSlide()">
+                <a href="#">CONOCE MÁS</a>
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div>
+        <div class="Contenedor_Actividades">
+          <div class="Imagen_contenedor">
+            <button id="Megusta8" class="Megusta-btn">
+              <i class="fa fa-heart" aria-hidden="true"></i>
+            </button>
+            <img
+              src="Imagenes_Proyecto/JoseMarComida.jpeg"
+              alt="Actividades de Ilobasco"
+            />
+          </div>
+          <div class="positionActividad_Text">
+            <h4>JoseMar Restaurante</h4>
+            <div class="calificación8">
+              <samp id="Estrellas-Megusta8">
+                <p>Calificación:</p>
+                <div class="rating8">
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                  <i class="fa fa-star"></i>
+                </div>
+              </samp>
+
+              <p>
+                Comentarios:
+                <samp>
+                  <a href="#"><i class="fa fa-comment"></i></a
+                ></samp>
+              </p>
+            </div>
+          </div>
+          <section id="ventanaArtice8">
+            <div class="Positionbtn2">
+              <button class="btnNew2" onclick="nextSlide()">
+                <a href="#">CONOCE MÁS</a>
+              </button>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+    <!--Fichas-->
+
+    <h2 id="Title-1">Fichas informativas</h2>
+    <section class="contenedor_FichasIF">
+      <div class="carousel">
+        <div class="slidesh">
+          <div class="slide" id="Ficha1"></div>
+          <div class="slide" id="Ficha2"></div>
+          <div class="slide" id="Ficha3"></div>
+        </div>
+
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+
+        <div class="dotsh">
+          <span class="doth active"></span>
+          <span class="doth"></span>
+          <span class="doth"></span>
+        </div>
+      </div>
+    </section>
+    <h2 class="title_Artesanias">Artesanía Local</h2>
+    <section class="News_Artesanias">
+      <div class="header_Artesanias"></div>
+      <div class="Articulo_Artesanias">
+        <h3>"Ilobasco donde el barro se combierte en cultura"</h3>
+        <p>
+          En Ilobasco, El Salvador, el mejor lugar para encontrar artesanías es
+          en las casas, talleres y locales comerciales de los artesanos
+          distribuidos por todo el pueblo. Puedes explorar estos
+          establecimientos, ubicados también en la Avenida Carlos Bonilla en el
+          barrio El Calvario, para conocer el proceso de elaboración y adquirir
+          piezas únicas de barro, como las famosas miniaturas y nacimientos.
+        </p>
+        <div class="Text_Artesanias">
+          <button class="btnArtesanias">
+            <a
+              href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/Artesanias-.html"
+              >Artesanías</a
+            >
+          </button>
+        </div>
+      </div>
+    </section>
+    <div class="footer-link">
+      <section class="btn_social_sección">
+        <button>Ilobasco Travel</button>
+      </section>
+      <footer class="footer-contenedor">
+        <ul>
+          <li>
+            <a href="#"><h3>Title one</h3></a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+        </ul>
+        <!--Footer 2-->
+        <ul>
+          <li>
+            <a href="#"><h3>Title one</h3></a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+        </ul>
+        <!--Footer 3-->
+        <ul>
+          <li>
+            <a href="#"><h3>Title one</h3></a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+        </ul>
+        <!--footer 4-->
+        <ul>
+          <li>
+            <a href="#"><h3>Title one</h3></a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+        </ul>
+      </footer>
+      <!--Redes sociales-->
+      <section class="social">
+        <div class="links">
+          <a href="#"><li class="fab fa-facebook-f"></li></a>
+          <a href="#"><li class="fab fa-instagram"></li></a>
+          <a href="#"> <li class="fab fa-whatsapp"></li></a>
+        </div>
+      </section>
+      <footer class="footer">
+        <h3>Ilobasco Travel Copyright©</h3>
+      </footer>
+    </div>
+
+    <!-- Modal iniciar sesión -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <!-- Encabezado estilo ventana -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <img src="Imagenes_Proyecto/icono.png" alt="icono" class="icono" />
+            <span>Login</span>
+          </div>
+          <span
+            onclick="CerrarOverlay(event)"
+            onclick="cerrarModal()"
+            class="close"
+            id="closeModal"
+            >&times;</span
+          >
+        </div>
+        <section id="Inf-sesión">
+          <h3>Inicio de sesión de usuarios</h3>
+          <hr />
+
+          <p>
+            Si tienes una cuenta, inicia sesión con tu correo electrónico o
+            numero de teléfono.
+          </p>
+        </section>
+        <div class="modal-body">
+          <form>
+            <input type="text" placeholder="Usuario" required /><br />
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="password" placeholder="Contraseña" required /><br />
+            <button type="submit" class="btn-submit">Iniciar sesión</button>
+          </form>
+        </div>
+        <nav id="menu-login">
+          <div class="Vmodal-registro" onclick="abrirModal2()">
+            <p>¿No tienes cuenta?</p>
+            <h4>Crear cuenta</h4>
+          </div>
+          <ul id="VmodalHelp">
+            <p>
+              ¿Necesitas ayuda?
+              <i
+                class="fas fa-chevron-down"
+                id="chevron"
+                onclick="Chevron_down_up()"
+              ></i>
+            </p>
+          </ul>
+          <div class="loader" id="loader"></div>
+
+          <ul class="modal-sesión">
+            <li><p>Olvidades tu Contraseña</p></li>
+            <li><p>Termios y condiciones</p></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!--Registrarse-->
+    <div id="RegistroModal" class="modal-registro">
+      <div class="modal-content2">
+        <div class="modal-header2">
+          <div class="modal-title2">
+            <img src="Imagenes_Proyecto/icono.png" alt="icono" class="icono" />
+            <span>Registro</span>
+          </div>
+          <span class="closeRegistro" id="closeModal2">&times;</span>
+        </div>
+        <section id="SPA">
+          <section id="Inf-sesión2">
+            <h3>Unete a Ilobasco Travel</h3>
+            <hr />
+
+            <p>
+              Descubre lo mejor de Ilobasco. Unete a nosotros, accede a rutas
+              únicas, recomendaciones, y una experiencia completa.<br />
+            </p>
+
+            <p id="enlace_Sesion">
+              Si ya tienes una cuenta inicia sesión con tu correo electrónico.
+            </p>
+          </section>
+          <div class="modal-body-Registro">
+            <form>
+              <label for="text">Ingresa tu nombre*</label>
+              <input type="text" placeholder="Nombre" required /><br />
+              <label for="usuario">Crea un nombre de usuario*</label>
+              <input type="text" placeholder="Usuario" required /><br />
+              <label for="email">Correo electrónico*</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                required
+              /><br />
+              <label for="tel">Teléfono*</label>
+              <input
+                type="tel"
+                id="telefono"
+                pattern="[0-9]{8,15}"
+                placeholder="Teléfono"
+                required
+              /><br />
+              <label for="password">Crea una contraseña*</label><br />
+              <input type="password" placeholder="Contraseña" required /><br />
+              <button type="submit" class="btn-submit2">Aceptar</button>
+            </form>
+            <div class="loader2" id="loader2"></div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="Actividad.js"></script>
+  </body>
+</html>
+>>>>>>> 59a83acde8540f2007390694a7b2f850068fc5b4
