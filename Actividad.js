@@ -56,19 +56,19 @@ let currentIndex = 0;
 const slides = [
   {
     text: "ILOBASCO, TRADICIÓN Y NATURALEZA EN UN SOLO  LUGAR",
-    image: "IglesiaSamiguel.png"
+    image: "Imagenes_Proyecto/IglesiaSamiguel.png"
   },
   {
     text: "DESCUBRE LA CULTURA Y EL ARTE DE ILOBASCO",
-    image: "Artesanias.png"
+    image: "Imagenes_Proyecto/Artesanias.png"
   },
   {
     text: "SABORES ÚNICOS EN LA GASTRONOMÍA LOCAL",
-    image: "Gastronomia.png"
+    image: "Imagenes_Proyecto/Gastronomia.png"
   },
   {
     text: "CONOCE LOS SITIOS TURÍSTICOS MÁS EMLEMÁTICOS",
-    image: "Helicondia.png"
+    image: "Imagenes_Proyecto/Helicondia.png"
   }
 ];
 
