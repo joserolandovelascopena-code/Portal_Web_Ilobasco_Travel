@@ -3146,7 +3146,9 @@ ul {
 }
 
 
+
 /* --- BARRA SUPERIOR --- */
+
 #Menu-movil {
   position: fixed;
   top: 0;
@@ -3160,31 +3162,37 @@ ul {
   position: fixed;
 }
 .menu-btn i {
-  color: white;
+  color:#FFD700;
   font-size: 28px;
   cursor: pointer;
   position: fixed;
+  transition: transform 0.80s ease;
   top: 16px;
   left: 20px;
 }
 
 /* --- MODAL LATERAL --- */
+
 #modal-menu {
   position: fixed;
   top: 0;
-  left: -420px; /* fuera de pantalla al inicio */
+  transform: translateX(-195%); /* empieza oculto a la izquierda */
+  transition: transform 1.10s ease;
   width: 90%;
   height: 100%;
   background-color: #ffffff;
   box-shadow: -2px 0 10px rgba(0,0,0,0.3);
   z-index: 1000;
-  transition: right 0.3s ease;
   overflow-y: auto;
   padding: 20px;
 }
 
 #modal-menu.active {
-  left: 0;
+
+  transform: translateX(-92.4%); /* se desliza a la vista */
+  opacity: 1;
+  pointer-events: auto;
+
 }
 
 /* Header modal */
