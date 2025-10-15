@@ -3176,7 +3176,7 @@ ul {
 #modal-menu {
   position: fixed;
   top: 0;
-  transform: translateX(-195%); /* empieza oculto a la izquierda */
+  transform: translateX(-196%); /* empieza oculto a la izquierda */
   transition: transform 1.10s ease;
   width: 90%;
   height: 100%;
@@ -3189,7 +3189,7 @@ ul {
 
 #modal-menu.active {
 
-  transform: translateX(-92.4%); /* se desliza a la vista */
+  transform: translateX(-89.4%); /* se desliza a la vista */
   opacity: 1;
   pointer-events: auto;
 
