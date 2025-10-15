@@ -767,14 +767,16 @@ document.querySelector(".menu-btn").addEventListener("click", () => {
 });
 
 const modal = document.getElementById("loginModal");
-const openBtn = document.getElementById("openLogin");
+const openBtn = document.querySelectorAll(".openLogin");
 const closeBtn = document.getElementById("closeModal");
 const ocultarV = document.querySelector(".Vmodal-registro");
 
 
-openBtn.addEventListener("click", () => {
-  modal.classList.add("show");
-  abrirModal();
+openBtn.forEach(btn => {
+  btn.addEventListener("click", () => {
+    modal.classList.add("show");
+    abrirModal();
+  });
 });
 
 closeBtn.addEventListener("click", () => {
