@@ -2379,8 +2379,24 @@ body.modal-abierto {
 }
 /*Sección de Fichas Informativas Turisticas y logisticas*/
 #Title-1{
-  margin-left: 20px;
+   margin-top: 10px;
+  margin-left: 80px;
   color: rgb(3, 54, 38);
+  margin-block-end: 10px;
+ 
+}
+.Titulo_Fichas{
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#Imagen_Icono_Fichas i{
+  font-size: 40px;
+  color: rgb(1, 56, 39);
+  position: absolute;
+  margin-left: 0.8%;
+  margin-top: -45px;
+
 }
 .carousel {
       position: relative;
@@ -2436,7 +2452,7 @@ body.modal-abierto {
       top: 50%;
       transform: translateY(-50%);
       background: rgba(0,0,0,0.6);
-      color: white;
+      color: #FFC107;
       border: none;
       font-size: 20px;
       cursor: pointer;
@@ -3585,10 +3601,11 @@ ul {
   padding-block-end: 5px;
   
 }
-.rating,.rating2,
-.rating3,.rating4,
-.rating5,.rating6,
-.rating7,.rating8 {
+.rating, .rating1, 
+.rating2,.rating3,
+.rating4,.rating5,
+.rating6,.rating7,
+.rating8 {
   font-size: 12px;
 }
 
@@ -3646,13 +3663,24 @@ ul {
 }
 /*Sección de Fichas Informativas Turisticas y logisticas*/
 #Title-1{
-  margin-left: 20px;
-  color: rgb(3, 54, 38);
+  position: absolute;
+  margin-left: 50px;
+  color: white;
+  margin-top: 15px;
+}
+#Imagen_Icono_Fichas i{
+  font-size: 20px;
+  color: rgb(224, 253, 244);
+  position: absolute;
+  margin-left: 5%;
+  margin-top: 15px;
+
 }
 .carousel {
       position: relative;
-      width: 320px;
-      height: 430px;
+      padding-top: 15px;
+      width: 330px;
+      height: 460px;
       overflow: hidden;
       border-radius: 2px;
     }
@@ -3695,15 +3723,15 @@ ul {
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 88vh;
+      height: 540px;
       background: #272727;
     }
     .prev, .next {
       position: absolute;
-      top: 50%;
+      top: 51%;
       transform: translateY(-50%);
       background: rgba(0,0,0,0.6);
-      color: white;
+      color: #FFC107;
       border: none;
       font-size: 20px;
       cursor: pointer;
