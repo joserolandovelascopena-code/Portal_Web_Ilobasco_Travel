@@ -1355,11 +1355,11 @@
           </form>
         </div>
         <nav id="menu-login">
-          <div class="Vmodal-registro" onclick="abrirModal2()">
+          <div class="Vmodal-registro">
             <p>¿No tienes cuenta?</p>
             <h4>Crear cuenta</h4>
           </div>
-          <ul id="VmodalHelp">
+          <ul id="VmodalHelp" onclick="abrirModal2()">
             <p>
               ¿Necesitas ayuda?
               <i
@@ -1396,7 +1396,7 @@
 
             <p>
               Descubre lo mejor de Ilobasco. Unete a nosotros, accede a rutas
-              únicas, recomendaciones, y una experiencia completa.<br />
+              únicas, recomendaciones, y una experiencia completa.
             </p>
 
             <p id="enlace_Sesion">
@@ -1428,7 +1428,9 @@
               <input type="password" placeholder="Contraseña" required /><br />
               <button type="submit" class="btn-submit2">Aceptar</button>
             </form>
-            <div class="loader2" id="loader2"></div>
+            <div class="animaciónLoder">
+              <div class="loader2" id="loader2"></div>
+            </div>
           </div>
         </section>
       </div>

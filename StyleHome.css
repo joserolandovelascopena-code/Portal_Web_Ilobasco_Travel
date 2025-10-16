@@ -3176,7 +3176,7 @@ ul {
 #modal-menu {
   position: fixed;
   top: 0;
-  transform: translateX(-196%); /* empieza oculto a la izquierda */
+  transform: translateX(-200%); /* empieza oculto a la izquierda */
   transition: transform 1.10s ease;
   width: 90%;
   height: 100%;
@@ -3189,7 +3189,7 @@ ul {
 
 #modal-menu.active {
 
-  transform: translateX(-89.4%); /* se desliza a la vista */
+  transform: translateX(-98.4%); /* se desliza a la vista */
   opacity: 1;
   pointer-events: auto;
 
@@ -3365,7 +3365,7 @@ ul {
   background-color: black;
   border-radius: 38px;
   border: none;
-  margin-left: 68%;
+  margin-left: 59%;
   margin-top: 1px;
 }
  .links  a li{
@@ -3661,7 +3661,7 @@ ul {
 
 /* Contenido de la ventana */
 #contenido2 p{
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:'Inter', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 0; 
   padding: 12px; 
   flex: 1; 
@@ -3725,7 +3725,7 @@ ul {
 
 /* Contenido de la ventana */
 #contenido3 p{
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:'Inter', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 0; 
   padding: 12px; 
   flex: 1; 
@@ -3790,7 +3790,7 @@ ul {
 
 /* Contenido de la ventana */
 #contenido4 p{
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:'Inter', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 0; 
   padding: 12px; 
   flex: 1; 
@@ -3854,7 +3854,7 @@ ul {
 
 /* Contenido de la ventana */
 #contenido5 p{
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:'Inter', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 0; 
   padding: 12px; 
   flex: 1; 
@@ -3911,7 +3911,7 @@ ul {
 
 /* Contenido de la ventana */
 #contenido6 p{
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:'Inter', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 0; 
   padding: 12px; 
   flex: 1; 
@@ -3975,7 +3975,7 @@ ul {
 
 /* Contenido de la ventana */
 #contenido7 p{
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:'Inter', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 0; 
   padding: 12px; 
   flex: 1; 
@@ -4037,7 +4037,7 @@ ul {
 
 /* Contenido de la ventana */
 #contenido8 p{
-  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family:'Inter', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   margin: 0; 
   padding: 12px; 
   flex: 1; 
@@ -4302,4 +4302,173 @@ ul {
   width: 600%;
   height: 100%;
 }
+
+
+/* Barra de título estilo ventana */
+.modal-header {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 14px;
+  cursor: default;
+}
+
+#Inf-sesión{
+  margin-top: 15px;
+  margin-left: 20px;
+}
+#Inf-sesión h3{
+  padding-block-end: 8px;
+  color: rgb(34, 34, 107);
+  
+}
+#Inf-sesión p{
+  padding-top: 8px;
+  padding-block-end: 12px;
+  font-size: 14px;
+  width: 90%;
+  color: #616161;
+}
+#Inf-sesión hr{
+  max-width: 339.8px;
+}
+.Vmodal-registro{
+  display: flex;
+  gap: 5px;
+  margin-top: 6px;
+  padding-top: 10px;
+}
+
+.Vmodal-registro h4{
+  color:rgb(0, 0, 0);
+  font-weight: bold;
+  text-decoration:underline;
+}
+
+
+
+.modal-sesión{
+  width: 336px;
+}
+
+.btn-submit {
+ transition: 0.90s ease;
+}
+
+.btn-submit:hover {
+  transform: scale(1.02);
+}
+
+#SPA{
+  padding: 16px;
+}
+/* Cuerpo del modal */
+.modal-content2 {
+  background: #fff;
+  margin: 0% auto;
+  border-radius: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Cabecera del modal */
+.modal-header2 {
+  background: #e5e9f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family:'Inter',  Arial, sans-serif;
+  font-size: 14px;
+  top: 0;
+  z-index: 100;
+}
+
+
+#Inf-sesión2{
+  margin-top: 15px;
+  margin-left: 10px;
+}
+#Inf-sesión2 p{
+  width: 98%;
+  color: #616161;
+}
+#Inf-sesión2 hr{
+  max-width: 96.2%;
+}
+
+.modal-content2 h2{
+  text-align: center;
+  margin-top:15px ;
+  
+}
+
+
+.modal-header2 .icono {
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+}
+
+
+.closeRegistro:hover {
+  background: rgb(216, 6, 6);
+  color: white;
+}
+.modal-body-Registro {
+  padding-left: 1%;
+  
+}
+.modal-body-Registro label{
+  color: #000;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.modal-body-Registro input[type="text"],
+.modal-body-Registro input[type="password"], .modal-body-Registro input[type="email"], .modal-body-Registro input[type="tel"] {
+  width: 96.5%;
+  padding: 10px;
+  margin: 6px;
+  border: 1px solid #FFC107;
+  border-radius: 6px;
+}
+label{
+    font-family:'Inter',  Arial, sans-serif;
+}
+
+.btn-submit2 {
+  width: 40%;
+  background: #FFC107;
+  color: #333333;
+  border: none;
+  
+}
+
+.animaciónLoder{
+  width: 100%;
+  height: 100%;
+ 
+  z-index: 5200;
+  
+    
+}
+
+.loader2 {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #FFC107;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 15px auto;
+  display: none;
+  z-index: 800;
+  
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
 }
