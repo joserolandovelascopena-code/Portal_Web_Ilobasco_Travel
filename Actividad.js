@@ -34,35 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //buscador
 
-const BuscadoMovil = document.getElementById("Lupa-Movil"); // Asegúrate que el id coincida
-const Ventana_Buscar = document.querySelector(".Contenedor_Lupa")
-const ContenedorBuscador = document.querySelector(".search-container");
-const CerraBuscar = document.getElementById("Volver_Bsucador")
-
-BuscadoMovil.addEventListener("click", () => {
-  ContenedorBuscador.classList.add("active");
-});
-
-BuscadoMovil.addEventListener("click", () => {
-  Ventana_Buscar.classList.add("active");
-});
-
-BuscadoMovil.addEventListener("click", () => {
-  Ventana_Buscar.classList.add("active");
-});
-
-CerraBuscar.addEventListener("click", () => {
-  Ventana_Buscar.classList.remove("active");
-});
-
-CerraBuscar.addEventListener("click", () => {
-  ContenedorBuscador.classList.remove("active");
-});
-
-
-
-
-
 const data = [
         {
           name: "Artesanías de Ilobasco",
@@ -109,6 +80,7 @@ const data = [
   } else {
     SculercerFondo.classList.remove("active"); 
   }
+
 });
 
 // Si el usuario sale del input, quita la clase
@@ -157,6 +129,37 @@ SculercerFondo.addEventListener("focus", () => {
 
         suggestionsBox.style.display = "block";
       });
+
+
+/*Buscador Movil */
+const BuscadoMovil = document.getElementById("Lupa-Movil"); // Asegúrate que el id coincida
+const Ventana_Buscar = document.querySelector(".Contenedor_Lupa")
+const ContenedorBuscador = document.querySelector(".search-container");
+const CerraBuscar = document.getElementById("Volver_Bsucador")
+
+BuscadoMovil.addEventListener("click", () => {
+  ContenedorBuscador.classList.add("active");
+});
+
+BuscadoMovil.addEventListener("click", () => {
+  Ventana_Buscar.classList.add("active");
+});
+
+BuscadoMovil.addEventListener("click", () => {
+  Ventana_Buscar.classList.add("active");
+});
+
+CerraBuscar.addEventListener("click", () => {
+  Ventana_Buscar.classList.remove("active");
+});
+
+CerraBuscar.addEventListener("click", () => {
+  ContenedorBuscador.classList.remove("active");
+});
+
+CerraBuscar.addEventListener("click", () => {
+  SculercerFondo.classList.remove("active");
+});
 
 //header imagenes
 

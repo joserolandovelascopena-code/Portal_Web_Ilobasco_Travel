@@ -16,31 +16,39 @@
   </head>
 
   <body>
-    <div>
+    <div class="EsculecerSearch"></div>
+    <div id="Menu-movil">
       <div class="menu-btn" onclick="abrirMenuMovil()">
         <i class="fas fa-bars"></i>
       </div>
     </div>
-    <nav class="nav-main">
+    <div class="search-container">
       <input
         type="text"
-        id="buscador"
+        id="search-input"
         placeholder="Buscar..."
-        onkeyup="buscar()"
+        autocomplete="off"
       />
+      <div id="suggestions"></div>
+    </div>
+    <div class="Contenedor_Lupa">
+      <h4>Busca en IloTravel</h4>
+      <i class="fas fa-arrow-left" id="Volver_Bsucador"></i>
+      <hr />
+    </div>
+    <i class="fas fa-search" id="Lupa-Movil"></i>
+
+    <nav class="nav-main">
       <div id="header-movil">
         <span class="closeMenu-movil" id="Close_memu_movil">&times;</span>
       </div>
 
       <ul class="nav-menu">
         <!-- enlaces visibles -->
-        <li>
-          <a
-            href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/index.html"
-            >Home</a
-          >
-        </li>
         <li><a href="#">Historia</a></li>
+        <li>
+          <a href="Artesanias-.html">Artesanías</a>
+        </li>
         <li><a href="#">Cultura</a></li>
         <li><a href="#">Comercio Local</a></li>
         <!-- menú desplegable -->
@@ -48,26 +56,20 @@
           <a href="#" id="verMas">Más ▾</a>
           <ul class="dropdown-menu">
             <li>
-              <a
-                href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/Gastronom%C3%ADa.html"
-                >Gastronomía</a
-              >
+              <a href="Gastronomía.html">Gastronomía</a>
             </li>
             <li><a href="#">Sitios Turísticos</a></li>
             <li><a href="#">Festividades</a></li>
             <li><a href="#">Hospedajes</a></li>
             <li><a href="#">Guía práctica</a></li>
             <li>
-              <a
-                href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/ContactoIlobascoTRV.html"
-                >Contacto</a
-              >
+              <a href="ContactoIlobascoTRV.html">Contacto</a>
             </li>
           </ul>
         </li>
 
         <li>
-          <button class="btnFooter" id="openLogin">
+          <button class="btnFooter openLogin">
             <span class="Text_btn">
               <i class="fa-solid fa-user"></i>
               <!-- Ícono de usuario -->
@@ -77,6 +79,64 @@
         </li>
       </ul>
     </nav>
+
+    <!-- MODAL LATERAL (SOLO PARA MÓVILES) -->
+    <div id="modal-menu">
+      <div id="header-movil">
+        <span class="closeModal" id="closeModal3">&times;</span>
+      </div>
+      <ul class="modal-nav">
+        <li>
+          <button class="btnsesión openLogin">
+            <span class="Text_btn2">
+              <i class="fa-solid fa-user"></i>
+              <!-- Ícono de usuario -->
+              Iniciar sesión
+            </span>
+          </button>
+        </li>
+
+        <hr id="movil-hr2" />
+
+        <!-- copia el mismo contenido de nav-main -->
+        <li><a href="#">Historia</a></li>
+        <li><a href="#">Cultura</a></li>
+        <li>
+          <a
+            href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/Artesanias-.html"
+            >Artesanías</a
+          >
+        </li>
+        <li><a href="#">Comercio Local</a></li>
+
+        <li>
+          <a
+            href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/Gastronom%C3%ADa.html"
+            >Gastronomía</a
+          >
+        </li>
+        <li><a href="#">Sitios Turísticos</a></li>
+        <li><a href="#">Festividades</a></li>
+        <li><a href="#">Hospedajes</a></li>
+        <li><a href="#">Guía práctica</a></li>
+        <li>
+          <a
+            href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/ContactoIlobascoTRV.html"
+            >Contacto</a
+          >
+        </li>
+
+        <hr id="movil-hr2" />
+
+        <li><a href="#">Foro</a></li>
+        <li><a href="#">Comentarios</a></li>
+        <hr id="movil-hr2" />
+        <li><a href="#">Ilobasco Travel</a></li>
+        <li><a>Atención al usuario:</a></li>
+        <li id="correo"><a>joseroladovelascopeña@gmail.com</a></li>
+      </ul>
+    </div>
+
     <div>
       <header class="hero">
         <div id="Title-baner">
@@ -88,11 +148,17 @@
       <section class="info-box">
         <h2>Tradición y Arte que Trasciende Generaciones</h2>
         <p>
-          En Ilobasco, cada artesanía cuenta una historia. Las manos de los
-          artesanos transforman el barro, los pigmentos y la creatividad en
-          obras únicas que reflejan la identidad cultural salvadoreña. Estas
-          piezas no solo son decorativas, sino también parte de nuestras raíces
-          y costumbres.
+          La historia de las artesanías en Ilobasco, El Salvador, se remonta al
+          menos al siglo XVIII, consolidándose como un centro de cerámica de
+          renombre gracias a una tradición que se ha transmitido de generación
+          en generación. Esta herencia se mantiene viva a través de familias y
+          artesanos que han perfeccionado técnicas como las miniaturas,
+          popularizadas por figuras pioneras y ahora un símbolo icónico del
+          pueblo. <br /><br />En Ilobasco, cada artesanía cuenta una historia.
+          Las manos de los artesanos transforman el barro, los pigmentos y la
+          creatividad en obras únicas que reflejan la identidad cultural
+          salvadoreña. Estas piezas no solo son decorativas, sino también parte
+          de nuestras raíces y costumbres.
         </p>
       </section>
 
