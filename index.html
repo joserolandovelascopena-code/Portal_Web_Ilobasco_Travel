@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ilobasco Travel.</title>
+    <meta
+      name="description"
+      content="Descubre Ilobasco Travel, el portal de turismo local de Ilobasco, Cabañas. 
+      Encuentra atractivos turísticos, eventos, gastronomía, Fichas, Ubicación de destinos, para planificar tu viaje y disfrutar al máximo la cultura y tradiciones de Ilobasco."
+    />
+    <meta
+      name="keywords"
+      content="Turismo, Ilbasco, Artesanías, Cabañas, Cabañas Oeste, portal web, Turismo local, barro, Iglesia de Sanmiguel Arcangel, Barro, La ciudad del barro, El Salvador"
+    />
+    <meta name="author" content="Ilobasco Travel, José Rolando, Flor Stefany" />
     <!--EStilo de la pagina css-->
     <link rel="stylesheet" href="StyleHome.css" />
     <!--Iconos de redes socilaes-->
@@ -22,19 +32,29 @@
     />
   </head>
   <body>
+    <div class="EsculecerSearch"></div>
     <div id="Menu-movil">
       <div class="menu-btn" onclick="abrirMenuMovil()">
         <i class="fas fa-bars"></i>
       </div>
-      <input type="text" id="buscador2" placeholder="Buscar..." />
     </div>
-    <nav class="nav-main">
+    <div class="search-container">
       <input
         type="text"
-        id="buscador"
+        id="search-input"
         placeholder="Buscar..."
-        onkeyup="buscar()"
+        autocomplete="off"
       />
+      <div id="suggestions"></div>
+    </div>
+    <div class="Contenedor_Lupa">
+      <h4>Busca en IloTravel</h4>
+      <i class="fas fa-arrow-left" id="Volver_Bsucador"></i>
+      <hr />
+    </div>
+    <i class="fas fa-search" id="Lupa-Movil"></i>
+
+    <nav class="nav-main">
       <div id="header-movil">
         <span class="closeMenu-movil" id="Close_memu_movil">&times;</span>
       </div>

@@ -1,107 +1,139 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Buscador Moderno</title>
     <style>
-      @keyframes aparecer {
-        from {
-          opacity: 0;
-          transform: translateY(20px); /* empieza más abajo */
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0); /* posición final */
-        }
+      .search-container {
+        position: relative;
+        max-width: 350px;
+        margin: 0 auto;
       }
 
-      .texto {
-        opacity: 0;
-        animation: aparecer 0.8s ease forwards;
-        /* forwards mantiene el estado final */
-      }
-
-      form {
-        display: block;
-        padding: 10px;
-        background-color: aliceblue;
-        width: 400px;
-        border-radius: 10px;
-      }
-      input {
-        padding: 10px;
-        margin: 4px;
-        width: 92%;
-        border-radius: 10px;
-        border: 2px solid rgb(0, 124, 128);
-      }
-
-      button {
-        background-color: blueviolet;
-        color: white;
-        border: none;
-        padding: 5px;
-        font-size: 13px;
-        border-radius: 10px;
-        width: 70%;
-        margin-left: 50px;
-        margin-top: 10px;
-      }
-
-      #modal {
-        position: fixed;
-        top: 0;
-        left: 0;
+      #search-input {
         width: 100%;
-        height: 100%;
-        background: rgba(0, 0, 0, 0.5);
-
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s ease;
+        padding: 12px 16px;
+        border: none;
+        border-radius: 25px;
+        background: #1e293b;
+        color: #fff;
+        font-size: 15px;
+        outline: none;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
       }
 
-      #modal.activo {
-        opacity: 1;
-        pointer-events: auto;
+      #search-input::placeholder {
+        color: #9ca3af;
       }
 
-      #contenido {
-        padding: 20px;
-        border-radius: 10px;
-        transform: translateY(-100px);
-        transition: transform 0.4s ease;
+      #suggestions {
+        position: absolute;
+        top: 110%;
+        left: 0;
+        right: 0;
+        background: #1e293b;
+        border-radius: 15px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        display: none;
+        z-index: 10;
       }
 
-      #modal.activo #contenido {
-        transform: translateY(0); /* baja suavemente */
+      .suggestion {
+        display: flex;
+        align-items: center;
+        padding: 10px;
+        gap: 10px;
+        cursor: pointer;
+        transition: background 0.3s;
+      }
+
+      .suggestion:hover {
+        background: #334155;
+      }
+
+      .suggestion img {
+        width: 45px;
+        height: 45px;
+        border-radius: 8px;
+        object-fit: cover;
       }
     </style>
   </head>
   <body>
-    <button id="AbrirModal">Animación</button>
-    <form id="modal">
-      <div id="contenido">
-        <input type="text" placeholder="Usuario" required /><br />
-        <input type="email" id="email" placeholder="Email" required /><br />
-        <input type="password" placeholder="Contraseña" required /><br />
-        <button type="submit" class="btn-submit">Iniciar sesión</button>
-        <button id="CerrarModal">Cerrar modal</button>
-      </div>
-    </form>
-    <h3 class="texto">Chachito Feliz</h3>
+    <div class="search-container">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Buscar..."
+        autocomplete="off"
+      />
+      <div id="suggestions"></div>
+    </div>
+
     <script>
-      const modal = document.getElementById("modal");
-      const btnAbrir = document.getElementById("AbrirModal");
-      const btnCerrar = document.getElementById("CerrarModal");
+      const data = [
+        {
+          name: "Artesanías de Ilobasco",
+          img: "Imagenes_Proyecto/Artesanias.png",
+          url: "file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/Artesanias-.html",
+        },
+        {
+          name: "Anctividades",
+          img: "Imagenes_Proyecto/CasaHacienda.jpg",
+          url: "gastronomia.html",
+        },
+        {
+          name: "Lugares turísticos",
+          img: "img/lugares.jpg",
+          url: "lugares.html",
+        },
+        {
+          name: "Hoteles y hospedajes",
+          img: "img/hoteles.jpg",
+          url: "hoteles.html",
+        },
+        {
+          name: "Eventos locales",
+          img: "img/eventos.jpg",
+          url: "eventos.html",
+        },
+      ];
 
-      btnAbrir.addEventListener("click", () => {
-        modal.classList.add("activo");
-      });
+      const searchInput = document.getElementById("search-input");
+      const suggestionsBox = document.getElementById("suggestions");
 
-      btnCerrar.addEventListener("click", () => {
-        modal.classList.remove("activo");
+      searchInput.addEventListener("keyup", () => {
+        const query = searchInput.value.toLowerCase();
+        suggestionsBox.innerHTML = "";
+
+        if (query.trim() === "") {
+          suggestionsBox.style.display = "none";
+          return;
+        }
+
+        const filtered = data.filter((item) =>
+          item.name.toLowerCase().includes(query)
+        );
+
+        if (filtered.length === 0) {
+          suggestionsBox.style.display = "none";
+          return;
+        }
+
+        filtered.forEach((item) => {
+          const div = document.createElement("div");
+          div.classList.add("suggestion");
+          div.innerHTML = `<img src="${item.img}" alt="${item.name}"><span>${item.name}</span>`;
+
+          div.onclick = () => {
+            window.location.href = item.url; // lleva al usuario a la página
+          };
+
+          suggestionsBox.appendChild(div);
+        });
+
+        suggestionsBox.style.display = "block";
       });
     </script>
   </body>

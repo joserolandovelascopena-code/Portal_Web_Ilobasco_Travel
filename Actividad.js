@@ -34,20 +34,129 @@ document.addEventListener("DOMContentLoaded", () => {
 
 //buscador
 
-function buscar() {
-  let input = document.getElementById("buscador").value.toLowerCase();
-  let secciones = document.querySelectorAll(".seccion");
+const BuscadoMovil = document.getElementById("Lupa-Movil"); // Asegúrate que el id coincida
+const Ventana_Buscar = document.querySelector(".Contenedor_Lupa")
+const ContenedorBuscador = document.querySelector(".search-container");
+const CerraBuscar = document.getElementById("Volver_Bsucador")
 
-  secciones.forEach(seccion => {
-    let texto = seccion.innerText.toLowerCase();
-    if (texto.includes(input)) {
-      seccion.style.display = "block";
-    } else {
-      seccion.style.display = "none"; 
-    }
-  });
-}
+BuscadoMovil.addEventListener("click", () => {
+  ContenedorBuscador.classList.add("active");
+});
 
+BuscadoMovil.addEventListener("click", () => {
+  Ventana_Buscar.classList.add("active");
+});
+
+BuscadoMovil.addEventListener("click", () => {
+  Ventana_Buscar.classList.add("active");
+});
+
+CerraBuscar.addEventListener("click", () => {
+  Ventana_Buscar.classList.remove("active");
+});
+
+CerraBuscar.addEventListener("click", () => {
+  ContenedorBuscador.classList.remove("active");
+});
+
+
+
+
+
+const data = [
+        {
+          name: "Artesanías de Ilobasco",
+          img: "Imagenes_Proyecto/Artesanias.png",
+          url: "file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/Artesanias-.html",
+        },
+        {
+          name: "Actividades",
+          img: "Imagenes_Proyecto/CasaHacienda.jpg",
+          url: "gastronomia.html",
+        },
+        {
+          name: "Lugares turísticos",
+          img: "Imagenes_Proyecto/Helicondia.png",
+          url: "lugares.html",
+        },
+        {
+          name: "Fichas Informativas",
+          img: "Imagenes_Proyecto/Tiestos.png",
+          url: "hoteles.html",
+        },
+        {
+          name: "Contacto",
+          img: "Imagenes_Proyecto/Contacto-Busqueda.jpg",
+          url: "eventos.html",
+        },
+        {
+          name: "Comida Local",
+          img: "Imagenes_Proyecto/Pupusas-Busqueda.png",
+          url: "eventos.html",
+        },
+      ];
+
+  const searchInput = document.getElementById("search-input");
+  const suggestionsBox = document.getElementById("suggestions");
+  const SculercerFondo = document.querySelector(".EsculecerSearch")
+
+
+  searchInput.addEventListener("input", () => {
+  const query = searchInput.value.trim();
+
+  if (query !== "") {
+    SculercerFondo.classList.add("active"); 
+  } else {
+    SculercerFondo.classList.remove("active"); 
+  }
+});
+
+// Si el usuario sale del input, quita la clase
+SculercerFondo.addEventListener("blur", () => {
+  SculercerFondo.classList.remove("active");
+});
+
+// Si vuelve a entrar y hay texto, reactiva la clase
+SculercerFondo.addEventListener("focus", () => {
+  if (SculercerFondo.value.trim() !== "") {
+    SculercerFondo.classList.add("active");
+  }
+});
+
+
+      searchInput.addEventListener("keyup", () => {
+        const query = searchInput.value.toLowerCase();
+        suggestionsBox.innerHTML = "";
+
+
+        if (query.trim() === "") {
+          suggestionsBox.style.display = "none";
+          return;
+        }
+
+        const filtered = data.filter((item) =>
+          item.name.toLowerCase().includes(query)
+        );
+
+        if (filtered.length === 0) {
+          suggestionsBox.style.display = "none";
+          return;
+        }
+
+        filtered.forEach((item) => {
+          const div = document.createElement("div");
+          div.classList.add("suggestion");
+          div.innerHTML = `<img src="${item.img}" alt="${item.name}"><span>${item.name}</span>`;
+
+          div.onclick = () => {
+            window.location.href = item.url; // lleva al usuario a la página
+          };
+
+          suggestionsBox.appendChild(div);
+        });
+
+        suggestionsBox.style.display = "block";
+      });
 
 //header imagenes
 
