@@ -263,9 +263,9 @@ ul {
 .news-Ilobasco{
     border-radius: 10px;
     padding: 10px;
-    display: grid; /* es para el funionamiento de grid-template-columns*/
-    grid-template-columns: 1fr 1fr 1fr; /* es el numero de columnas de las seciones de cada noticia*/
-    gap: 1px; /* es un espaciado interno*/
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    gap: 1px; 
     margin: 80px 0;
 }
 .news-Ilobasco img{
@@ -298,13 +298,13 @@ ul {
  padding: 15px 40px;
  font-size: 15px;
  font-weight: bold;
- border-radius: 50px; /* Bordes redondeados */
+ border-radius: 50px; 
  cursor: pointer;
  transition: 0.3s;
 }
 
     .btn:hover {
-      background: #FFC107; /* Un amarillo más oscuro al pasar el mouse */
+      background: #FFC107; 
       transform: scale(1.05);
     }
 
@@ -326,17 +326,17 @@ ul {
     }
 
     .active {
-      background: #FFD700; /* Amarillo cuando está activo */
+      background: #FFD700; 
       opacity: 1;
     }
 
     .btnNew1{
-      background: #FFD700; /* Amarillo */
+      background: #FFD700; 
       border: none;
       padding: 15px 40px;
       font-size: 11px;
       font-weight: bold;
-      border-radius: 50px; /* Bordes redondeados */
+      border-radius: 50px; 
       cursor: pointer;
       transition: 0.3s;
       
@@ -3569,7 +3569,7 @@ ul {
 }
 /* Baner cars imagenes */
 .baner-one {
-  margin-top: 60px ;
+  margin-top: 56px ;
   background: url(Imagenes_Proyecto/IglesiaSamiguel.png) no-repeat center/cover ;
   height: 410px;
   width: 100%;

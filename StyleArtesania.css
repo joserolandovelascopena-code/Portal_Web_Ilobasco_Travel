@@ -251,51 +251,107 @@ ul {
       position: relative;
       width: 90%;
       margin: 10px;
-      height: 485px;
+      height: 490px;
       margin-left: 66px;
       border-radius: 8px;
       overflow: hidden;
+      
     }
 
-    /* Mantener tu tamaño de imagen */
     .Carrusel-Imagenes img {
       width: 100%;
       height: 260px;
       border-radius: 8px;
+      transition: opacity 6s ease-in-out, background-image 6.5s ease-in-out;
     }
 
     /* Slides en fila */
     .slidesImg {
       display: flex;
-      transition: transform 0.5s ease-in-out;
       width: 100%;
       height: 100%;
+      
+    }
+    .slidesImg {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      
     }
 
     .Img-slide {
       min-width: 100%;
       height: 100%;
+      transition: transform 0.5s ease-in-out; /* ya existente */
+      
     }
+    
+
+    .Img-slide.show {
+     animation: smoothFade 0.6s ease-in-out;
+     }
 
      #imagen1{
-      background: url(Imagenes_Proyecto/Cuesto\ artesanal.jpeg);
+      background-image: url(Imagenes_Proyecto/Cuesto\ artesanal.jpeg);
       background-size: cover;
       background-position: center;
       
+      
     }
     #imagen2{
-      background: url(Imagenes_Proyecto/Decoradores.jpeg);
+      background-image: url(Imagenes_Proyecto/Decoradores.jpeg);
       background-size: cover;
       background-position: center;
       
     }
     #imagen3{
-      background: url(Imagenes_Proyecto/Figuras\ Virgen\ de\ Fatima.jpeg);
+      background-image: url(Imagenes_Proyecto/Figuras\ Virgen\ de\ Fatima.jpeg);
       background-size: cover;
       background-position: center;
       
     }
-
+    #imagen4{
+      background-image: url(Imagenes_Proyecto/Maceta_Barro.jpeg);
+      background-size: cover;
+      background-position: center;
+      
+    }
+    #imagen5{
+      background-image: url(Imagenes_Proyecto/Testil.jpeg);
+      background-size: cover;
+      background-position: center;
+      
+    }
+     #imagen6{
+      background-image: url(Imagenes_Proyecto/Artesania\ figuras.jpeg);
+      background-size: cover;
+      background-position: center;
+      
+    }
+     #imagen7{
+      background-image: url(Imagenes_Proyecto/Porrones.jpeg);
+      background-size: cover;
+      background-position: center;
+      
+    }
+     #imagen8{
+      background-image: url(Imagenes_Proyecto/Figurs\ de\ Jesus\ y\ María.jpeg);
+      background-size: cover;
+      background-position: center;
+      
+    }
+     #imagen9{
+      background-image: url(Imagenes_Proyecto/FotoArt1.jpeg);
+      background-size: cover;
+      background-position: center;
+      
+    }
+     #imagen10{
+      background-image: url(Imagenes_Proyecto/Joyeria\ artesanal.jpeg);
+      background-size: cover;
+      background-position: center;
+      
+    }
     /* Botones */
     .previo, .siguiente {
       position: absolute;
@@ -333,12 +389,17 @@ ul {
       background: #FFC107;
     }
 
-@keyframes slide {
-  0%, 25% { transform: translateX(0); }
-  30%, 55% { transform: translateX(-100%); }
-  60%, 85% { transform: translateX(-200%); }
-  90%, 100% { transform: translateX(0); }
+@keyframes smoothFade {
+  from {
+    
+    transform: scale(1.05);
+  }
+  to {
+    
+    transform: scale(1);
+  }
 }
+
 
 /*Cuadro informativo*/
 .info-box {
@@ -1365,16 +1426,23 @@ ul {
     /* Slides en fila */
     .slidesImg {
       display: flex;
-      transition: transform 0.5s ease-in-out;
+      
       width: 100%;
       height: 100%;
     }
 
+    
     .Img-slide {
       min-width: 100%;
       height: 100%;
+      transition: transform 0.5s ease-in-out; 
+      
     }
+    
 
+    .Img-slide.show {
+     animation: smoothFade 0.6s ease-in-out;
+     }
      #imagen1{
       background: url(Imagenes_Proyecto/Pintura\ Ilobasco.jpeg);
       background-size: cover;
@@ -1472,13 +1540,6 @@ ul {
       background: #FFC107;
     }
 
-@keyframes slide {
-  0%, 25% { transform: translateX(0); }
-  30%, 55% { transform: translateX(-100%); }
-  60%, 85% { transform: translateX(-200%); }
-  90%, 100% { transform: translateX(0); }
-}
-
 
 /* Botón de Iniciar sesión */
 .btnsesión{
@@ -1549,5 +1610,197 @@ ul {
         color:#ffffff;
 
     }
+
+
+    /*Login*/
+
+.modal-content {
+  background: #fff;
+  margin: 0% auto;
+  border-radius: 0px;
+  height: 100%;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  
+}
+
+.modal-content2 {
+  background: #fff;
+  margin: 0% auto;
+  border-radius: 0px;
+  width: 600%;
+  height: 100%;
+}
+
+
+/* Barra de título estilo ventana */
+.modal-header {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 14px;
+  cursor: default;
+}
+
+#Inf-sesión{
+  margin-top: 15px;
+  margin-left: 20px;
+}
+#Inf-sesión h3{
+  padding-block-end: 8px;
+  color: rgb(34, 34, 107);
+  
+}
+#Inf-sesión p{
+  padding-top: 8px;
+  padding-block-end: 12px;
+  font-size: 14px;
+  width: 90%;
+  color: #616161;
+}
+#Inf-sesión hr{
+  max-width: 339.8px;
+}
+.Vmodal-registro{
+  display: flex;
+  gap: 5px;
+  margin-top: 6px;
+  padding-top: 10px;
+}
+
+.Vmodal-registro h4{
+  color:rgb(0, 0, 0);
+  font-weight: bold;
+  text-decoration:underline;
+}
+
+
+
+.modal-sesión{
+  width: 336px;
+}
+
+.btn-submit {
+ transition: 0.90s ease;
+}
+
+.btn-submit:hover {
+  transform: scale(1.02);
+}
+
+#SPA{
+  padding: 16px;
+}
+/* Cuerpo del modal */
+.modal-content2 {
+  background: #fff;
+  margin: 0% auto;
+  border-radius: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Cabecera del modal */
+.modal-header2 {
+  background: #e5e9f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family:'Inter',  Arial, sans-serif;
+  font-size: 14px;
+  top: 0;
+  z-index: 100;
+}
+
+
+#Inf-sesión2{
+  margin-top: 15px;
+  margin-left: 10px;
+}
+#Inf-sesión2 p{
+  width: 98%;
+  color: #616161;
+}
+#Inf-sesión2 hr{
+  max-width: 96.2%;
+}
+
+.modal-content2 h2{
+  text-align: center;
+  margin-top:15px ;
+  
+}
+
+
+.modal-header2 .icono {
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+}
+
+
+.closeRegistro:hover {
+  background: rgb(216, 6, 6);
+  color: white;
+}
+.modal-body-Registro {
+  padding-left: 1%;
+  
+}
+.modal-body-Registro label{
+  color: #000;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.modal-body-Registro input[type="text"],
+.modal-body-Registro input[type="password"], .modal-body-Registro input[type="email"], .modal-body-Registro input[type="tel"] {
+  width: 96.5%;
+  padding: 10px;
+  margin: 6px;
+  border: 1px solid #FFC107;
+  border-radius: 6px;
+}
+label{
+    font-family:'Inter',  Arial, sans-serif;
+}
+
+.btn-submit2 {
+  width: 40%;
+  background: #FFC107;
+  color: #333333;
+  border: none;
+  
+}
+
+.animaciónLoder{
+  width: 100%;
+  height: 100%;
+ 
+  z-index: 5200;
+  
+    
+}
+
+.loader2 {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #FFC107;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 15px auto;
+  display: none;
+  z-index: 800;
+  
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+
 }
 

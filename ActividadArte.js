@@ -197,6 +197,27 @@ document.addEventListener("DOMContentLoaded", () => {
       mostrarSlide(index);
     });
   });
+
+function mostrarSlide(i) {
+  if (i >= totalSlides) index = 0;
+  if (i < 0) index = totalSlides - 1;
+
+  slides.style.transform = `translateX(-${index * 100}%)`;
+
+  // animación en la imagen actual
+  slideItems.forEach((slide, idx) => {
+    slide.classList.remove("show"); // quitar animación de todas
+    if (idx === index) {
+      void slide.offsetWidth; // reinicia la animación
+      slide.classList.add("show"); // agregar animación a la actual
+    }
+  });
+
+  dots.forEach(dot => dot.classList.remove("active"));
+  dots[index].classList.add("active");
+}
+
+
 });
 
 
