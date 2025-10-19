@@ -91,7 +91,7 @@ p{
         width: 390px;
         margin-top: -50px;
         margin-left: 160px;
-        z-index: 1040;
+        z-index: 1100;
 
       }
       
@@ -120,7 +120,6 @@ p{
         border-radius: 15px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         display: none;
-    
         z-index: 1100;
       }
 
@@ -415,7 +414,7 @@ ul {
 #InfArtice1 {
   position: fixed;
   inset: 0;
-  z-index: 1000;
+  z-index:1200;
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   pointer-events: none;
@@ -642,7 +641,7 @@ body.modal-abierto {
 #InfArtice2 {
   position: fixed;
   inset: 0;
-  z-index: 1000;
+  z-index:1200;
   background: rgba(0, 0, 0, 0.5);
   opacity: 0;
   pointer-events: none;
@@ -892,7 +891,7 @@ body.modal-abierto {
 
 #InfArtice3 {
   position: fixed;
-  z-index: 1000;
+  z-index:1200;
   left: 0;
   top: 0;
   width: 100%;
@@ -1102,7 +1101,7 @@ body.modal-abierto {
 
 #InfArtice4 {
   position: fixed;
-  z-index: 1000;
+  z-index:1200;
   left: 0;
   top: 0;
   width: 100%;
@@ -1311,7 +1310,7 @@ body.modal-abierto {
 
 #InfArtice5 {
   position: fixed;
-  z-index: 1000;
+  z-index:1200;
   left: 0;
   top: 0;
   width: 100%;
@@ -1520,7 +1519,7 @@ body.modal-abierto {
 
 #InfArtice6 {
   position: fixed;
-  z-index: 1000;
+  z-index:1200;
   left: 0;
   top: 0;
   width: 100%;
@@ -1728,7 +1727,7 @@ body.modal-abierto {
 
 #InfArtice7 {
   position: fixed;
-  z-index: 1000;
+  z-index:1200;
   left: 0;
   top: 0;
   width: 100%;
@@ -1937,7 +1936,7 @@ body.modal-abierto {
 
 #InfArtice8 {
   position: fixed;
-  z-index: 1000;
+  z-index:1200;
   left: 0;
   top: 0;
   width: 100%;
@@ -2719,7 +2718,7 @@ text-decoration: none;
 .modal {
   display: none;
   position: fixed;
-  z-index: 1002;
+  z-index: 1102;
   left: 0;
   top: 0;
   width: 100%;
@@ -2924,7 +2923,7 @@ text-decoration: none;
 .modal-registro {
   display: none;
   position: fixed;
-  z-index: 1000;
+   z-index: 1102;
   left: 0;
   top: 0;
   width: 100%;
@@ -3252,7 +3251,7 @@ ul {
   cursor: pointer;
   position: fixed;
   transition: transform 0.80s ease;
-  top: 14px;
+  top: 16px;
   left: 20px;
 }
 
@@ -3570,7 +3569,7 @@ ul {
 }
 /* Baner cars imagenes */
 .baner-one {
-  margin-top: 56px ;
+  margin-top: 60px ;
   background: url(Imagenes_Proyecto/IglesiaSamiguel.png) no-repeat center/cover ;
   height: 410px;
   width: 100%;

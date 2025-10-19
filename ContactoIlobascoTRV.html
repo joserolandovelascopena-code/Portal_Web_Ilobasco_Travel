@@ -9,19 +9,43 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
-    <!--Menú Bar-->
-    <nav class="nav-main">
+    <div class="EsculecerSearch"></div>
+    <div id="Menu-movil">
+      <div class="menu-btn" onclick="abrirMenuMovil()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+    <div class="search-container">
       <input
         type="text"
-        id="buscador"
+        id="search-input"
         placeholder="Buscar..."
-        onkeyup="buscar()"
+        autocomplete="off"
       />
-      <ul class="nav-menu">
-        <!-- buscador -->
+      <div id="suggestions"></div>
+    </div>
+    <div class="Contenedor_Lupa">
+      <h4>Busca en IloTravel</h4>
+      <i class="fas fa-arrow-left" id="Volver_Bsucador"></i>
+      <hr />
+    </div>
+    <i class="fas fa-search" id="Lupa-Movil"></i>
+    <nav class="nav-main">
+      <div id="header-movil">
+        <span class="closeMenu-movil" id="Close_memu_movil">&times;</span>
+      </div>
 
+      <ul class="nav-menu">
         <!-- enlaces visibles -->
         <li>
           <a
@@ -30,10 +54,11 @@
           >
         </li>
         <li><a href="#">Historia</a></li>
-        <li><a href="#">Cultura</a></li>
-        <li><a href="#">Artesanías</a></li>
-        <li><a href="#">Comercio Local</a></li>
+        <li>
+          <a href="Artesanias-.html">Artesanías</a>
+        </li>
 
+        <li><a href="#">Comercio Local</a></li>
         <!-- menú desplegable -->
         <li class="dropdown">
           <a href="#" id="verMas">Más ▾</a>
@@ -44,18 +69,74 @@
                 >Gastronomía</a
               >
             </li>
+            <li><a href="#">Cultura</a></li>
             <li><a href="#">Sitios Turísticos</a></li>
             <li><a href="#">Festividades</a></li>
-            <li><a href="#">Fichas</a></li>
+            <li><a href="#">Hospedajes</a></li>
             <li><a href="#">Guía práctica</a></li>
           </ul>
         </li>
 
-        <div class="menu-btn">
-          <i class="fas fa-bars"></i>
-        </div>
+        <li>
+          <button class="btnFooter openLogin">
+            <span class="Text_btn">
+              <i class="fa-solid fa-user"></i>
+              <!-- Ícono de usuario -->
+              Iniciar sesión
+            </span>
+          </button>
+        </li>
       </ul>
     </nav>
+
+    <!-- MODAL LATERAL (SOLO PARA MÓVILES) -->
+    <div id="modal-menu">
+      <div id="header-movil">
+        <span class="closeModal" id="closeModal3">&times;</span>
+      </div>
+      <ul class="modal-nav">
+        <li>
+          <button class="btnsesión openLogin">
+            <span class="Text_btn2">
+              <i class="fa-solid fa-user"></i>
+              <!-- Ícono de usuario -->
+              Iniciar sesión
+            </span>
+          </button>
+        </li>
+
+        <hr id="movil-hr2" />
+
+        <!-- copia el mismo contenido de nav-main -->
+        <li><a href="#">Historia</a></li>
+        <li><a href="#">Cultura</a></li>
+        <li>
+          <a href="Artesanias-.html">Artesanías</a>
+        </li>
+        <li><a href="#">Comercio Local</a></li>
+
+        <li>
+          <a href="Gastronomía.html">Gastronomía</a>
+        </li>
+        <li><a href="#">Sitios Turísticos</a></li>
+        <li><a href="#">Festividades</a></li>
+        <li><a href="#">Hospedajes</a></li>
+        <li><a href="#">Guía práctica</a></li>
+        <li>
+          <a href="ContactoIlobascoTRV.html">Contacto</a>
+        </li>
+
+        <hr id="movil-hr2" />
+
+        <li><a href="#">Foro</a></li>
+        <li><a href="#">Comentarios</a></li>
+        <hr id="movil-hr2" />
+        <li><a href="#">Ilobasco Travel</a></li>
+        <li><a>Atención al usuario:</a></li>
+        <li id="correo"><a>joseroladovelascopeña@gmail.com</a></li>
+      </ul>
+    </div>
+
     <div class="ContenedorContacto">
       <hr class="Menu_line" />
       <section id="contacto">
@@ -129,7 +210,7 @@
             <div class="Stylebutton">
               <div class="line-left"></div>
               <button class="btnNew2" onclick="nextSlide()">
-                <a href="#">MÁS INFORMACIÓN</a>
+                <a href="#">Más Información</a>
               </button>
             </div>
           </div>
@@ -154,7 +235,7 @@
             <div class="Stylebutton">
               <div class="line-left"></div>
               <button class="btnNew2" onclick="nextSlide()">
-                <a href="#">MÁS INFORMACIÓN</a>
+                <a href="#">Más Información</a>
               </button>
             </div>
           </div>
@@ -183,101 +264,103 @@
             <div class="Stylebutton">
               <div class="line-left"></div>
               <button class="btnNew2" onclick="nextSlide()">
-                <a href="#">MÁS INFORMACIÓN</a>
+                <a href="#">Más Información</a>
               </button>
             </div>
           </div>
         </div>
       </section>
+
       <!--Sección de Restaruantes socios-->
       <section class="Contenedor-Resturuantes">
-        <h2 class="Title-Artices2">Contacto Restaruntes</h2>
-        <article class="Artice2">
-          <div class="Contenido">
-            <div>
-              <img
-                src="Imagenes_Proyecto/Baner.jpg"
-                alt="Actividades de Ilobasco"
-              />
-            </div>
-            <div class="positionContact_Text2">
-              <h3>Contacto</h3>
-              <h4>Hotel El Paraíso</h4>
-              <p>Telefono: 📞 2222-3333</p>
-              <p>Email: ✉️ hotel@paraiso.com</p>
-              <a href="#"> Facebook:</a>
-              <li class="fab fa-facebook-f" id="PositionICO"></li>
+        <h2 class="Title-Artices2">Contacto Restaurantes</h2>
 
-              <a href="#"> Ubicación:</a>
-              <li class="fas fa-map-marker-alt" id="PositionICO"></li>
-            </div>
-            <div class="Stylebutton2">
-              <button class="btnRestarua" onclick="nextSlide()">
-                <a href="#">MÁS INFORMACIÓN</a>
-              </button>
-            </div>
-          </div>
-          <div class="Contenido">
-            <div>
-              <img
-                src="Imagenes_Proyecto/Baner.jpg"
-                alt="Actividades de Ilobasco"
-              />
-            </div>
-            <div class="positionContact_Text2">
-              <h3>Contacto</h3>
-              <h4>Hotel El Paraíso</h4>
-              <p>Telefono: 📞 2222-3333</p>
-              <p>Email: ✉️ hotel@paraiso.com</p>
-              <a href="#"> Facebook:</a>
-              <li class="fab fa-facebook-f" id="PositionICO"></li>
+        <div class="carousel-container">
+          <button class="prev" onclick="prevSlide()">&#10094;</button>
 
-              <a href="#"> Ubicación:</a>
-              <li class="fas fa-map-marker-alt" id="PositionICO"></li>
+          <article class="Artice2">
+            <div class="Contenido">
+              <div>
+                <img
+                  src="Imagenes_Proyecto/Baner.jpg"
+                  alt="Actividades de Ilobasco"
+                />
+              </div>
+              <div class="positionContact_Text2">
+                <h3>Contacto</h3>
+                <h4>Hotel El Paraíso</h4>
+                <p>Telefono: 📞 2222-3333</p>
+                <p>Email: ✉️ hotel@paraiso.com</p>
+                <a href="#">Facebook:</a>
+                <li class="fab fa-facebook-f" id="PositionICO"></li>
+                <a href="#">Ubicación:</a>
+                <li class="fas fa-map-marker-alt" id="PositionICO"></li>
+              </div>
+              <div class="Stylebutton2">
+                <button class="btnRestarua">Más Información</button>
+              </div>
             </div>
-            <div class="Stylebutton2">
-              <button class="btnRestarua" onclick="nextSlide()">
-                <a href="#">MÁS INFORMACIÓN</a>
-              </button>
-            </div>
-          </div>
-          <div class="Contenido">
-            <div>
-              <img
-                src="Imagenes_Proyecto/Baner.jpg"
-                alt="Actividades de Ilobasco"
-              />
-            </div>
-            <div class="positionContact_Text2">
-              <h3>Contacto</h3>
-              <h4>Hotel El Paraíso</h4>
-              <p>Telefono: 📞 2222-3333</p>
-              <p>Email: ✉️ hotel@paraiso.com</p>
-              <a href="#"> Facebook:</a>
-              <li class="fab fa-facebook-f" id="PositionICO"></li>
 
-              <a href="#"> Ubicación:</a>
-              <li class="fas fa-map-marker-alt" id="PositionICO"></li>
+            <div class="Contenido">
+              <div>
+                <img
+                  src="Imagenes_Proyecto/Baner.jpg"
+                  alt="Actividades de Ilobasco"
+                />
+              </div>
+              <div class="positionContact_Text2">
+                <h3>Contacto</h3>
+                <h4>Restaurante La Hacienda</h4>
+                <p>Telefono: 📞 7777-8888</p>
+                <p>Email: ✉️ hacienda@correo.com</p>
+                <a href="#">Facebook:</a>
+                <li class="fab fa-facebook-f" id="PositionICO"></li>
+                <a href="#">Ubicación:</a>
+                <li class="fas fa-map-marker-alt" id="PositionICO"></li>
+              </div>
+              <div class="Stylebutton2">
+                <button class="btnRestarua">Más Información</button>
+              </div>
             </div>
-            <div class="Stylebutton2">
-              <button class="btnRestarua" onclick="nextSlide()">
-                <a href="#">MÁS INFORMACIÓN</a>
-              </button>
+
+            <div class="Contenido">
+              <div>
+                <img
+                  src="Imagenes_Proyecto/Baner.jpg"
+                  alt="Actividades de Ilobasco"
+                />
+              </div>
+              <div class="positionContact_Text2">
+                <h3>Contacto</h3>
+                <h4>Café Central</h4>
+                <p>Telefono: 📞 9999-0000</p>
+                <p>Email: ✉️ cafe@central.com</p>
+                <a href="#">Facebook:</a>
+                <li class="fab fa-facebook-f" id="PositionICO"></li>
+                <a href="#">Ubicación:</a>
+                <li class="fas fa-map-marker-alt" id="PositionICO"></li>
+              </div>
+              <div class="Stylebutton2">
+                <button class="btnRestarua">Más Información</button>
+              </div>
             </div>
-          </div>
-        </article>
+          </article>
+
+          <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
       </section>
+
       <h2 class="title-art">Contacto de locales de Artesanía</h2>
       <section class="Contenedor-Artesanía">
         <div class="contenido-Art">
           <div class="Articulo-imagen">
-            <img src="Imagenes_Proyecto/Baner2.jpg" alt="" />
+            <img src="Imagenes_Proyecto/Contacto_Artesanias2.jpeg" alt="" />
           </div>
           <div class="Articulo-Art">
             <h3>Contacto</h3>
-            <h4>Hotel El Paraíso</h4>
+            <h4>El Arte de mi Pueblo</h4>
             <p>Telefono: 📞 2222-3333</p>
-            <p>Email: ✉️ hotel@paraiso.com</p>
+            <p>Email: ✉️ artemipublo@.com</p>
             <a href="#"> Facebook:</a>
             <li class="fab fa-facebook-f" id="PositionICO"></li>
 
@@ -287,13 +370,13 @@
         </div>
         <div class="contenido-Art">
           <div class="Articulo-imagen">
-            <img src="Imagenes_Proyecto/Baner2.jpg" alt="" />
+            <img src="Imagenes_Proyecto/Contacto_Artesanias1.jpeg" alt="" />
           </div>
           <div class="Articulo-Art">
             <h3>Contacto</h3>
-            <h4>Hotel El Paraíso</h4>
+            <h4>HyPer Craft</h4>
             <p>Telefono: 📞 2222-3333</p>
-            <p>Email: ✉️ hotel@paraiso.com</p>
+            <p>Email: ✉️ hypercraft@.com</p>
             <a href="#"> Facebook:</a>
             <li class="fab fa-facebook-f" id="PositionICO"></li>
 
@@ -303,18 +386,9 @@
         </div>
       </section>
     </div>
-
     <div class="footer-link">
       <section class="btn_social_sección">
-        <div class="btn_Position">
-          <button class="btnFooter">
-            <span class="Text_btn">
-              <i class="fa-solid fa-user"></i>
-              <!-- Ícono de usuario -->
-              <a href="#">LOGIN</a>
-            </span>
-          </button>
-        </div>
+        <button>Ilobasco Travel</button>
       </section>
       <footer class="footer-contenedor">
         <ul>
@@ -364,6 +438,7 @@
             <a href="#">Blokchain</a>
           </li>
         </ul>
+
         <!--Footer 3-->
         <ul>
           <li>
@@ -422,8 +497,124 @@
         </div>
       </section>
       <footer class="footer">
-        <h3>El sitio Tec Copyright ©</h3>
+        <h3>Ilobasco Travel Copyright©</h3>
       </footer>
+    </div>
+
+    <!-- Modal iniciar sesión -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <!-- Encabezado estilo ventana -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <img src="Imagenes_Proyecto/icono.png" alt="icono" class="icono" />
+            <span>Login</span>
+          </div>
+          <span
+            onclick="CerrarOverlay(event)"
+            onclick="cerrarModal()"
+            class="close"
+            id="closeModal"
+            >&times;</span
+          >
+        </div>
+        <section id="Inf-sesión">
+          <h3>Inicio de sesión de usuarios</h3>
+          <hr />
+
+          <p>
+            Si tienes una cuenta, inicia sesión con tu correo electrónico o
+            numero de teléfono.
+          </p>
+        </section>
+        <div class="modal-body">
+          <form>
+            <input type="text" placeholder="Usuario" required /><br />
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="password" placeholder="Contraseña" required /><br />
+            <button type="submit" class="btn-submit">Iniciar sesión</button>
+          </form>
+        </div>
+        <nav id="menu-login">
+          <div class="Vmodal-registro">
+            <p>¿No tienes cuenta?</p>
+            <h4>Crear cuenta</h4>
+          </div>
+          <ul id="VmodalHelp" onclick="abrirModal2()">
+            <p>
+              ¿Necesitas ayuda?
+              <i
+                class="fas fa-chevron-down"
+                id="chevron"
+                onclick="Chevron_down_up()"
+              ></i>
+            </p>
+          </ul>
+          <div class="loader" id="loader"></div>
+
+          <ul class="modal-sesión">
+            <li><p>Olvidades tu Contraseña</p></li>
+            <li><p>Termios y condiciones</p></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!--Registrarse-->
+    <div id="RegistroModal" class="modal-registro">
+      <div class="modal-content2">
+        <div class="modal-header2">
+          <div class="modal-title2">
+            <img src="Imagenes_Proyecto/icono.png" alt="icono" class="icono" />
+            <span>Registro</span>
+          </div>
+          <span class="closeRegistro" id="closeModal2">&times;</span>
+        </div>
+        <section id="SPA">
+          <section id="Inf-sesión2">
+            <h3>Unete a Ilobasco Travel</h3>
+            <hr />
+
+            <p>
+              Descubre lo mejor de Ilobasco. Unete a nosotros, accede a rutas
+              únicas, recomendaciones, y una experiencia completa.
+            </p>
+
+            <p id="enlace_Sesion">
+              Si ya tienes una cuenta inicia sesión con tu correo electrónico.
+            </p>
+          </section>
+          <div class="modal-body-Registro">
+            <form>
+              <label for="text">Ingresa tu nombre*</label>
+              <input type="text" placeholder="Nombre" required /><br />
+              <label for="usuario">Crea un nombre de usuario*</label>
+              <input type="text" placeholder="Usuario" required /><br />
+              <label for="email">Correo electrónico*</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                required
+              /><br />
+              <label for="tel">Teléfono*</label>
+              <input
+                type="tel"
+                id="telefono"
+                pattern="[0-9]{8,15}"
+                placeholder="Teléfono"
+                required
+              /><br />
+              <label for="password">Crea una contraseña*</label><br />
+              <input type="password" placeholder="Contraseña" required /><br />
+              <button type="submit" class="btn-submit2">Aceptar</button>
+            </form>
+            <div class="animaciónLoder">
+              <div class="loader2" id="loader2"></div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
     <script src="ActividadContac.js"></script>
   </body>

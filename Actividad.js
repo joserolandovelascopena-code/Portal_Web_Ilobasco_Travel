@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const data = [
         {
           name: "Artesanías de Ilobasco",
-          img: "Imagenes_Proyecto/Artesanias.png",
+          img: "Imagenes_Proyecto/Figuras\ de\ Barro.jpeg",
           url: "file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/Artesanias-.html",
         },
         {

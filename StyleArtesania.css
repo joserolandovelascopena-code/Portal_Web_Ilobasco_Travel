@@ -1376,7 +1376,7 @@ ul {
     }
 
      #imagen1{
-      background: url(Imagenes_Proyecto/Cuesto\ artesanal.jpeg);
+      background: url(Imagenes_Proyecto/Pintura\ Ilobasco.jpeg);
       background-size: cover;
       background-position: center;
       
@@ -1388,12 +1388,53 @@ ul {
       
     }
     #imagen3{
-      background: url(Imagenes_Proyecto/Figuras\ Virgen\ de\ Fatima.jpeg);
+      background: url(Imagenes_Proyecto/Ollas_barro.jpeg);
       background-size: cover;
       background-position: center;
       
     }
-
+    #imagen4{
+      background: url(Imagenes_Proyecto/Maceta_Barro.jpeg);
+      background-size: cover;
+      background-position: center;
+      
+    }
+    #imagen5{
+      background: url(Imagenes_Proyecto/Testil.jpeg);
+      background-size: cover;
+      background-position: center;
+      
+    }
+     #imagen6{
+      background: url(Imagenes_Proyecto/Artesania\ figuras.jpeg);
+      background-size: cover;
+      background-position: center;
+      
+    }
+     #imagen7{
+      background: url(Imagenes_Proyecto/Porrones.jpeg);
+      background-size: cover;
+      background-position: center;
+      
+    }
+     #imagen8{
+      background: url(Imagenes_Proyecto/Figurs\ de\ Jesus\ y\ María.jpeg);
+      background-size: cover;
+      background-position: center;
+      
+    }
+     #imagen9{
+      background: url(Imagenes_Proyecto/FotoArt1.jpeg);
+      background-size: cover;
+      background-position: center;
+      
+    }
+     #imagen10{
+      background: url(Imagenes_Proyecto/Joyeria\ artesanal.jpeg);
+      background-size: cover;
+      background-position: center;
+      
+    }
     /* Botones */
     .previo, .siguiente {
       position: absolute;
