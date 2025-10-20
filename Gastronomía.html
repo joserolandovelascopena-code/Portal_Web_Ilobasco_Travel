@@ -11,40 +11,57 @@
     />
   </head>
   <body>
+    <section id="Caja-container">
+      <div class="EsculecerSearch"></div>
+      <div id="Menu-movil">
+        <div class="menu-btn" onclick="abrirMenuMovil()">
+          <i class="fas fa-bars"></i>
+        </div>
+      </div>
+      <div class="search-container">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Buscar..."
+          autocomplete="off"
+        />
+        <div id="suggestions"></div>
+      </div>
+    </section>
+    <div class="Contenedor_Lupa">
+      <h4>Busca en IloTravel</h4>
+      <i class="fas fa-arrow-left" id="Volver_Bsucador"></i>
+      <hr />
+    </div>
+    <i class="fas fa-search" id="Lupa-Movil"></i>
+
     <nav class="nav-main">
-      <!-- buscador -->
-      <input
-        type="text"
-        id="buscador"
-        placeholder="Buscar..."
-        onkeyup="buscar()"
-      />
+      <div id="header-movil">
+        <span class="closeMenu-movil" id="Close_memu_movil">&times;</span>
+      </div>
+
       <ul class="nav-menu">
         <!-- enlaces visibles -->
-        <li>
-          <a
-            href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/index.html"
-            >Home</a
-          >
-        </li>
         <li><a href="#">Historia</a></li>
-        <li><a href="#">Cultura</a></li>
         <li>
-          <a
-            href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/Artesanias-.html"
-            >Artesanías</a
-          >
+          <a href="Artesanias-.html">Artesanías</a>
         </li>
-        <li><a href="#">Comercio local</a></li>
-
+        <li><a href="#">Cultura</a></li>
+        <li><a href="#">Comercio Local</a></li>
         <!-- menú desplegable -->
         <li class="dropdown">
           <a href="#" id="verMas">Más ▾</a>
           <ul class="dropdown-menu">
-            <li><a href="#">Sitios turísticos</a></li>
+            <li>
+              <a
+                href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/Gastronom%C3%ADa.html"
+                >Gastronomía</a
+              >
+            </li>
+            <li><a href="#">Sitios Turísticos</a></li>
             <li><a href="#">Festividades</a></li>
-            <li><a href="#">Hospedaje</a></li>
-            <li><a href="#">Guía practica</a></li>
+            <li><a href="#">Hospedajes</a></li>
+            <li><a href="#">Guía práctica</a></li>
             <li>
               <a
                 href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/ContactoIlobascoTRV.html"
@@ -54,13 +71,83 @@
           </ul>
         </li>
 
-        <div class="menu-btn">
-          <i class="fas fa-bars"></i>
-        </div>
+        <li>
+          <button class="btnFooter openLogin">
+            <span class="Text_btn">
+              <i class="fa-solid fa-user"></i>
+              <!-- Ícono de usuario -->
+              Iniciar sesión
+            </span>
+          </button>
+        </li>
       </ul>
     </nav>
+
+    <!-- MODAL LATERAL (SOLO PARA MÓVILES) -->
+    <div id="modal-menu">
+      <div id="header-movil">
+        <span class="closeModal" id="closeModal3">&times;</span>
+      </div>
+      <ul class="modal-nav">
+        <li>
+          <button class="btnsesión openLogin">
+            <span class="Text_btn2">
+              <i class="fa-solid fa-user"></i>
+              <!-- Ícono de usuario -->
+              Iniciar sesión
+            </span>
+          </button>
+        </li>
+
+        <hr id="movil-hr2" />
+
+        <!-- copia el mismo contenido de nav-main -->
+        <li><a href="#">Historia</a></li>
+        <li><a href="#">Cultura</a></li>
+        <li>
+          <a href="Artesanias-.html">Artesanías</a>
+        </li>
+        <li><a href="#">Comercio Local</a></li>
+
+        <li>
+          <a href="Gastronomía.html">Gastronomía</a>
+        </li>
+        <li><a href="#">Sitios Turísticos</a></li>
+        <li><a href="#">Festividades</a></li>
+        <li><a href="#">Hospedajes</a></li>
+        <li><a href="#">Guía práctica</a></li>
+        <li>
+          <a href="ContactoIlobascoTRV.html">Contacto</a>
+        </li>
+
+        <hr id="movil-hr2" />
+
+        <li><a href="#">Foro</a></li>
+        <li><a href="#">Comentarios</a></li>
+        <hr id="movil-hr2" />
+        <li><a href="#">Ilobasco Travel</a></li>
+        <li><a>Atención al usuario:</a></li>
+        <li id="correo"><a>joseroladovelascopeña@gmail.com</a></li>
+      </ul>
+    </div>
+
     <div class="Contenedorgastronomico">
-      <hr class="line-menu" />
+      <main class="Carrusel_Inf">
+        <section class="Articulos-gastronomicos">
+          <div class="Articulo c1"><h4>Hola</h4></div>
+          <div class="Articulo c2"><h4>Segundo</h4></div>
+          <div class="Articulo c3"><h4>Tercero</h4></div>
+          <div class="Articulo c4"><h4>Cuarto</h4></div>
+          <div class="Articulo c5"><h4>Quinto</h4></div>
+          <div class="Articulo c2"><h4>Segundo</h4></div>
+          <div class="Articulo c3"><h4>Tercero</h4></div>
+          <div class="Articulo c4"><h4>Cuarto</h4></div>
+          <div class="Articulo c5"><h4>Quinto</h4></div>
+        </section>
+
+        <button class="previo">&#10094;</button>
+        <button class="siguiente">&#10095;</button>
+      </main>
       <h2 class="title-ilobasco">Gastronomia</h2>
       <section class="news-gastronomia">
         <div id="Seccion">
@@ -126,7 +213,7 @@
             </button>
           </div>
         </div>
-        <div id="Seccion">
+        <div id="Seccion" class="seccion2-1">
           <img src="Imagenes_Proyecto/Gastronomia.png" alt="imagen comida" />
           <div class="contenedor-gastronomia">
             <h3>Pupusas</h3>
@@ -142,7 +229,8 @@
             </button>
           </div>
         </div>
-        <div id="Seccion">
+
+        <div id="Seccion" class="seccion2-2">
           <img src="Imagenes_Proyecto/polloGisa.png" alt="imagen comida" />
           <div class="contenedor-gastronomia">
             <h3>Pollo Guisado</h3>
@@ -160,17 +248,10 @@
         </div>
       </section>
     </div>
+
     <div class="footer-link">
       <section class="btn_social_sección">
-        <div class="btn_Position">
-          <button class="btnFooter">
-            <span class="Text_btn">
-              <i class="fa-solid fa-user"></i>
-              <!-- Ícono de usuario -->
-              <a href="#">LOGIN</a>
-            </span>
-          </button>
-        </div>
+        <button>Ilobasco Travel</button>
       </section>
       <footer class="footer-contenedor">
         <ul>
@@ -220,6 +301,7 @@
             <a href="#">Blokchain</a>
           </li>
         </ul>
+
         <!--Footer 3-->
         <ul>
           <li>
@@ -278,8 +360,124 @@
         </div>
       </section>
       <footer class="footer">
-        <h3>El sitio Tec Copyright ©</h3>
+        <h3>Ilobasco Travel Copyright©</h3>
       </footer>
+    </div>
+
+    <!-- Modal iniciar sesión -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <!-- Encabezado estilo ventana -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <img src="Imagenes_Proyecto/icono.png" alt="icono" class="icono" />
+            <span>Login</span>
+          </div>
+          <span
+            onclick="CerrarOverlay(event)"
+            onclick="cerrarModal()"
+            class="close"
+            id="closeModal"
+            >&times;</span
+          >
+        </div>
+        <section id="Inf-sesión">
+          <h3>Inicio de sesión de usuarios</h3>
+          <hr />
+
+          <p>
+            Si tienes una cuenta, inicia sesión con tu correo electrónico o
+            numero de teléfono.
+          </p>
+        </section>
+        <div class="modal-body">
+          <form>
+            <input type="text" placeholder="Usuario" required /><br />
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="password" placeholder="Contraseña" required /><br />
+            <button type="submit" class="btn-submit">Iniciar sesión</button>
+          </form>
+        </div>
+        <nav id="menu-login">
+          <div class="Vmodal-registro">
+            <p>¿No tienes cuenta?</p>
+            <h4>Crear cuenta</h4>
+          </div>
+          <ul id="VmodalHelp" onclick="abrirModal2()">
+            <p>
+              ¿Necesitas ayuda?
+              <i
+                class="fas fa-chevron-down"
+                id="chevron"
+                onclick="Chevron_down_up()"
+              ></i>
+            </p>
+          </ul>
+          <div class="loader" id="loader"></div>
+
+          <ul class="modal-sesión">
+            <li><p>Olvidades tu Contraseña</p></li>
+            <li><p>Termios y condiciones</p></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!--Registrarse-->
+    <div id="RegistroModal" class="modal-registro">
+      <div class="modal-content2">
+        <div class="modal-header2">
+          <div class="modal-title2">
+            <img src="Imagenes_Proyecto/icono.png" alt="icono" class="icono" />
+            <span>Registro</span>
+          </div>
+          <span class="closeRegistro" id="closeModal2">&times;</span>
+        </div>
+        <section id="SPA">
+          <section id="Inf-sesión2">
+            <h3>Unete a Ilobasco Travel</h3>
+            <hr />
+
+            <p>
+              Descubre lo mejor de Ilobasco. Unete a nosotros, accede a rutas
+              únicas, recomendaciones, y una experiencia completa.
+            </p>
+
+            <p id="enlace_Sesion">
+              Si ya tienes una cuenta inicia sesión con tu correo electrónico.
+            </p>
+          </section>
+          <div class="modal-body-Registro">
+            <form>
+              <label for="text">Ingresa tu nombre*</label>
+              <input type="text" placeholder="Nombre" required /><br />
+              <label for="usuario">Crea un nombre de usuario*</label>
+              <input type="text" placeholder="Usuario" required /><br />
+              <label for="email">Correo electrónico*</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                required
+              /><br />
+              <label for="tel">Teléfono*</label>
+              <input
+                type="tel"
+                id="telefono"
+                pattern="[0-9]{8,15}"
+                placeholder="Teléfono"
+                required
+              /><br />
+              <label for="password">Crea una contraseña*</label><br />
+              <input type="password" placeholder="Contraseña" required /><br />
+              <button type="submit" class="btn-submit2">Aceptar</button>
+            </form>
+            <div class="animaciónLoder">
+              <div class="loader2" id="loader2"></div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
     <script src="ActividaGastrono.js"></script>
   </body>
