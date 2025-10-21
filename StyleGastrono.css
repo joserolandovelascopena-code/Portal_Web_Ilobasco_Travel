@@ -233,9 +233,8 @@ ul {
 /*noticias gastronomicas*/
 .Carrusel_Inf {
   height: 380px;
-  margin: 8% 1.5% 0% 1.5%;
-  background: white;
-  position: relative;
+  margin: 8% 1% 0% 1%;
+  background: transparent;
   overflow: hidden; /* Oculta lo que se sale del contenedor */
   border-radius: 15px;
 }
@@ -261,20 +260,129 @@ ul {
   display: flex;
   transition: transform 0.6s ease;
   width: max-content; /* Se ajusta al número total de artículos */
+ 
 }
 
 .Articulo {
-  flex: 0 0 calc( 50% - 0px); /* 🔹 4 artículos por vista */
+  width: 625px;
   margin: 5px;
-  height: 380px;
-  background-color: #084d68;
+  height: 370px;
+  background-color: white;
   border-radius: 15px;
   color: white;
-  text-align: center;
   font-size: 20px;
+}
+.Position-inf{
+   position:absolute ;
+
+}
+.Articulo h4 {
+  color: #000;
+  margin-top: 60px;
+  margin-top: 3%;
+  margin-left: 3%;
+}
+.Img-articulos{
+  width: 280px;
+  height: 270px;
+  margin-top: 1.5%;
+  margin-left: 26%;
+  
+}
+.food1{
+  font-size: 23px;
+  
+  position: absolute;
+  z-index: 1000;
+  color: black;
+  margin-top: 260px;
+  margin-left: 60px;
+
+}
+
+.Icono-food{
+  
+}
+/*restaruante domicilio*/
+
+.hero {
+  width: 97.5%;
+  margin: 1.2%;
+  padding: 50px;
+  background: linear-gradient(90deg, #f2fdf5, #e8f9ef);
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  text-align: left;
+}
+
+.hero-header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 28px;
+}
+
+.hero-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 16px;
+  background: #c9f2d4;
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 32px;
+  color: #27ae60;
+}
+
+.hero-text h1 {
+  margin: 0;
+  font-size: 30px;
+  color: #145a32;
+  letter-spacing: 0.5px;
+}
+
+.hero-text p {
+  margin: 6px 0 0;
+  color: #5f705f;
+  font-size: 15px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn-primary, .btn-outline {
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+.btn-primary {
+  background: #27ae60;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #1e8449;
+}
+
+.btn-outline {
+  border: 2px solid #27ae60;
+  color: #27ae60;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: #27ae60;
+  color: #fff;
 }
 
 #Seccion{
@@ -318,6 +426,7 @@ ul {
     margin-left: 15px;
     margin-top: 10px;
 }
+
 /*Foter de la pagina o piede de pagina*/
 
 /* 
@@ -1011,7 +1120,7 @@ ul {
   display: block;
   z-index: 1000;
   right: 0;
-  margin-top: 18px;
+  margin-top: -50px;
   margin-right: 16px;
 }
 
@@ -1061,7 +1170,7 @@ ul {
  .search-container {
         display: none;
         position: fixed;
-        margin-top: 65px;
+        margin-top: -5px;
         margin-left: 14px;
         width: 94%;
         z-index: 1052;
@@ -1251,6 +1360,211 @@ ul {
     }
 
 /*noticias gastronomicas*/
+
+.Carrusel_Inf {
+  height: 380px;
+  margin: 20% 1% 0% 1%;
+  background: transparent;
+  overflow: hidden; 
+  border-radius: 15px;
+  display: none;
+}
+
+
+#foodCarousel {
+  margin-top: 200px;
+  position: relative;
+  max-width: 100%;
+  margin: 9px;
+  margin-top: 10px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+
+#foodSlides {
+  position: relative;
+  width: 100%;
+  height: 340px;
+}
+
+.slideItem {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  text-align: center;
+  padding: 20px;
+}
+
+.slideItem.activo {
+  opacity: 1;
+}
+
+.slideItem h4 {
+  font-size: 1.1em;
+  color: #2e7d32;
+  margin-bottom: 10px;
+}
+
+.imgFood {
+  width: 200px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 14px;
+  margin-bottom: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.iconFood {
+
+  position: absolute;
+  color: #388e3c;
+  font-size: 1em;
+  margin-top: 56%;
+  left: 0;
+  margin-left: 160px;
+}
+
+/* --- Botones --- */
+#btnPrevFood,
+#btnNextFood {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(56, 142, 60, 0.85);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#btnPrevFood:hover,
+#btnNextFood:hover {
+  background: rgba(27, 94, 32, 0.95);
+}
+
+#btnPrevFood {
+  left: 10px;
+}
+
+#btnNextFood {
+  right: 10px;
+}
+
+/* --- Indicadores --- */
+#dotsFood {
+  display: flex;
+  justify-content: center;
+  margin: 14px 0;
+  gap: 7px;
+}
+
+.dotFood {
+  width: 9px;
+  height: 9px;
+  background: #cfd8dc;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.activeDot {
+  background: #2e7d32;
+  width: 22px;
+  border-radius: 8px;
+}
+
+
+/*restaruante domicilio*/
+
+.hero {
+  width: 96%;
+  margin: 1.8%;
+  padding: 50px;
+  margin-top: 69px;
+  background: linear-gradient(90deg, #f2fdf5, #e8f9ef);
+  border-radius: 0px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  text-align: left;
+}
+
+.hero-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.hero-icon {
+  width: 120px;
+  height: 108px;
+  border-radius: 16px;
+  background: #c9f2d4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  color: #27ae60;
+}
+
+.hero-text h1 {
+  margin: 0;
+  font-size: 28px;
+  color: #145a32;
+  letter-spacing: 0.5px;
+}
+
+.hero-text p {
+  margin: 6px 0 0;
+  color: #5f705f;
+  font-size: 15px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn-primary, .btn-outline {
+  padding: 12px 20px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  font-size: 15px;
+}
+
+.btn-primary {
+  background: #27ae60;
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: #1e8449;
+}
+
+.btn-outline {
+  border: 2px solid #27ae60;
+  color: #27ae60;
+  background: transparent;
+}
+
+.btn-outline:hover {
+  background: #27ae60;
+  color: #fff;
+}
+
+
 #Seccion{
     border-radius: 15px;
      background-color: rgb(243, 242, 242);
@@ -1258,18 +1572,17 @@ ul {
 
 }
 .news-gastronomia{
-    padding: 10px;
+    padding: 8px;
+    margin-block-end: 30px;
     display: grid;
     grid-template-columns: auto;
-    gap: 0px;
+    gap: 10px;
 }
 .seccion2-1{
   grid-template-columns: 1/2;
 
 }
-.seccion2-2{
 
-}
 .news-gastronomia img{
     width: 100%;
     height: 320px;
@@ -1279,7 +1592,7 @@ ul {
 }
 .news-gastronomia div{
     background-color: rgb(243, 242, 242);
-    margin: 10px;
+      margin: 9px;
 }
 .Contenedor-gastronomico{
     padding: 10px;
@@ -1300,6 +1613,194 @@ ul {
 }
 .title-ilobasco{
     margin-left: 15px;
-    margin-top: 80px;
+    margin-top: 15px;
+}
+/*Login*/
+
+.modal-content {
+  background: #fff;
+  margin: 0% auto;
+  border-radius: 0px;
+  height: 100%;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  
+}
+
+.modal-content2 {
+  background: #fff;
+  margin: 0% auto;
+  border-radius: 0px;
+  width: 600%;
+  height: 100%;
+}
+
+
+/* Barra de título estilo ventana */
+.modal-header {
+  font-family: 'Inter', Arial, sans-serif;
+  font-size: 14px;
+  cursor: default;
+}
+
+#Inf-sesión{
+  margin-top: 15px;
+  margin-left: 20px;
+}
+#Inf-sesión h3{
+  padding-block-end: 8px;
+  color: rgb(34, 34, 107);
+  
+}
+#Inf-sesión p{
+  padding-top: 8px;
+  padding-block-end: 12px;
+  font-size: 14px;
+  width: 90%;
+  color: #616161;
+}
+#Inf-sesión hr{
+  max-width: 339.8px;
+}
+.Vmodal-registro{
+  display: flex;
+  gap: 5px;
+  margin-top: 6px;
+  padding-top: 10px;
+}
+
+.Vmodal-registro h4{
+  color:rgb(0, 0, 0);
+  font-weight: bold;
+  text-decoration:underline;
+}
+
+
+
+.modal-sesión{
+  width: 336px;
+}
+
+.btn-submit {
+ transition: 0.90s ease;
+}
+
+.btn-submit:hover {
+  transform: scale(1.02);
+}
+
+#SPA{
+  padding: 16px;
+}
+/* Cuerpo del modal */
+.modal-content2 {
+  background: #fff;
+  margin: 0% auto;
+  border-radius: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* Cabecera del modal */
+.modal-header2 {
+  background: #e5e9f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family:'Inter',  Arial, sans-serif;
+  font-size: 14px;
+  top: 0;
+  z-index: 100;
+}
+
+
+#Inf-sesión2{
+  margin-top: 15px;
+  margin-left: 10px;
+}
+#Inf-sesión2 p{
+  width: 98%;
+  color: #616161;
+}
+#Inf-sesión2 hr{
+  max-width: 96.2%;
+}
+
+.modal-content2 h2{
+  text-align: center;
+  margin-top:15px ;
+  
+}
+
+
+.modal-header2 .icono {
+  width: 16px;
+  height: 16px;
+  margin-left: 8px;
+}
+
+
+.closeRegistro:hover {
+  background: rgb(216, 6, 6);
+  color: white;
+}
+.modal-body-Registro {
+  padding-left: 1%;
+  
+}
+.modal-body-Registro label{
+  color: #000;
+  font-size: 14px;
+  margin-left: 5px;
+}
+
+.modal-body-Registro input[type="text"],
+.modal-body-Registro input[type="password"], .modal-body-Registro input[type="email"], .modal-body-Registro input[type="tel"] {
+  width: 96.5%;
+  padding: 10px;
+  margin: 6px;
+  border: 1px solid #FFC107;
+  border-radius: 6px;
+}
+label{
+    font-family:'Inter',  Arial, sans-serif;
+}
+
+.btn-submit2 {
+  width: 40%;
+  background: #FFC107;
+  color: #333333;
+  border: none;
+  
+}
+
+.animaciónLoder{
+  width: 100%;
+  height: 100%;
+ 
+  z-index: 5200;
+  
+    
+}
+
+.loader2 {
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #FFC107;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 1s linear infinite;
+  margin: 15px auto;
+  display: none;
+  z-index: 800;
+  
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 }

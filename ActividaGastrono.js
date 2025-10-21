@@ -35,50 +35,50 @@ document.addEventListener("DOMContentLoaded", () => {
 //buscador
 
 const data = [
-        {
-          name: "Artesanías de Ilobasco",
-          img: "Imagenes_Proyecto/Artesanias.png",
-          url: "file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/Artesanias-.html",
-        },
-        {
-          name: "Actividades",
-          img: "Imagenes_Proyecto/CasaHacienda.jpg",
-          url: "gastronomia.html",
-        },
-        {
-          name: "Lugares turísticos",
-          img: "Imagenes_Proyecto/Helicondia.png",
-          url: "lugares.html",
-        },
-        {
-          name: "Fichas Informativas",
-          img: "Imagenes_Proyecto/Tiestos.png",
-          url: "hoteles.html",
-        },
-        {
-          name: "Contacto",
-          img: "Imagenes_Proyecto/Contacto-Busqueda.jpg",
-          url: "eventos.html",
-        },
-        {
-          name: "Comida Local",
-          img: "Imagenes_Proyecto/Pupusas-Busqueda.png",
-          url: "eventos.html",
-        },
-      ];
+  {
+    name: "Artesanías de Ilobasco",
+    img: "Imagenes_Proyecto/Artesanias.png",
+    url: "file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/Artesanias-.html",
+  },
+  {
+    name: "Actividades",
+    img: "Imagenes_Proyecto/CasaHacienda.jpg",
+    url: "gastronomia.html",
+  },
+  {
+    name: "Lugares turísticos",
+    img: "Imagenes_Proyecto/Helicondia.png",
+    url: "lugares.html",
+  },
+  {
+    name: "Fichas Informativas",
+    img: "Imagenes_Proyecto/Tiestos.png",
+    url: "hoteles.html",
+  },
+  {
+    name: "Contacto",
+    img: "Imagenes_Proyecto/Contacto-Busqueda.jpg",
+    url: "eventos.html",
+  },
+  {
+    name: "Comida Local",
+    img: "Imagenes_Proyecto/Pupusas-Busqueda.png",
+    url: "eventos.html",
+  },
+];
 
-  const searchInput = document.getElementById("search-input");
-  const suggestionsBox = document.getElementById("suggestions");
-  const SculercerFondo = document.querySelector(".EsculecerSearch")
+const searchInput = document.getElementById("search-input");
+const suggestionsBox = document.getElementById("suggestions");
+const SculercerFondo = document.querySelector(".EsculecerSearch")
 
 
-  searchInput.addEventListener("input", () => {
+searchInput.addEventListener("input", () => {
   const query = searchInput.value.trim();
 
   if (query !== "") {
-    SculercerFondo.classList.add("active"); 
+    SculercerFondo.classList.add("active");
   } else {
-    SculercerFondo.classList.remove("active"); 
+    SculercerFondo.classList.remove("active");
   }
 
 });
@@ -96,39 +96,39 @@ SculercerFondo.addEventListener("focus", () => {
 });
 
 
-      searchInput.addEventListener("keyup", () => {
-        const query = searchInput.value.toLowerCase();
-        suggestionsBox.innerHTML = "";
+searchInput.addEventListener("keyup", () => {
+  const query = searchInput.value.toLowerCase();
+  suggestionsBox.innerHTML = "";
 
 
-        if (query.trim() === "") {
-          suggestionsBox.style.display = "none";
-          return;
-        }
+  if (query.trim() === "") {
+    suggestionsBox.style.display = "none";
+    return;
+  }
 
-        const filtered = data.filter((item) =>
-          item.name.toLowerCase().includes(query)
-        );
+  const filtered = data.filter((item) =>
+    item.name.toLowerCase().includes(query)
+  );
 
-        if (filtered.length === 0) {
-          suggestionsBox.style.display = "none";
-          return;
-        }
+  if (filtered.length === 0) {
+    suggestionsBox.style.display = "none";
+    return;
+  }
 
-        filtered.forEach((item) => {
-          const div = document.createElement("div");
-          div.classList.add("suggestion");
-          div.innerHTML = `<img src="${item.img}" alt="${item.name}"><span>${item.name}</span>`;
+  filtered.forEach((item) => {
+    const div = document.createElement("div");
+    div.classList.add("suggestion");
+    div.innerHTML = `<img src="${item.img}" alt="${item.name}"><span>${item.name}</span>`;
 
-          div.onclick = () => {
-            window.location.href = item.url; // lleva al usuario a la página
-          };
+    div.onclick = () => {
+      window.location.href = item.url; // lleva al usuario a la página
+    };
 
-          suggestionsBox.appendChild(div);
-        });
+    suggestionsBox.appendChild(div);
+  });
 
-        suggestionsBox.style.display = "block";
-      });
+  suggestionsBox.style.display = "block";
+});
 
 
 /*Buscador Movil */
@@ -200,7 +200,7 @@ function cerrarModal() {
 
 document.addEventListener('DOMContentLoaded', () => {
   const VmodalHelp = document.getElementById("VmodalHelp");
-  const Vinf_help = document.querySelector(".modal-sesión"); 
+  const Vinf_help = document.querySelector(".modal-sesión");
 
   if (!VmodalHelp || !Vinf_help) {
     console.warn('No se encontró VmodalHelp o .modal-sesión en el DOM');
@@ -211,8 +211,8 @@ document.addEventListener('DOMContentLoaded', () => {
     Vinf_help.style.display = (Vinf_help.style.display === "block") ? "none" : "block";
   });
   VmodalHelp.addEventListener('click', () => {
-  Vinf_help.classList.toggle("show");
-});
+    Vinf_help.classList.toggle("show");
+  });
 });
 
 //down chveron
@@ -221,9 +221,9 @@ function Chevron_down_up() {
   icon.classList.toggle("fa-chevron-down");
   icon.classList.toggle("fa-chevron-up");
   VmodalHelp.addEventListener('click', () => {
-  Vinf_help.classList.toggle("show");
-  
-});
+    Vinf_help.classList.toggle("show");
+
+  });
 }
 
 const form = modal.querySelector("form");
@@ -294,13 +294,13 @@ const btnPrev = document.querySelector(".previo");
 const btnNext = document.querySelector(".siguiente");
 
 let index = 0;
-const visibles = 4; // Cuántos artículos se ven a la vez
+const visibles =4.5;
 const total = articulos.length;
 
 function mostrarSlide(i) {
-  // 🔁 Si retrocede del inicio, pasa al final
+
   if (i < 0) index = total - visibles;
-  // 🔁 Si avanza del final, vuelve al inicio
+
   else if (i > total - visibles) index = 0;
   else index = i;
 
@@ -308,6 +308,40 @@ function mostrarSlide(i) {
   carrusel.style.transform = `translateX(-${index * (100 / visibles)}%)`;
 }
 
-btnPrev.addEventListener("click", () => mostrarSlide(index - 1));
-btnNext.addEventListener("click", () => mostrarSlide(index + 1));
+btnPrev.addEventListener("click", () => mostrarSlide(index - 0.5));
+btnNext.addEventListener("click", () => mostrarSlide(index + 0.5));
 
+
+//carruselFodd para moviles
+
+    const slides = document.querySelectorAll(".slideItem");
+    const prev = document.getElementById("btnPrevFood");
+    const next = document.getElementById("btnNextFood");
+    const dotsContainer = document.getElementById("dotsFood");
+    let inde = 0;
+
+    slides.forEach((_, i) => {
+      const dot = document.createElement("span");
+      dot.classList.add("dotFood");
+      if (i === 0) dot.classList.add("activeDot");
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll(".dotFood");
+
+    function showSlide(n) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("activo", i === n);
+        dots[i].classList.toggle("activeDot", i === n);
+      });
+    }
+
+    prev.addEventListener("click", () => {
+      inde = (inde - 1 + slides.length) % slides.length;
+      showSlide(inde);
+    });
+
+    next.addEventListener("click", () => {
+      inde = (inde + 1) % slides.length;
+      showSlide(inde);
+    });

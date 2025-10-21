@@ -375,7 +375,7 @@ ul {
       left: 50%;
       transform: translateX(-50%);
       display: flex;
-      gap: 8px;
+      gap: 150px;
     }
     .Indicadores-cars span {
       width: 12px;
@@ -1611,8 +1611,7 @@ ul {
 
     }
 
-
-    /*Login*/
+/*Login*/
 
 .modal-content {
   background: #fff;
