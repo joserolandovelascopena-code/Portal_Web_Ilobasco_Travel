@@ -2918,8 +2918,38 @@ text-decoration: none;
   transform: scale(1.02);
   background: #f5b904;
 }
+/*Botón inisiar sesión en registro*/
+#Iniciar-sesion {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: all 0.6s ease; 
+  width: 28%;
+  padding: 8px 10px;
+  color: black;
+  font-weight: bolder;
+  border-radius: 9px;
+  font-size: 15px;
+  border: 1px solid #FFC107;
+  background: transparent;
+}
 
-/*Esta es la sección de registro*/
+
+#Iniciar-sesion.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+#Iniciar-sesion:hover {
+  border: 1px solid #2c2c2c;
+  background-color: #000;
+  color: white;
+  transform: scale(1.03); 
+  transition: all 0.3s ease;
+}
+
+
 .modal-registro {
   display: none;
   position: fixed;
@@ -4493,6 +4523,7 @@ ul {
 
 
 /* Barra de título estilo ventana */
+
 .modal-header {
   font-family: 'Inter', Arial, sans-serif;
   font-size: 14px;
@@ -4568,6 +4599,21 @@ ul {
   font-size: 14px;
   top: 0;
   z-index: 100;
+}
+/*Botón inisiar sesión en registro*/
+#Iniciar-sesion {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: all 0.6s ease; 
+  width: 34%;
+  padding: 8px 8px;
+  color: white;
+  font-weight: bolder;
+  border-radius: 9px;
+  font-size: 12px;
+  border: 1px solid #2e2e2e;
+  background: black;
 }
 
 

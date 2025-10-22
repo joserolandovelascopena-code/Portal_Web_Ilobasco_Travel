@@ -231,6 +231,7 @@ ul {
 }
 
 /*noticias gastronomicas*/
+
 .Carrusel_Inf {
   height: 380px;
   margin: 8% 1% 0% 1%;
@@ -262,7 +263,9 @@ ul {
   width: max-content; /* Se ajusta al número total de artículos */
  
 }
-
+#foodCarousel{
+display: none;
+}
 .Articulo {
   width: 625px;
   margin: 5px;

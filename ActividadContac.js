@@ -58,7 +58,7 @@ const data = [
         {
           name: "Contacto",
           img: "Imagenes_Proyecto/Contacto-Busqueda.jpg",
-          url: "eventos.html",
+          url: "file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/ContactoIlobascoTRV.html",
         },
         {
           name: "Comida Local",

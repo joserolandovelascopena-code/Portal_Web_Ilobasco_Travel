@@ -48,7 +48,7 @@ const data = [
         {
           name: "Lugares turísticos",
           img: "Imagenes_Proyecto/Helicondia.png",
-          url: "lugares.html",
+          url: "file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/index.html",
         },
         {
           name: "Fichas Informativas",
@@ -58,7 +58,7 @@ const data = [
         {
           name: "Contacto",
           img: "Imagenes_Proyecto/Contacto-Busqueda.jpg",
-          url: "eventos.html",
+          url: "file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/ContactoIlobascoTRV.html",
         },
         {
           name: "Comida Local",

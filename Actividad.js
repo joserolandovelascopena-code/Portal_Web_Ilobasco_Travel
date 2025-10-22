@@ -38,12 +38,14 @@ const data = [
         {
           name: "Artesanías de Ilobasco",
           img: "Imagenes_Proyecto/Figuras\ de\ Barro.jpeg",
+          url: "Artesanias-.html",
           url: "file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/Artesanias-.html",
         },
         {
           name: "Actividades",
           img: "Imagenes_Proyecto/CasaHacienda.jpg",
-          url: "gastronomia.html",
+          url: "index.html",
+          url: "file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/index.html",
         },
         {
           name: "Lugares turísticos",
@@ -58,12 +60,14 @@ const data = [
         {
           name: "Contacto",
           img: "Imagenes_Proyecto/Contacto-Busqueda.jpg",
-          url: "eventos.html",
+          url: "ContactoIlobascoTRV.html",
+          url: "file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/ContactoIlobascoTRV.html",
         },
         {
           name: "Comida Local",
           img: "Imagenes_Proyecto/Pupusas-Busqueda.png",
-          url: "eventos.html",
+          url: "Gastronomía.html",
+          url: "file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/Gastronom%C3%ADa.html",
         },
       ];
 
@@ -956,6 +960,16 @@ form.addEventListener("submit", (e) => {
 
 
 //Registro
+document.getElementById("enlace_Sesion").addEventListener("click", () => {
+  const Btn_sesión = document.getElementById("Iniciar-sesion");
+  const  OpenBtn_sesión = document.getElementById("enlace_Sesion");
+
+  OpenBtn_sesión.addEventListener("click", () => {
+  Btn_sesión.classList.toggle("show")
+});
+  
+});
+
 document.querySelector(".Vmodal-registro").addEventListener("click", () => {
   document.querySelector(".nav-menu").classList.toggle("show");
 });
@@ -963,6 +977,7 @@ document.querySelector(".Vmodal-registro").addEventListener("click", () => {
 const modal2 = document.getElementById("RegistroModal");
 const openBtn2 = document.querySelector(".Vmodal-registro");
 const closeBtn2 = document.getElementById("closeModal2");
+const CerraRegistro = document.getElementById("Iniciar-sesion")
 
 
 openBtn2.addEventListener("click", () => {
@@ -971,6 +986,11 @@ openBtn2.addEventListener("click", () => {
 });
 
 closeBtn2.addEventListener("click", () => {
+  modal2.classList.remove("show");
+  cerrarModal2();
+});
+
+CerraRegistro.addEventListener("click", () => {
   modal2.classList.remove("show");
   cerrarModal2();
 });
