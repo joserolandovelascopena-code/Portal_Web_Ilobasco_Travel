@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guía Práctica de Turismo en Ilobasco</title>
+    <link rel="stylesheet" href="GuiaPractic.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="EsculecerSearch"></div>
+    <div id="Menu-movil">
+      <div class="menu-btn" onclick="abrirMenuMovil()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+    <div class="search-container">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Buscar..."
+        autocomplete="off"
+      />
+      <div id="suggestions"></div>
+    </div>
+    <div class="Contenedor_Lupa">
+      <h4>Busca en IloTravel</h4>
+      <i class="fas fa-arrow-left" id="Volver_Bsucador"></i>
+      <hr />
+    </div>
+    <i class="fas fa-search" id="Lupa-Movil"></i>
+
+    <nav class="nav-main">
+      <div id="header-movil">
+        <span class="closeMenu-movil" id="Close_memu_movil">&times;</span>
+      </div>
+
+      <ul class="nav-menu">
+        <!-- enlaces visibles -->
+        <li><a href="#">Historia</a></li>
+        <li>
+          <a href="Artesanias-.html">Artesanías</a>
+        </li>
+        <li><a href="#">Cultura</a></li>
+        <li><a href="#">Comercio Local</a></li>
+        <!-- menú desplegable -->
+        <li class="dropdown">
+          <a href="#" id="verMas">Más ▾</a>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/Gastronom%C3%ADa.html"
+                >Gastronomía</a
+              >
+            </li>
+            <li><a href="#">Sitios Turísticos</a></li>
+            <li><a href="#">Festividades</a></li>
+            <li><a href="#">Hospedajes</a></li>
+            <li><a href="#">Guía práctica</a></li>
+            <li>
+              <a
+                href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/ContactoIlobascoTRV.html"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <button class="btnFooter openLogin">
+            <span class="Text_btn">
+              <i class="fa-solid fa-user"></i>
+              <!-- Ícono de usuario -->
+              Iniciar sesión
+            </span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- MODAL LATERAL (SOLO PARA MÓVILES) -->
+    <div id="modal-menu">
+      <div id="header-movil">
+        <span class="closeModal" id="closeModal3">&times;</span>
+      </div>
+      <ul class="modal-nav">
+        <li>
+          <button class="btnsesión openLogin">
+            <span class="Text_btn2">
+              <i class="fa-solid fa-user"></i>
+              <!-- Ícono de usuario -->
+              Iniciar sesión
+            </span>
+          </button>
+        </li>
+
+        <hr id="movil-hr2" />
+
+        <!-- copia el mismo contenido de nav-main -->
+        <li><a href="#">Historia</a></li>
+        <li><a href="#">Cultura</a></li>
+        <li>
+          <a href="Artesanias-.html">Artesanías</a>
+        </li>
+        <li><a href="#">Comercio Local</a></li>
+
+        <li>
+          <a href="Gastronomía.html">Gastronomía</a>
+        </li>
+        <li><a href="#">Sitios Turísticos</a></li>
+        <li><a href="#">Festividades</a></li>
+        <li><a href="#">Hospedajes</a></li>
+        <li><a href="#">Guía práctica</a></li>
+        <li>
+          <a href="ContactoIlobascoTRV.html">Contacto</a>
+        </li>
+
+        <hr id="movil-hr2" />
+
+        <li><a href="#">Foro</a></li>
+        <li><a href="#">Comentarios</a></li>
+        <hr id="movil-hr2" />
+        <li><a href="#">Ilobasco Travel</a></li>
+        <li><a>Atención al usuario:</a></li>
+        <li id="correo"><a>joseroladovelascopeña@gmail.com</a></li>
+      </ul>
+    </div>
+
+    <header>
+      <div class="Contenido-header">
+        <h1>Guía Práctica de Turismo en Ilobasco</h1>
+        <p>
+          Vive la experiencia de un pueblo artesanal lleno de historia, cultura
+          y naturaleza.
+        </p>
+      </div>
+    </header>
+
+    <div class="contenedor">
+      <div class="contendor-texto tex1">
+        <section class="section">
+          <h2>Sobre Ilobasco</h2>
+          <p>
+            Ilobasco es una ciudad del departamento de Cabañas, en El Salvador,
+            reconocida por su tradición artesanal y su ambiente acogedor. Su
+            nombre proviene del náhuatl <strong>Xilohuashco</strong>, que
+            significa “Lugar de los retoños de elote”. La ciudad conserva su
+            encanto colonial, con calles pintorescas y talleres familiares
+            dedicados al arte de la cerámica.
+          </p>
+          <p>
+            Además de su historia, Ilobasco es un punto de referencia para los
+            amantes del arte popular salvadoreño. Sus “sorpresas” —figuras de
+            barro con escenas ocultas— son un símbolo de identidad cultural que
+            atrae tanto a turistas nacionales como internacionales.
+          </p>
+        </section>
+      </div>
+      <section>
+        <h2 id="Titulo">Atractivos Turísticos</h2>
+        <div class="grid-lugares">
+          <div class="lugar">
+            <img
+              src="Imagenes_Proyecto/Artesanias_baner2.jpeg"
+              alt="Artesanías de Ilobasco"
+            />
+            <div class="info">
+              <h3>Artesanías y Sorpresas</h3>
+              <p>
+                Los talleres de cerámica son el corazón de Ilobasco. Aquí puedes
+                aprender sobre el proceso artesanal y comprar figuras únicas
+                hechas a mano.
+              </p>
+            </div>
+          </div>
+
+          <div class="lugar">
+            <img
+              src="Imagenes_Proyecto/casaHacienda.jpg"
+              alt="Cerro Miramundo"
+            />
+            <div class="info">
+              <h3>Casa De la Hacienda</h3>
+              <p>
+                Es un museo y parque acuático en Ilobasco, que combina
+                atracciones para el entretenimineto con el disfrute del
+                padrimonio cultural. Que se destaca por sus múltiples piscinas,
+                toboganes áreas verdes y una mii granja.
+              </p>
+            </div>
+          </div>
+
+          <div class="lugar">
+            <img
+              src="Imagenes_Proyecto/ParceCentral.jpg"
+              alt="Centro Histórico de Ilobasco"
+            />
+            <div class="info">
+              <h3>Centro Histórico</h3>
+              <p>
+                El parque central, la iglesia San Miguel Arcángel y los
+                alrededores son lugares perfectos para caminar, comer y
+                disfrutar del ambiente local.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="contendor-texto">
+        <section class="caja1 section">
+          <h2>Gastronomía Local</h2>
+          <p>
+            Ilobasco ofrece una rica variedad de platillos típicos salvadoreños,
+            entre ellos pupusas, tamales y riguas. No te pierdas las pupusas de
+            ayote y los dulces artesanales elaborados con recetas tradicionales.
+          </p>
+        </section>
+
+        <section class="caja1 section">
+          <h2>Consejos para tu Visita</h2>
+          <ul>
+            <li>
+              Visita entre las 8:00 a.m. y 5:00 p.m. para aprovechar las
+              actividades artesanales.
+            </li>
+            <li>
+              Usa calzado cómodo, especialmente si planeas recorrer el casco
+              urbano o senderos naturales.
+            </li>
+            <li>Apoya a los artesanos comprando productos locales.</li>
+            <li>
+              Respeta las tradiciones y cuida los espacios públicos y naturales.
+            </li>
+          </ul>
+        </section>
+
+        <section class="caja1 section section">
+          <h2>Cómo Llegar</h2>
+          <p>
+            Ilobasco está ubicado a unos 74 kilómetros de San Salvador. Puedes
+            llegar tomando la carretera Panamericana hasta San Martín y luego
+            continuar hacia Sensuntepeque. El viaje dura aproximadamente dos
+            horas, con hermosos paisajes rurales durante el recorrido.
+          </p>
+        </section>
+
+        <section class="caja1 section">
+          <h2>Más Información</h2>
+          <p>
+            Para conocer más sobre rutas, horarios y festividades locales,
+            comunícate con la Oficina Municipal de Turismo de Ilobasco o visita
+            el portal oficial de
+            <a href="https://elsalvador.travel/" target="_blank"
+              >Turismo El Salvador</a
+            >.
+          </p>
+        </section>
+      </div>
+    </div>
+    <!--Footer Pie de pagína-->
+
+    <div class="footer-link">
+      <section class="btn_social_sección">
+        <button>Ilobasco Travel</button>
+      </section>
+      <footer class="footer-contenedor">
+        <ul>
+          <li>
+            <a href="#"><h3>Title one</h3></a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+        </ul>
+        <!--Footer 2-->
+        <ul>
+          <li>
+            <a href="#"><h3>Title one</h3></a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+        </ul>
+        <!--Footer 3-->
+        <ul>
+          <li>
+            <a href="#"><h3>Title one</h3></a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+        </ul>
+        <!--footer 4-->
+        <ul>
+          <li>
+            <a href="#"><h3>Title one</h3></a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+          <li>
+            <a href="#">Blokchain</a>
+          </li>
+        </ul>
+      </footer>
+      <!--Redes sociales-->
+      <section class="social">
+        <div class="links">
+          <a href="#"><li class="fab fa-facebook-f"></li></a>
+          <a href="#"><li class="fab fa-instagram"></li></a>
+          <a href="#"> <li class="fab fa-whatsapp"></li></a>
+        </div>
+      </section>
+      <footer class="footer">
+        <h3>Ilobasco Travel Copyright©</h3>
+      </footer>
+    </div>
+    <!-- Modal iniciar sesión -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <!-- Encabezado estilo ventana -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <img src="Imagenes_Proyecto/icono.png" alt="icono" class="icono" />
+            <span>Login</span>
+          </div>
+          <span
+            onclick="CerrarOverlay(event)"
+            onclick="cerrarModal()"
+            class="close"
+            id="closeModal"
+            >&times;</span
+          >
+        </div>
+        <section id="Inf-sesión">
+          <h3>Inicio de sesión de usuarios</h3>
+          <hr />
+          <p>
+            Si tienes una cuenta, inicia sesión con tu correo electrónico o
+            numero de teléfono.
+          </p>
+        </section>
+        <div class="modal-body">
+          <form>
+            <input type="text" placeholder="Usuario" required /><br />
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="password" placeholder="Contraseña" required /><br />
+            <button type="submit" class="btn-submit">Iniciar sesión</button>
+          </form>
+        </div>
+        <nav id="menu-login">
+          <div class="Vmodal-registro">
+            <p>¿No tienes cuenta?</p>
+            <h4>Crear cuenta</h4>
+          </div>
+          <ul id="VmodalHelp" onclick="abrirModal2()">
+            <p>
+              ¿Necesitas ayuda?
+              <i
+                class="fas fa-chevron-down"
+                id="chevron"
+                onclick="Chevron_down_up()"
+              ></i>
+            </p>
+          </ul>
+          <div class="loader" id="loader"></div>
+
+          <ul class="modal-sesión">
+            <li><p>Olvidades tu Contraseña</p></li>
+            <li><p>Termios y condiciones</p></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!--Registrarse-->
+    <div id="RegistroModal" class="modal-registro">
+      <div class="modal-content2">
+        <div class="modal-header2">
+          <div class="modal-title2">
+            <img src="Imagenes_Proyecto/icono.png" alt="icono" class="icono" />
+            <span>Registro</span>
+          </div>
+          <span class="closeRegistro" id="closeModal2">&times;</span>
+        </div>
+        <section id="SPA">
+          <section id="Inf-sesión2">
+            <h3>Unete a Ilobasco Travel</h3>
+            <hr />
+
+            <p>
+              Descubre lo mejor de Ilobasco. Unete a nosotros, accede a rutas
+              únicas, recomendaciones, y una experiencia completa.
+            </p>
+
+            <p id="enlace_Sesion">
+              Si ya tienes una cuenta inicia sesión con tu correo electrónico.
+            </p>
+            <button class="openLogin" id="Iniciar-sesion">
+              <i class="fa-solid fa-user"></i>
+              Iniciar sesión
+            </button>
+          </section>
+          <div class="modal-body-Registro">
+            <form>
+              <label for="text">Ingresa tu nombre*</label>
+              <input type="text" placeholder="Nombre" required /><br />
+              <label for="usuario">Crea un nombre de usuario*</label>
+              <input type="text" placeholder="Usuario" required /><br />
+              <label for="email">Correo electrónico*</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                required
+              /><br />
+              <label for="tel">Teléfono*</label>
+              <input
+                type="tel"
+                id="telefono"
+                pattern="[0-9]{8,15}"
+                placeholder="Teléfono"
+                required
+              /><br />
+              <label for="password">Crea una contraseña*</label><br />
+              <input type="password" placeholder="Contraseña" required /><br />
+              <button type="submit" class="btn-submit2">Aceptar</button>
+            </form>
+            <div class="animaciónLoder">
+              <div class="loader2" id="loader2"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="ActividadGuiaPrac.js"></script>
+  </body>
+</html>

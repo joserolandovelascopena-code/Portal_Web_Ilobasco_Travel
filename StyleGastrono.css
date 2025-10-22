@@ -32,7 +32,7 @@ p{
   cursor: pointer;
   right: 30px;
   font-size: 1.5rem;
-  color: #ffffff;
+    color:#FFD700;
   z-index: 1042;
   margin-top: -92px;
   
@@ -303,9 +303,7 @@ display: none;
 
 }
 
-.Icono-food{
-  
-}
+
 /*restaruante domicilio*/
 
 .hero {

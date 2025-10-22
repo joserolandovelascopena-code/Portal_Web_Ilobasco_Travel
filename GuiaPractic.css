@@ -12,22 +12,11 @@
 body {
   background-color: rgb(247, 238, 227);
   font-family:'Inter','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  color: rgb(3, 54, 38);
+ 
 }
-
-
-#Title-baner {
-  font-family:'Inter','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  text-align: center;
-  padding: 10px 20px;
-  font-size: 15px;
-  background: rgba(0, 0, 0, 0.20);
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.60 );
-  color: rgb(236, 234, 228);
-  border-radius: 15px;
-  display: inline-block;
-
- }
+p{
+  color: #000;
+}
 /*Menú*/
 
 /*menu bar*/
@@ -38,11 +27,11 @@ body {
 .menu-btn {
   position: fixed;
   cursor: pointer;
-  right: 30px;
+  right: 39px;
   font-size: 1.5rem;
-    color:#FFD700;
+   color:#FFD700;
   z-index: 10001;
-  margin-top: -44px;
+  margin-top: -42px;
   
 }
 #movil-hr{
@@ -231,273 +220,149 @@ ul {
 }
 
 
-/*Carrusel*/
 
-#TL{
-  margin-top: 20px;
-  margin-left: 64px;
-  color: rgb(3, 54, 38);
-  margin-block-end: 30px;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.1);
-}
-#TL2{
-  margin-top: 30px;
-  margin-left: 65px;
-  color: rgb(3, 54, 38);
+    header {
+        margin-top: 60px;
+       background-image: url(Imagenes_Proyecto/IglesiaSamiguel.png);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      color: #fff;
+      text-align: center;
+      height: 500px;
+      animation: fadeIn 1s ease-out;
+      border-end-end-radius: 18px;
+      border-end-start-radius: 18px;
+    }
+
+    header h1  {
+      font-size: 2.5rem;
+      
+      
+    }
+    .Contenido-header{
+        padding: 13px;
+        background-color: #DFDBE5;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%23959300' fill-opacity='0.26' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E");
+        background-color: rgba(0, 0, 0, 0.425);
+        height: 100%;
+        border-end-end-radius: 18px;
+        border-end-start-radius: 18px;
+        padding-top: 190px;
+        width: 100%;
+    }
  
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.1);
-}
-  .Carrusel-Imagenes {
-      position: relative;
-      width: 90%;
-      margin: 10px;
-      height: 490px;
-      margin-left: 66px;
-      border-radius: 8px;
-      overflow: hidden;
-      
+
+    header p {
+      font-size: 1.1rem;
+      color: #fff;
+    }
+    .contendor-texto{
+        margin-top: 20px;
+        box-shadow: 0 8px 20px rgba(34, 139, 34, 0.3);
+        background-color: white;
+        border-radius: 16px;
+        padding: 50px;
+        font-family:'Inter', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .tex1{
+        margin-block-end: 60px;
     }
 
-    .Carrusel-Imagenes img {
-      width: 100%;
-      height: 260px;
-      border-radius: 8px;
-      transition: opacity 6s ease-in-out, background-image 6.5s ease-in-out;
+    .contenedor {
+      margin: auto;
+      padding: 1% 5%;
     }
 
-    /* Slides en fila */
-    .slidesImg {
-      display: flex;
-      width: 100%;
-      height: 100%;
-      
+    .section {
+      margin-bottom: 2.5rem;
+      animation: slideUp 1s ease-out;
     }
-    .slidesImg {
-      display: flex;
-      width: 100%;
-      height: 100%;
-      
-    }
-
-    .Img-slide {
-      min-width: 100%;
-      height: 100%;
-      transition: transform 0.5s ease-in-out; /* ya existente */
-      
-    }
-    
-
-    .Img-slide.show {
-     animation: smoothFade 0.6s ease-in-out;
-     }
-
-     #imagen1{
-      background-image: url(Imagenes_Proyecto/Cuesto\ artesanal.jpeg);
-      background-size: cover;
-      background-position: center;
-      
-      
-    }
-    #imagen2{
-      background-image: url(Imagenes_Proyecto/Decoradores.jpeg);
-      background-size: cover;
-      background-position: center;
-      
-    }
-    #imagen3{
-      background-image: url(Imagenes_Proyecto/Figuras\ Virgen\ de\ Fatima.jpeg);
-      background-size: cover;
-      background-position: center;
-      
-    }
-    #imagen4{
-      background-image: url(Imagenes_Proyecto/Maceta_Barro.jpeg);
-      background-size: cover;
-      background-position: center;
-      
-    }
-    #imagen5{
-      background-image: url(Imagenes_Proyecto/Testil.jpeg);
-      background-size: cover;
-      background-position: center;
-      
-    }
-     #imagen6{
-      background-image: url(Imagenes_Proyecto/Artesania\ figuras.jpeg);
-      background-size: cover;
-      background-position: center;
-      
-    }
-     #imagen7{
-      background-image: url(Imagenes_Proyecto/Porrones.jpeg);
-      background-size: cover;
-      background-position: center;
-      
-    }
-     #imagen8{
-      background-image: url(Imagenes_Proyecto/Figurs\ de\ Jesus\ y\ María.jpeg);
-      background-size: cover;
-      background-position: center;
-      
-    }
-     #imagen9{
-      background-image: url(Imagenes_Proyecto/FotoArt1.jpeg);
-      background-size: cover;
-      background-position: center;
-      
-    }
-     #imagen10{
-      background-image: url(Imagenes_Proyecto/Joyeria\ artesanal.jpeg);
-      background-size: cover;
-      background-position: center;
-      
-    }
-    /* Botones */
-    .previo, .siguiente {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0,0,0,0.7);
-      color: #FFD700;
-      border: none;
-      font-size: 20px;
-      cursor: pointer;
-      padding: 10px;
-      border-radius: 10px;
-    }
-    .previo { left: 10px; }
-    .siguiente { right: 10px; }
-
-    /* Indicadores */
-    .Indicadores-cars {
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 150px;
-    }
-    .Indicadores-cars span {
-      width: 12px;
-      height: 12px;
-      background: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      cursor: pointer;
-    }
-     .dohtV1.active {
-      background: #FFC107;
-    }
-
-@keyframes smoothFade {
-  from {
-    
-    transform: scale(1.05);
-  }
-  to {
-    
-    transform: scale(1);
-  }
-}
-
-
-/*Cuadro informativo*/
-.info-box {
-  background: #fff;
-  padding: 2.5rem;
-  margin: 3rem 4%;
-  border-left: 6px solid #FFC107;
-  border-radius: 12px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-  text-align: center;
-  animation: fadeIn 1.5s ease;
-}
-
-.info-box h2 {
-  color: black;
-  margin-bottom: 1rem;
-  font-size: 1.8rem;
-}
-
-.info-box p {
-  color: #555;
-  font-size: 1rem;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-
-  /*Encabezado principal*/
-
-.hero {
-  text-align: center;
-  background: url(Imagenes_Proyecto/Artesanias_baner2.jpeg) ;
-  background-repeat: no-repeat;
-  color: white;
-  padding: 5rem 1rem;
-  animation: fadeIn 1.5s ease;
-  margin-top: 56px;
-  height: 589px;
-}
-
-.hero h1 {
-  font-size: 2.8rem;
-  letter-spacing: 2px;
-  margin-bottom: 0.5rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  opacity: 0.9;
-}
-
-/* Sección de artesanías*/
-.artesanias {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  padding: 3rem 5%;
-}
-
-.item {
-  background: white;
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.item:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-}
-
-.item img {
-  width: 100%;
-  height: 240px;
-  object-fit: cover;
-  transition: transform 0.5s ease;
-}
-
-.item:hover img {
-  transform: scale(1.05);
-}
-
-.info {
-  padding: 1.5rem;
-}
-
-.info h2 {
-  font-size: 1.3rem;
+ .tex1 h2{
   color: #d08770;
-  margin-bottom: 0.5rem;
-}
+      border-left: 5px solid #6aabaf;
+      padding-left: 10px;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+ }
 
-.info p {
-  font-size: 0.95rem;
-  color: #555;
-}
+ #Titulo{
+  color: #d08770;
+  border-left: 5px solid #6aabaf;
+  padding-left: 10px;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  margin-left: 4%;
+ }
+   
+ .contendor-texto h2{
+    color: #d08770;
+      border-left: 5px solid #6aabaf;
+      padding-left: 10px;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+ }
 
+    .grid-lugares {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .lugar {
+      background: #fff;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .lugar:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    .lugar img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+    }
+
+    .info {
+      padding: 1rem;
+   
+    }
+
+    .info h3 {
+       color: #d08770;
+      margin-bottom: 0.5rem;
+    }
+
+    .info p {
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    .caja1 ul {
+      margin-left: 1.5rem;
+      list-style-type: disc;
+    }
+
+    
+
+     .contendor-texto a {
+      color: #3ea04a;
+      text-decoration: none;
+      font-weight: bold;
+    }
+   
+    .contendor-texto a:hover {
+      text-decoration: underline;
+    }
+
+    /* Animaciones */
+ 
+    
 /* 
    Pie de página*/
 .footer {
@@ -510,16 +375,6 @@ ul {
 }
 
 /*Animaciones*/
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
 
 .footer-link{
@@ -1017,6 +872,36 @@ text-decoration: none;
   border: 2px solid #084d68;
   border-radius: 6px;
 }
+/*Botón inisiar sesión en registro*/
+#Iniciar-sesion {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: all 0.6s ease; 
+  width: 28%;
+  padding: 8px 10px;
+  color: black;
+  font-weight: bolder;
+  border-radius: 9px;
+  font-size: 15px;
+  border: 1px solid #FFC107;
+  background: transparent;
+}
+
+
+#Iniciar-sesion.show {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+#Iniciar-sesion:hover {
+  border: 1px solid #2c2c2c;
+  background-color: #000;
+  color: white;
+  transform: scale(1.03); 
+  transition: all 0.3s ease;
+}
 
 
 .btn-submit2 {
@@ -1196,7 +1081,7 @@ ul {
   display: block;
   z-index: 1000;
   right: 0;
-  margin-top: -40px;
+  margin-top: -36px;
   margin-right: 16px;
 }
 
@@ -1363,183 +1248,6 @@ ul {
    color: #e7ad00;
    background: #ffffff;
 }
-
-
-/*Encabezado principal*/
-
-.hero {
-  text-align: center;
-  background: url(Imagenes_Proyecto/Artesanias_baner2.jpeg) no-repeat center/cover;
-  color: white;
-  padding: 5rem 1rem;
-  animation: fadeIn 1.5s ease;
-  margin-top: 56px;
-  height: 420px;
-}
-
-.hero h1 {
-  font-size: 2.8rem;
-  letter-spacing: 2px;
-  margin-bottom: 0.5rem;
-}
-
-.hero p {
-  font-size: 1.2rem;
-  opacity: 0.9;
-}
-
-/*Carrusel*/
-
-#TL{
-  margin-top: 20px;
-  margin-left: 20%;
-  font-size: 20px;
-  color: rgb(3, 54, 38);
-  margin-block-end: 30px;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.1);
-}
-#TL2{
-  margin-top: 30px;
-   font-size: 20px;
-  margin-left: 20%;
-  color: rgb(3, 54, 38);
- 
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.1);
-}
-  .Carrusel-Imagenes {
-      position: relative;
-      width: 90%;
-      margin: 10px;
-      height: 300px;
-      margin-left: 5%;
-      border-radius: 8px;
-      overflow: hidden;
-    }
-
-    /* Mantener tu tamaño de imagen */
-    .Carrusel-Imagenes img {
-      width: 100%;
-      height: 260px;
-      border-radius: 8px;
-    }
-
-    /* Slides en fila */
-    .slidesImg {
-      display: flex;
-      
-      width: 100%;
-      height: 100%;
-    }
-
-    
-    .Img-slide {
-      min-width: 100%;
-      height: 100%;
-      transition: transform 0.5s ease-in-out; 
-      
-    }
-    
-
-    .Img-slide.show {
-     animation: smoothFade 0.6s ease-in-out;
-     }
-     #imagen1{
-      background: url(Imagenes_Proyecto/Pintura\ Ilobasco.jpeg);
-      background-size: cover;
-      background-position: center;
-      
-    }
-    #imagen2{
-      background: url(Imagenes_Proyecto/Decoradores.jpeg);
-      background-size: cover;
-      background-position: center;
-      
-    }
-    #imagen3{
-      background: url(Imagenes_Proyecto/Ollas_barro.jpeg);
-      background-size: cover;
-      background-position: center;
-      
-    }
-    #imagen4{
-      background: url(Imagenes_Proyecto/Maceta_Barro.jpeg);
-      background-size: cover;
-      background-position: center;
-      
-    }
-    #imagen5{
-      background: url(Imagenes_Proyecto/Testil.jpeg);
-      background-size: cover;
-      background-position: center;
-      
-    }
-     #imagen6{
-      background: url(Imagenes_Proyecto/Artesania\ figuras.jpeg);
-      background-size: cover;
-      background-position: center;
-      
-    }
-     #imagen7{
-      background: url(Imagenes_Proyecto/Porrones.jpeg);
-      background-size: cover;
-      background-position: center;
-      
-    }
-     #imagen8{
-      background: url(Imagenes_Proyecto/Figurs\ de\ Jesus\ y\ María.jpeg);
-      background-size: cover;
-      background-position: center;
-      
-    }
-     #imagen9{
-      background: url(Imagenes_Proyecto/FotoArt1.jpeg);
-      background-size: cover;
-      background-position: center;
-      
-    }
-     #imagen10{
-      background: url(Imagenes_Proyecto/Joyeria\ artesanal.jpeg);
-      background-size: cover;
-      background-position: center;
-      
-    }
-    /* Botones */
-    .previo, .siguiente {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background: rgba(0,0,0,0.7);
-      color: #FFD700;
-      border: none;
-      font-size: 20px;
-      cursor: pointer;
-      padding: 10px;
-      border-radius: 10px;
-    }
-    .previo { left: 10px; }
-    .siguiente { right: 10px; }
-
-    /* Indicadores */
-    .Indicadores-cars {
-      position: absolute;
-      bottom: 10px;
-      left: 50%;
-      transform: translateX(-50%);
-      display: flex;
-      gap: 8px;
-    }
-    .Indicadores-cars span {
-      width: 12px;
-      height: 12px;
-      background: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      cursor: pointer;
-    }
-     .dohtV1.active {
-      background: #FFC107;
-    }
-
 
 /* Botón de Iniciar sesión */
 .btnsesión{
@@ -1794,12 +1502,48 @@ label{
   z-index: 800;
   
 }
+ header {
+  margin-top: 56px;
+ }
+.contenedor {
+      margin: auto;
+      padding: 0% 0%;
+      
+    }
+ .contendor-texto{
+        box-shadow: 0 8px 10px rgba(129, 129, 129, 0.3);
+        border-radius: 0px;
+        text-align: justify;
+        padding: 40px;
+ }
+ .grid-lugares {
+      margin: 4%;
+      
+    }
+/*Botón inisiar sesión en registro*/
+#Iniciar-sesion {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(20px);
+  transition: all 0.6s ease; 
+  width: 34%;
+  padding: 8px 8px;
+  color: white;
+  font-weight: bolder;
+  border-radius: 9px;
+  font-size: 12px;
+  border: 1px solid #2e2e2e;
+  background: black;
+}
+
+.lugar {
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
 
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
-
 }
-
