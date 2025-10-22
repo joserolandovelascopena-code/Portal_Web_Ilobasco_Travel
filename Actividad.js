@@ -39,35 +39,33 @@ const data = [
           name: "Artesanías de Ilobasco",
           img: "Imagenes_Proyecto/Figuras\ de\ Barro.jpeg",
           url: "Artesanias-.html",
-          url: "file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/Artesanias-.html",
+          
         },
         {
           name: "Actividades",
           img: "Imagenes_Proyecto/CasaHacienda.jpg",
           url: "index.html",
-          url: "file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/index.html",
         },
         {
           name: "Lugares turísticos",
           img: "Imagenes_Proyecto/Helicondia.png",
-          url: "lugares.html",
+          url: "index.html",
         },
         {
           name: "Fichas Informativas",
           img: "Imagenes_Proyecto/Tiestos.png",
-          url: "hoteles.html",
+          url: "index.html",
         },
         {
           name: "Contacto",
           img: "Imagenes_Proyecto/Contacto-Busqueda.jpg",
           url: "ContactoIlobascoTRV.html",
-          url: "file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/ContactoIlobascoTRV.html",
         },
         {
           name: "Comida Local",
           img: "Imagenes_Proyecto/Pupusas-Busqueda.png",
           url: "Gastronomía.html",
-          url: "file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/Gastronom%C3%ADa.html",
+        
         },
       ];
 
