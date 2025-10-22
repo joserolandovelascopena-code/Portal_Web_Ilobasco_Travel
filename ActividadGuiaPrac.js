@@ -67,6 +67,10 @@ const data = [
           url: "Gastronomía.html",
         
         },
+          {
+          name: "Guia turística",
+          url: "GuiaTuristica.html",
+        },
       ];
 
   const searchInput = document.getElementById("search-input");
