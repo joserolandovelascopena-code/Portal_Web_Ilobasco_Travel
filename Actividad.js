@@ -1008,7 +1008,7 @@ registroForm.addEventListener("submit", async (e) => {
     }
   } catch (error) {
     console.error(error);
-    alert("❌ Error al registrar usuario");
+    alert("Error al registrar usuario, intenta de nuevo");
   } finally {
     registroLoader.style.display = "none";
   }
