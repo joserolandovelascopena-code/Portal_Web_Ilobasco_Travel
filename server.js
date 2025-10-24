@@ -16,7 +16,7 @@ app.use(express.static(__dirname)); // sirve los archivos de la misma carpeta
 const pool = new Pool({
   user: "postgres",             
   host: "localhost",
-  database: "postgres",           
+  database: "postgres",          // tu base de datos
   password: "TojiSatoru12",
   port: 5432,
 });
@@ -31,9 +31,8 @@ app.post("/registrar", async (req, res) => {
   const { nombre, usuario, correo, telefono, contraseña } = req.body;
   try {
     await pool.query(
-      `INSERT INTO public."Usuarios"(
-	id, nombre, usuario, correo, telefono, "contraseña")
-	VALUES (?, ?, ?, ?, ?, ?);`,
+      `INSERT INTO public."Usuarios" (nombre, usuario, correo, telefono, "contraseña")
+       VALUES ($1, $2, $3, $4, $5)`,
       [nombre, usuario, correo, telefono, contraseña]
     );
     res.json({ success: true, message: "✅ Usuario registrado correctamente" });
@@ -48,7 +47,7 @@ app.post("/login", async (req, res) => {
   const { usuario, contraseña } = req.body;
   try {
     const result = await pool.query(
-      `SELECT * FROM "Usuarios" WHERE usuario = $1 AND "contraseña" = $2`,
+      `SELECT * FROM public."Usuarios" WHERE usuario = $1 AND "contraseña" = $2`,
       [usuario, contraseña]
     );
 

@@ -874,90 +874,7 @@ function resetAutoSlide() {
 autoSlide();
 
 
-
-//Iniciar seción
-document.querySelector(".menu-btn").addEventListener("click", () => {
-  document.querySelector(".nav-menu").classList.toggle("show");
-});
-
-const modal = document.getElementById("loginModal");
-const openBtn = document.querySelectorAll(".openLogin");
-const closeBtn = document.getElementById("closeModal");
-const ocultarV = document.querySelector(".Vmodal-registro");
-
-
-openBtn.forEach(btn => {
-  btn.addEventListener("click", () => {
-    modal.classList.add("show");
-    abrirModal();
-  });
-});
-
-closeBtn.addEventListener("click", () => {
-  modal.classList.remove("show");
-  cerrarModal();
-});
-
-ocultarV.addEventListener("click", () => {
-  modal.classList.remove("show");
-  cerrarModal();
-});
-
-function abrirModal() {
-  document.body.style.overflow = "hidden";
-}
-
-function cerrarModal() {
-  document.body.style.overflow = "auto";
-}
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  const VmodalHelp = document.getElementById("VmodalHelp");
-  const Vinf_help = document.querySelector(".modal-sesión"); 
-
-  if (!VmodalHelp || !Vinf_help) {
-    console.warn('No se encontró VmodalHelp o .modal-sesión en el DOM');
-    return;
-  }
-
-  VmodalHelp.addEventListener('click', () => {
-    Vinf_help.style.display = (Vinf_help.style.display === "block") ? "none" : "block";
-  });
-  VmodalHelp.addEventListener('click', () => {
-  Vinf_help.classList.toggle("show");
-});
-});
-
-//down chveron
-function Chevron_down_up() {
-  const icon = document.getElementById("chevron");
-  icon.classList.toggle("fa-chevron-down");
-  icon.classList.toggle("fa-chevron-up");
-  VmodalHelp.addEventListener('click', () => {
-  Vinf_help.classList.toggle("show");
-  
-});
-}
-
-const form = modal.querySelector("form");
-const loader = document.getElementById("loader");
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault(); // evitar recarga
-  loader.style.display = "block"; // mostrar loader
-
-  // Simular proceso de envío
-  setTimeout(() => {
-    loader.style.display = "none";
-    alert("Has hiniciado sesión"); // reemplaza con lógica real
-    modal.classList.remove("show");
-    cerrarModal();
-  }, 2000);
-});
-
-
-//Registro
+// ---------- Menú y modales ----------
 document.getElementById("enlace_Sesion").addEventListener("click", () => {
   const Btn_sesión = document.getElementById("Iniciar-sesion");
   const  OpenBtn_sesión = document.getElementById("enlace_Sesion");
@@ -967,55 +884,132 @@ document.getElementById("enlace_Sesion").addEventListener("click", () => {
 });
   
 });
-
-document.querySelector(".Vmodal-registro").addEventListener("click", () => {
+document.querySelector(".menu-btn").addEventListener("click", () => {
   document.querySelector(".nav-menu").classList.toggle("show");
 });
 
+const modal = document.getElementById("loginModal");
 const modal2 = document.getElementById("RegistroModal");
-const openBtn2 = document.querySelector(".Vmodal-registro");
-const closeBtn2 = document.getElementById("closeModal2");
-const CerraRegistro = document.getElementById("Iniciar-sesion")
 
+const openLoginBtns = document.querySelectorAll(".openLogin");
+const closeLoginBtn = document.getElementById("closeModal");
+const ocultarV = document.querySelector(".Vmodal-registro");
+const closeRegistroBtn = document.getElementById("closeModal2");
+const iniciarSesionBtn = document.getElementById("Iniciar-sesion");
 
-openBtn2.addEventListener("click", () => {
-  modal2.classList.add("show");
-  abrirModal2();
-});
-
-closeBtn2.addEventListener("click", () => {
-  modal2.classList.remove("show");
-  cerrarModal2();
-});
-
-CerraRegistro.addEventListener("click", () => {
-  modal2.classList.remove("show");
-  cerrarModal2();
-});
-
-
-function abrirModal2() {
+openLoginBtns.forEach(btn => btn.addEventListener("click", () => {
+  modal.classList.add("show");
   document.body.style.overflow = "hidden";
-}
+}));
 
-function cerrarModal2() {
+closeLoginBtn.addEventListener("click", () => {
+  modal.classList.remove("show");
   document.body.style.overflow = "auto";
-}
-
-const form2 = modal2.querySelector("form");
-const loader2 = document.getElementById("loader2");
-
-form2.addEventListener("submit", (e) => {
-  e.preventDefault(); // evitar recarga
-  loader2.style.display = "block"; // mostrar loader
-
-  // Simular proceso de envío
-  setTimeout(() => {
-    loader2.style.display = "none";
-    alert("Cuenta creada"); // reemplaza con lógica real
-    modal2.classList.remove("show");
-    cerrarModal2();
-  }, 2000);
 });
 
+ocultarV.addEventListener("click", () => {
+  modal.classList.remove("show");
+  document.body.style.overflow = "auto";
+});
 
+openLoginBtns.forEach(btn => btn.addEventListener("click", () => {
+  modal.classList.add("show");
+  document.body.style.overflow = "hidden";
+}));
+
+closeRegistroBtn.addEventListener("click", () => {
+  modal2.classList.remove("show");
+  document.body.style.overflow = "auto";
+});
+
+iniciarSesionBtn.addEventListener("click", () => {
+  modal2.classList.remove("show");
+  modal.classList.add("show");
+  document.body.style.overflow = "hidden";
+});
+
+document.querySelector(".Vmodal-registro").addEventListener("click", () => {
+  modal2.classList.add("show");
+  document.body.style.overflow = "hidden";
+});
+
+// ---------- Help dropdown ----------
+document.addEventListener('DOMContentLoaded', () => {
+  const VmodalHelp = document.getElementById("VmodalHelp");
+  const Vinf_help = document.querySelector(".modal-sesión"); 
+
+  if (VmodalHelp && Vinf_help) {
+    VmodalHelp.addEventListener('click', () => {
+      Vinf_help.style.display = (Vinf_help.style.display === "block") ? "none" : "block";
+      Vinf_help.classList.toggle("show");
+      const icon = document.getElementById("chevron");
+      icon.classList.toggle("fa-chevron-down");
+      icon.classList.toggle("fa-chevron-up");
+    });
+  }
+});
+
+// ---------- Login ----------
+const loginForm = modal.querySelector("form");
+const loginLoader = document.getElementById("loader");
+
+loginForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  loginLoader.style.display = "block";
+
+  const usuario = loginForm.elements["usuario"]?.value || loginForm.elements["email"]?.value;
+  const contraseña = loginForm.elements["contraseña"].value;
+
+  try {
+    const res = await fetch("http://localhost:3000/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ usuario, contraseña }),
+    });
+    const data = await res.json();
+    alert(data.message);
+    if (data.success) {
+      modal.classList.remove("show");
+      document.body.style.overflow = "auto";
+    }
+  } catch (error) {
+    console.error(error);
+    alert("Error al iniciar sesión");
+  } finally {
+    loginLoader.style.display = "none";
+  }
+});
+
+// ---------- Registro ----------
+const registroForm = modal2.querySelector("form");
+const registroLoader = document.getElementById("loader2");
+
+registroForm.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  registroLoader.style.display = "block";
+
+  const nombre = registroForm.elements["nombre"].value;
+  const usuario = registroForm.elements["usuario"].value;
+  const correo = registroForm.elements["correo"].value;
+  const telefono = registroForm.elements["telefono"].value;
+  const contraseña = registroForm.elements["contraseña"].value;
+
+  try {
+    const res = await fetch("http://localhost:3000/registrar", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ nombre, usuario, correo, telefono, contraseña }),
+    });
+    const data = await res.json();
+    alert(data.message);
+    if (data.success) {
+      modal2.classList.remove("show");
+      document.body.style.overflow = "auto";
+    }
+  } catch (error) {
+    console.error(error);
+    alert("❌ Error al registrar usuario");
+  } finally {
+    registroLoader.style.display = "none";
+  }
+});
