@@ -37,7 +37,7 @@ app.post("/registrar", async (req, res) => {
     );
     res.json({ success: true, message: "✅ Usuario registrado correctamente" });
   } catch (error) {
-    console.error("❌ Error al registrar:", error.message);
+    console.error("Error al registrar:", error.message);
     res.status(500).json({ success: false, message: "Error al registrar usuario" });
   }
 });
@@ -57,12 +57,56 @@ app.post("/login", async (req, res) => {
       res.status(401).json({ success: false, message: "Usuario o contraseña incorrectos" });
     }
   } catch (error) {
-    console.error("❌ Error al iniciar sesión:", error.message);
+    console.error(" Error al iniciar sesión:", error.message);
     res.status(500).json({ success: false, message: "Error al iniciar sesión" });
   }
 });
 
 // Levantar servidor
 app.listen(port, () => {
-  console.log(`🚀 Servidor corriendo en http://localhost:${port}`);
+  console.log(`Servidor corriendo en http://localhost:${port}`);
+});
+
+
+// === GUARDAR COMENTARIO ===
+app.post("/comentarios", async (req, res) => {
+  const { id_ventana, usuario, comentario } = req.body;
+
+  if (!id_ventana || !usuario || !comentario) {
+    return res.status(400).json({ success: false, message: "Datos incompletos" });
+  }
+
+  try {
+    await pool.query(
+      `INSERT INTO public."Comentarios" (id_ventana, usuario, comentario, fecha)
+       VALUES ($1, $2, $3, NOW())`,
+      [id_ventana, usuario, comentario]
+    );
+
+    res.json({ success: true, message: "✅ Comentario guardado correctamente" });
+  } catch (error) {
+    console.error("❌ Error al guardar comentario:", error.message);
+    res.status(500).json({ success: false, message: "Error al guardar comentario" });
+  }
+});
+
+
+// === OBTENER COMENTARIOS POR VENTANA ===
+app.get("/comentarios/:id_ventana", async (req, res) => {
+  const { id_ventana } = req.params;
+
+  try {
+    const result = await pool.query(
+      `SELECT id, usuario, comentario, fecha
+       FROM public."Comentarios"
+       WHERE id_ventana = $1
+       ORDER BY fecha ASC`,
+      [id_ventana]
+    );
+
+    res.json(result.rows);
+  } catch (error) {
+    console.error("❌ Error al obtener comentarios:", error.message);
+    res.status(500).json({ success: false, message: "Error al obtener comentarios" });
+  }
 });

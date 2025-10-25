@@ -53,7 +53,7 @@
     </div>
     <div class="search-container">
       <input
-        type="text"
+        type="search"
         id="search-input"
         placeholder="Buscar..."
         autocomplete="off"
@@ -337,7 +337,7 @@
             </div>
           </div>
         </div>
-        <section class="socialComentarios show">
+        <section class="socialComentarios" id="socialComentarios" data-id="1">
           <div class="Header-comentarios">
             <div class="header-line"></div>
             <h3>Comentarios</h3>
@@ -345,31 +345,16 @@
             <hr />
           </div>
 
-          <div class="Comentarisos">
-            <p>
-              Al llegar al Jardín Heliconias en Ilobasco, te recibe un arco
-              natural de follaje verde intenso. Caminas por senderos suaves y
-              serenos, bordeados de heleconias que se elevan como esculturas
-              vivas. Los colores rojos intensos, naranjas, amarillos y verdes
-              contrastan contra hojas grandes, creando un juego de luz y sombra
-              que da vida al paisaje. <br /><br />El aire huele a humedad
-              tropical, tierra y flores. Se escuchan pájaros y el murmullo de
-              ramas moviéndose con la brisa. A cada paso, descubres detalles:
-              pequeñas flores colgantes, pétalos que parecen llamar tu atención,
-              insectos que revolotean curiosos.<br /><br />
-              Las heleconias, con sus formas únicas —algunas verticales, otras
-              arqueadas como alas, otras en racimos densos— crean rincones de
-              ensueño para fotos. Hay miradores, zonas con bancas rústicas y
-              todo pensado para que tu mirada viaje de flor en flor. Es fácil
-              olvidarse del mundo exterior cuando estás allí.
-              <br /><br />Además, el lugar se define como un espacio que desea
-              “ser único” más que compararse con otros destinos naturales.<br /><br />
-              Instagram También se le ubica en tramos de carretera cercano a
-              Ilobasco: “Heliconias del Bosque: Km 53” y “Portal Jardín
-              Heliconias: Km 49 ½ carretera a Ilobasco” Instagram Se menciona
-              que funciona como un ecoparque donde familias pueden venir a
-              disfrutar naturaleza y tranquilidad.
-            </p>
+          <div class="Comentarisos" id="listaComentarios"></div>
+
+          <!-- Barra para escribir nuevo comentario -->
+          <div class="Sección-comentarios">
+            <input
+              type="text"
+              id="boxComentario"
+              placeholder="Agregar un comentario..."
+            />
+            <button id="btnEnviar">Enviar</button>
           </div>
         </section>
       </div>
@@ -1418,7 +1403,11 @@
         <!-- Encabezado estilo ventana -->
         <div class="modal-header">
           <div class="modal-title">
-            <img src="Imagenes_Proyecto/icono.png" alt="icono" class="icono" />
+            <img
+              src="Imagenes_Proyecto/Logo_color_Travel.png"
+              alt="icono"
+              class="icono"
+            />
             <span>Login</span>
           </div>
           <span
@@ -1492,7 +1481,11 @@
       <div class="modal-content2">
         <div class="modal-header2">
           <div class="modal-title2">
-            <img src="Imagenes_Proyecto/icono.png" alt="icono" class="icono" />
+            <img
+              src="Imagenes_Proyecto/Logo_color_Travel.png"
+              alt="icono"
+              class="icono2"
+            />
             <span>Registro</span>
           </div>
           <span class="closeRegistro" id="closeModal2">&times;</span>

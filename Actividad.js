@@ -295,20 +295,99 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
-
- document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => {
+  // Elementos del modal
   const comentarios = document.querySelector(".socialComentarios");
   const OpenComentarios = document.getElementById("OpenComentarios");
   const clouseComent = document.getElementById("closeComen");
 
-  if (comentarios && OpenComentarios) {
-    OpenComentarios.addEventListener("click", () => {
-      comentarios.classList.toggle("show"); // alterna entre visible y oculto
-    }); 
-  } 
+  // Elementos de comentarios
+  const btnEnviar = document.getElementById("btnEnviar");
+  const boxComentario = document.getElementById("boxComentario");
+  const listaComentarios = document.getElementById("listaComentarios");
+
+  // Identificador de la ventana/artículo
+  const idVentana = comentarios.dataset.id; // "1", "2", etc.
+
+  // Usuario (de sesión)
+  const usuario = sessionStorage.getItem("usuario") || "Usuario anónimo";
+
+  // Abrir modal
+  OpenComentarios.addEventListener("click", () => {
+    comentarios.classList.add("show");
+    cargarComentarios();
+  });
+
+  // Cerrar modal
   clouseComent.addEventListener("click", () => {
-   comentarios.classList.remove("show");  }); 
+    comentarios.classList.remove("show");
+  });
+
+  // Cargar comentarios desde el servidor
+  async function cargarComentarios() {
+    listaComentarios.innerHTML = "";
+    try {
+      const res = await fetch(`http://localhost:3000/comentarios/${idVentana}`);
+      const comentariosServidor = await res.json();
+
+      comentariosServidor.forEach((c) => {
+        const div = document.createElement("div");
+        div.classList.add("comentario-item");
+        div.innerHTML = `
+          <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="user">
+          <div class="comentario-contenido">
+            <h4>${c.usuario}</h4>
+            <small>${new Date(c.fecha).toLocaleString()}</small>
+            <p>${c.comentario}</p>
+          </div>
+        `;
+        listaComentarios.appendChild(div);
+      });
+    } catch (err) {
+      console.error("Error al cargar comentarios:", err);
+    }
+  }
+
+  // Enviar comentario al servidor
+  const enviarComentario = async () => {
+    const texto = boxComentario.value.trim();
+    if (!texto) return;
+
+    try {
+      const res = await fetch("http://localhost:3000/comentarios", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          id_ventana: idVentana,
+          usuario: usuario,
+          comentario: texto,
+        }),
+      });
+
+      const data = await res.json();
+      if (data.success) {
+        boxComentario.value = "";
+        cargarComentarios(); // refresca los comentarios
+      } else {
+        alert("Error al enviar comentario: " + data.message);
+      }
+    } catch (err) {
+      console.error("Error al enviar comentario:", err);
+    }
+  };
+
+  // Botón enviar
+  btnEnviar.addEventListener("click", enviarComentario);
+
+  // Enter para enviar
+  boxComentario.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      enviarComentario();
+    }
+  });
 });
+
 
   
 //Ventana 2
