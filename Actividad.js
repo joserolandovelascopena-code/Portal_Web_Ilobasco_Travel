@@ -296,7 +296,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+ document.addEventListener("DOMContentLoaded", () => {
+  const comentarios = document.querySelector(".socialComentarios");
+  const OpenComentarios = document.getElementById("OpenComentarios");
 
+  if (comentarios && OpenComentarios) {
+    OpenComentarios.addEventListener("click", () => {
+      comentarios.classList.toggle("show"); // alterna entre visible y oculto
+    });
+  }
+});
+
+  
 //Ventana 2
 
 const ventanaArtice2 = document.getElementById('ventanaArtice2');
