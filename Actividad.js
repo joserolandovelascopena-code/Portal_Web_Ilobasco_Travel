@@ -299,12 +299,15 @@ document.addEventListener("DOMContentLoaded", () => {
  document.addEventListener("DOMContentLoaded", () => {
   const comentarios = document.querySelector(".socialComentarios");
   const OpenComentarios = document.getElementById("OpenComentarios");
+  const clouseComent = document.getElementById("closeComen");
 
   if (comentarios && OpenComentarios) {
     OpenComentarios.addEventListener("click", () => {
       comentarios.classList.toggle("show"); // alterna entre visible y oculto
-    });
-  }
+    }); 
+  } 
+  clouseComent.addEventListener("click", () => {
+   comentarios.classList.remove("show");  }); 
 });
 
   
