@@ -454,7 +454,7 @@ ul {
 /* Contenedor del contenido del modal */
 #contenido {
   width: 60%;
- background: rgb(248, 235, 211);
+  background: rgb(248, 235, 211);
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -683,13 +683,12 @@ body.modal-abierto {
 
 .Titulos-funciones {
   display: flex;
-  margin-left: 38%;
+  margin-left: 38.1%;
   position: absolute;
   overflow: hidden;
   padding-top: 6px;
   gap: 68px;
 }
-
 .comentarios i {
   padding-top: 14px;
   font-size: 24px;
@@ -716,7 +715,7 @@ html, body {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   box-shadow: 0 -4px 15px rgba(0,0,0,0.2);
-  transform: translateY(100%);
+  transform: translateY(108%);
   transition: transform 0.6s ease;
   display: flex;
   flex-direction: column;
@@ -958,7 +957,7 @@ html, body {
   flex: 1;
   border: none;
   border-radius: 25px;
-  padding: 10px 15px;
+  padding: 12px 15px;
   background-color: #f1f1f1;
   outline: none;
   font-size: 14px;
@@ -967,7 +966,7 @@ html, body {
   flex: 1;
   border: none;
   border-radius: 25px;
-  padding: 10px 15px;
+  padding: 12px 15px;
   background-color: #f1f1f1;
   outline: none;
   font-size: 14px;
@@ -976,7 +975,7 @@ html, body {
   flex: 1;
   border: none;
   border-radius: 25px;
-  padding: 10px 15px;
+  padding: 12px 15px;
   background-color: #f1f1f1;
   outline: none;
   font-size: 14px;
@@ -985,7 +984,7 @@ html, body {
   flex: 1;
   border: none;
   border-radius: 25px;
-  padding: 10px 15px;
+  padding: 12px 15px;
   background-color: #f1f1f1;
   outline: none;
   font-size: 14px;
@@ -994,7 +993,7 @@ html, body {
   flex: 1;
   border: none;
   border-radius: 25px;
-  padding: 10px 15px;
+  padding: 12px 15px;
   background-color: #f1f1f1;
   outline: none;
   font-size: 14px;
@@ -1003,7 +1002,7 @@ html, body {
   flex: 1;
   border: none;
   border-radius: 25px;
-  padding: 10px 15px;
+  padding: 12px 15px;
   background-color: #f1f1f1;
   outline: none;
   font-size: 14px;
@@ -1012,7 +1011,7 @@ html, body {
   flex: 1;
   border: none;
   border-radius: 25px;
-  padding: 10px 15px;
+  padding: 12px 15px;
   background-color: #f1f1f1;
   outline: none;
   font-size: 14px;
@@ -1021,7 +1020,7 @@ html, body {
   flex: 1;
   border: none;
   border-radius: 25px;
-  padding: 10px 15px;
+  padding: 12px 15px;
   background-color: #f1f1f1;
   outline: none;
   font-size: 14px;
@@ -1174,9 +1173,186 @@ html, body {
   margin-top: 5px;
   font-size: 14px;
 }
+.menu-btn.show{
+ display: none;
+}
+/* === SECCIÓN DE RESEÑAS === */
+.SocialReseña {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, #ffffff, #f3f9f7);
+  z-index: 1201;
+  transform: translateY(100%);
+  box-shadow: 0 -4px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
 
+.SocialReseña.show {
+  transform: translateY(0);
+}
 
+.Header-reseña {
+  position: relative;
+  padding: 15px 10px 5px;
+  background-color: #ffffff;
+  color: #000000;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
 
+.Header-reseña h3 {
+  margin: 0;
+  font-size: 1.4em;
+  letter-spacing: 0.5px;
+  padding: 0px 5px 4px;
+
+}
+
+#closeReseña {
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #000000;
+  transition: transform 0.2s ease;
+}
+#closeReseña:hover {
+  transform: scale(1.2);
+}
+
+.contenedor-reseñas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  padding: 15px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* === COLUMNA IZQUIERDA: ESCRIBIR === */
+.Sección-reseñas {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+.Sección-reseñas:hover {
+  transform: translateY(-3px);
+}
+
+.Sección-reseñas h4 {
+  margin-bottom: 10px;
+  color: #007a5c;
+}
+
+.Estrellas i {
+  color: #e7e6e4;
+  font-size: 22px;
+  margin-right: 4px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+.Estrellas i:hover {
+  transform: scale(1.2);
+}
+
+.Sección-reseñas input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 0.95em;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+#boxreseña{
+  height: 200px;
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  font-family: "Poppins",'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.Sección-reseñas input:focus {
+  border-color: #acc9ff;
+  box-shadow: 0 0 8px rgba(0, 122, 92, 0.2);
+}
+
+.Sección-reseñas button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007a5c;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.Sección-reseñas button:hover {
+  background-color: #009f75;
+  transform: translateY(-2px);
+}
+
+/* === COLUMNA DERECHA: LISTA DE RESEÑAS === */
+.Reseñas {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  overflow-y: auto;
+  height: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+.Reseñas h3 {
+  text-align: center;
+  color: #007a5c;
+  margin-bottom: 10px;
+}
+
+/* Tarjeta individual de reseña  */
+.card-reseña {
+  background-color: #f9fdfb;
+  border: 1px solid #e3ece9;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 10px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+.card-reseña:hover {
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.card-reseña h5 {
+  margin: 0 0 5px;
+  font-size: 1em;
+  color: #333;
+}
+.card-reseña p {
+  font-size: 0.9em;
+  color: #555;
+}
+.card-reseña .stars {
+  color: #ffc107;
+  font-size: 20px;
+}
 
 
 /*Ventana 2*/
@@ -4349,8 +4525,6 @@ ul {
 /* Ventanas de Actividades */
 .Titulos_Largos h4{
   max-width: 160px;
-
-
 }
 
 /* Contenedor del contenido del modal */
@@ -4385,6 +4559,8 @@ ul {
   margin-left: 36px;
   color: #000;
 }
+
+
 /*Ventana 1*/
     .Carrusel-Imagenes {
       position: relative;
@@ -4935,6 +5111,34 @@ margin-top: 6px;
   padding: 2px 6px;
 }
 
+/*Reseñas*/
+.Reseñas {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  overflow-y:visible;
+  height: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+.contenedor-reseñas {
+ 
+  grid-template-columns: 1fr;
+  height: 100%;
+ 
+}
+.Header-reseña h3 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  padding: 0px 8px 4px;
+}
+
+#closeReseña {
+  right: 20px;
+  top: 10px;
+  font-size: 24px;
+ 
+}
 .rating, .rating1, 
 .rating2,.rating3,
 .rating4,.rating5,

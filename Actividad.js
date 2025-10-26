@@ -299,7 +299,6 @@ document.addEventListener("DOMContentLoaded", () => {
 //Comentarios
 document.addEventListener("DOMContentLoaded", () => {
 
-  // Elementos del modal
   const comentarios = document.querySelector(".socialComentarios");
   const OpenComentarios = document.getElementById("OpenComentarios");
   const clouseComent = document.getElementById("closeComen");
@@ -312,10 +311,10 @@ document.addEventListener("DOMContentLoaded", () => {
   // Identificador de la ventana/artículo
   const idVentana = comentarios.dataset.id; // "1", "2", etc.
 
-  // Usuario (de sesión)
+ 
   const usuario = sessionStorage.getItem("usuario") || "Usuario anónimo";
 
-  // Abrir modal
+
   OpenComentarios.addEventListener("click", () => {
     comentarios.classList.add("show");
     cargarComentarios();
@@ -967,7 +966,107 @@ boxComentario8.addEventListener("keypress", (e) => {
 });
 
 
-  
+document.addEventListener("DOMContentLoaded", () => {
+  const resenaModal = document.querySelector(".SocialReseña");
+  const openResenaBtn = document.getElementById("OpenReseña");
+  const closeResenaBtn = document.getElementById("closeReseña");
+
+  // Abrir modal y cargar reseñas
+  openResenaBtn?.addEventListener("click", () => {
+    resenaModal.classList.add("show");
+    const idSitio = resenaModal.dataset.id;
+    cargarResenas(idSitio);
+  });
+
+  // Cerrar modal
+  closeResenaBtn?.addEventListener("click", () => {
+    resenaModal.classList.remove("show");
+  });
+
+  // Selección de estrellas
+  const estrellas = document.querySelectorAll(".Estrellas i");
+  estrellas.forEach((estrella, index) => {
+    estrella.addEventListener("click", () => {
+      estrellas.forEach((e, i) => {
+        e.classList.toggle("active", i <= index);
+        e.style.color = i <= index ? "#ffc107" : "#e7e6e4";
+      });
+    });
+  });
+
+  // Enviar reseña
+  document.getElementById("Enviar-reseña").addEventListener("click", async () => {
+    const idSitio = resenaModal.dataset.id;
+    const usuario = "Visitante";
+    const titulo = document.getElementById("boxTitulo").value.trim();
+    const resena = document.getElementById("boxreseña").value.trim();
+    const calificacion = document.querySelectorAll(".Estrellas i.active").length;
+
+    if (!titulo || !resena || calificacion === 0) {
+      alert("Por favor, completa todos los campos y selecciona una calificación.");
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost:3000/resenas", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id_sitio: idSitio, usuario, titulo, resena, calificacion })
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        alert("Reseña guardada correctamente");
+        cargarResenas(idSitio);
+
+        // Limpiar inputs
+        document.getElementById("boxTitulo").value = "";
+        document.getElementById("boxreseña").value = "";
+        estrellas.forEach(e => { e.classList.remove("active"); e.style.color = "#e7e6e4"; });
+      } else {
+        alert("Error al guardar la reseña: " + data.message);
+      }
+    } catch (error) {
+      console.error("Error de conexión:", error);
+      alert("Error de conexión con el servidor");
+    }
+  });
+});
+
+// Función para cargar reseñas
+async function cargarResenas(idSitio) {
+  const lista = document.getElementById("listaReseñas");
+  lista.innerHTML = "<h3>Reseñas</h3>";
+
+  try {
+    const response = await fetch(`http://localhost:3000/resenas/${idSitio}`);
+    const resenas = await response.json();
+
+    if (!Array.isArray(resenas) || resenas.length === 0) {
+      lista.innerHTML += "<p>No hay reseñas todavía.</p>";
+      return;
+    }
+
+    resenas.forEach(r => {
+      const card = document.createElement("div");
+      card.className = "card-reseña";
+      card.innerHTML = `
+        <h5>${r.titulo}</h5>
+        <div class="stars">${"★".repeat(r.calificacion)}${"☆".repeat(5 - r.calificacion)}</div>
+        <p>${r.resena}</p>
+        <small>Por ${r.usuario} — ${new Date(r.fecha).toLocaleDateString()}</small>
+      `;
+      lista.appendChild(card);
+    });
+  } catch (error) {
+    console.error("Error al cargar reseñas:", error);
+    lista.innerHTML += "<p>Error al cargar reseñas.</p>";
+  }
+}
+
+
+
 //Ventana 2
 const ventanaArtice2 = document.getElementById('ventanaArtice2');
 const InfArtice2 = document.getElementById('InfArtice2');

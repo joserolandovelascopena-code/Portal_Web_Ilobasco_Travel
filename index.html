@@ -249,6 +249,48 @@
         </div>
       </div>
     </div>
+
+    <!--Reseñas-->
+    <section class="SocialReseña" id="socialReseña" data-id="1">
+      <div class="Header-reseña">
+        <h3>Escribe tu reseña</h3>
+        <span class="CloseReseña" id="closeReseña">&times;</span>
+        <hr />
+      </div>
+      <div class="contenedor-reseñas">
+        <div class="Sección-reseñas">
+          <h4>Calificación:</h4>
+          <samp id="Estrellas-Reseña">
+            <div class="Estrellas">
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+              <i class="fa fa-star"></i>
+            </div>
+          </samp>
+          <br />
+          <p>Escribe tu un titulo, max 40 caracteres</p>
+          <input
+            type="text"
+            id="boxTitulo"
+            name="Titulo"
+            placeholder="Titulo"
+          />
+          <p>Escribe tu reseña, minimo 200 caracteres</p>
+          <textarea
+            id="boxreseña"
+            name="reseña"
+            rows="5"
+            cols="40"
+            placeholder="Escribe aquí..."
+          ></textarea>
+          <button id="Enviar-reseña">Enviar</button>
+        </div>
+        <div class="Reseñas" id="listaReseñas"><h3>Reseña</h3></div>
+      </div>
+    </section>
+    <!--Sección actividades-->
     <h2 class="title_Actividades">Actividades para tí.</h2>
     <article id="InfArtice1">
       <div id="contenido">
@@ -268,7 +310,7 @@
               <samp id="OpenComentarios">
                 <i class="fa-solid fa-comments"></i>
               </samp>
-              <samp> <i class="fa-solid fa-book"></i></samp>
+              <samp id="OpenReseña"> <i class="fa-solid fa-book"></i></samp>
             </di>
             <div class="Titulos-funciones">
               <h5>Comentarios</h5>
