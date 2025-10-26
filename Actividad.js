@@ -295,7 +295,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+//Comentarios
 document.addEventListener("DOMContentLoaded", () => {
+
   // Elementos del modal
   const comentarios = document.querySelector(".socialComentarios");
   const OpenComentarios = document.getElementById("OpenComentarios");
@@ -386,12 +389,586 @@ document.addEventListener("DOMContentLoaded", () => {
       enviarComentario();
     }
   });
+
+//ventana 2 
+const comentarios2 = document.querySelector(".socialComentarios2");
+const OpenComentarios2 = document.getElementById("OpenComentarios2");
+const clouseComent2 = document.getElementById("closeComen2");
+
+OpenComentarios2.addEventListener("click", () => {
+  comentarios2.classList.add("show");
+  cargarComentarios2(); 
+});
+
+
+ 
+  clouseComent2.addEventListener("click", () => {
+    comentarios2.classList.remove("show");
+  });
+
+const listaComentarios2 = document.getElementById("listaComentarios2");
+const boxComentario2 = document.getElementById("boxComentario2");
+const btnEnviar2 = document.getElementById("btnEnviar2");
+const idVentana2 = comentarios2.dataset.id;
+
+
+async function cargarComentarios2() {
+  listaComentarios2.innerHTML = "";
+  try {
+    const res = await fetch(`http://localhost:3000/comentarios/${idVentana2}`);
+    const comentariosServidor = await res.json();
+
+    comentariosServidor.forEach((c) => {
+      const div = document.createElement("div");
+      div.classList.add("comentario-item");
+      div.innerHTML = `
+        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="user">
+        <div class="comentario-contenido">
+          <h4>${c.usuario}</h4>
+          <small>${new Date(c.fecha).toLocaleString()}</small>
+          <p>${c.comentario}</p>
+        </div>
+      `;
+      listaComentarios2.appendChild(div);
+    });
+  } catch (err) {
+    console.error("Error al cargar comentarios ventana 2:", err);
+  }
+}
+
+const enviarComentario2 = async () => {
+  const texto = boxComentario2.value.trim();
+  if (!texto) return;
+
+  try {
+    const res = await fetch("http://localhost:3000/comentarios", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        id_ventana: idVentana2,
+        usuario: usuario,
+        comentario: texto,
+      }),
+    });
+
+    const data = await res.json();
+    if (data.success) {
+      boxComentario2.value = "";
+      cargarComentarios2(); // refresca los comentarios de ventana 2
+    } else {
+      alert("Error al enviar comentario: " + data.message);
+    }
+  } catch (err) {
+    console.error("Error al enviar comentario ventana 2:", err);
+  }
+};
+
+// Asignar eventos
+btnEnviar2.addEventListener("click", enviarComentario2);
+boxComentario2.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    enviarComentario2();
+  }
+});
+
+//ventana 3 
+const comentarios3 = document.querySelector(".socialComentarios3");
+const OpenComentarios3 = document.getElementById("OpenComentarios3");
+const clouseComent3 = document.getElementById("closeComen3");
+
+OpenComentarios3.addEventListener("click", () => {
+  comentarios3.classList.add("show");
+  cargarComentarios3(); 
+});
+
+
+ 
+  clouseComent3.addEventListener("click", () => {
+    comentarios3.classList.remove("show");
+  });
+
+const listaComentarios3 = document.getElementById("listaComentarios3");
+const boxComentario3 = document.getElementById("boxComentario3");
+const btnEnviar3 = document.getElementById("btnEnviar3");
+const idVentana3 = comentarios3.dataset.id;
+
+
+async function cargarComentarios3() {
+  listaComentarios3.innerHTML = "";
+  try {
+    const res = await fetch(`http://localhost:3000/comentarios/${idVentana3}`);
+    const comentariosServidor = await res.json();
+
+    comentariosServidor.forEach((c) => {
+      const div = document.createElement("div");
+      div.classList.add("comentario-item");
+      div.innerHTML = `
+        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="user">
+        <div class="comentario-contenido">
+          <h4>${c.usuario}</h4>
+          <small>${new Date(c.fecha).toLocaleString()}</small>
+          <p>${c.comentario}</p>
+        </div>
+      `;
+      listaComentarios3.appendChild(div);
+    });
+  } catch (err) {
+    console.error("Error al cargar comentarios ventana 3:", err);
+  }
+}
+
+const enviarComentario3 = async () => {
+  const texto = boxComentario3.value.trim();
+  if (!texto) return;
+
+  try {
+    const res = await fetch("http://localhost:3000/comentarios", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        id_ventana: idVentana3,
+        usuario: usuario,
+        comentario: texto,
+      }),
+    });
+
+    const data = await res.json();
+    if (data.success) {
+      boxComentario3.value = "";
+      cargarComentarios3(); 
+    } else {
+      alert("Error al enviar comentario: " + data.message);
+    }
+  } catch (err) {
+    console.error("Error al enviar comentario ventana 3:", err);
+  }
+};
+
+// Asignar eventos
+btnEnviar3.addEventListener("click", enviarComentario3);
+boxComentario3.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    enviarComentario3();
+  }
+});
+
+//ventana 4 
+const comentarios4 = document.querySelector(".socialComentarios4");
+const OpenComentarios4 = document.getElementById("OpenComentarios4");
+const clouseComent4 = document.getElementById("closeComen4");
+
+OpenComentarios4.addEventListener("click", () => {
+  comentarios4.classList.add("show");
+  cargarComentarios4(); 
+});
+
+
+ 
+  clouseComent4.addEventListener("click", () => {
+    comentarios4.classList.remove("show");
+  });
+
+const listaComentarios4 = document.getElementById("listaComentarios4");
+const boxComentario4 = document.getElementById("boxComentario4");
+const btnEnviar4 = document.getElementById("btnEnviar4");
+const idVentana4 = comentarios4.dataset.id;
+
+
+async function cargarComentarios4() {
+  listaComentarios4.innerHTML = "";
+  try {
+    const res = await fetch(`http://localhost:3000/comentarios/${idVentana4}`);
+    const comentariosServidor = await res.json();
+
+    comentariosServidor.forEach((c) => {
+      const div = document.createElement("div");
+      div.classList.add("comentario-item");
+      div.innerHTML = `
+        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="user">
+        <div class="comentario-contenido">
+          <h4>${c.usuario}</h4>
+          <small>${new Date(c.fecha).toLocaleString()}</small>
+          <p>${c.comentario}</p>
+        </div>
+      `;
+      listaComentarios4.appendChild(div);
+    });
+  } catch (err) {
+    console.error("Error al cargar comentarios ventana 4:", err);
+  }
+}
+
+const enviarComentario4 = async () => {
+  const texto = boxComentario4.value.trim();
+  if (!texto) return;
+
+  try {
+    const res = await fetch("http://localhost:3000/comentarios", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        id_ventana: idVentana4,
+        usuario: usuario,
+        comentario: texto,
+      }),
+    });
+
+    const data = await res.json();
+    if (data.success) {
+      boxComentario4.value = "";
+      cargarComentarios4(); 
+    } else {
+      alert("Error al enviar comentario: " + data.message);
+    }
+  } catch (err) {
+    console.error("Error al enviar comentario ventana 4:", err);
+  }
+};
+
+// Asignar eventos
+btnEnviar4.addEventListener("click", enviarComentario4);
+boxComentario4.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    enviarComentario4();
+  }
+});
+
+//ventana 5 
+const comentarios5 = document.querySelector(".socialComentarios5");
+const OpenComentarios5 = document.getElementById("OpenComentarios5");
+const clouseComent5 = document.getElementById("closeComen5");
+
+OpenComentarios5.addEventListener("click", () => {
+  comentarios5.classList.add("show");
+  cargarComentarios5(); 
+});
+
+
+ 
+  clouseComent5.addEventListener("click", () => {
+    comentarios5.classList.remove("show");
+  });
+
+const listaComentarios5 = document.getElementById("listaComentarios5");
+const boxComentario5 = document.getElementById("boxComentario5");
+const btnEnviar5 = document.getElementById("btnEnviar5");
+const idVentana5 = comentarios5.dataset.id;
+
+
+async function cargarComentarios5() {
+  listaComentarios5.innerHTML = "";
+  try {
+    const res = await fetch(`http://localhost:3000/comentarios/${idVentana5}`);
+    const comentariosServidor = await res.json();
+
+    comentariosServidor.forEach((c) => {
+      const div = document.createElement("div");
+      div.classList.add("comentario-item");
+      div.innerHTML = `
+        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="user">
+        <div class="comentario-contenido">
+          <h4>${c.usuario}</h4>
+          <small>${new Date(c.fecha).toLocaleString()}</small>
+          <p>${c.comentario}</p>
+        </div>
+      `;
+      listaComentarios5.appendChild(div);
+    });
+  } catch (err) {
+    console.error("Error al cargar comentarios ventana 5:", err);
+  }
+}
+
+const enviarComentario5 = async () => {
+  const texto = boxComentario5.value.trim();
+  if (!texto) return;
+
+  try {
+    const res = await fetch("http://localhost:3000/comentarios", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        id_ventana: idVentana5,
+        usuario: usuario,
+        comentario: texto,
+      }),
+    });
+
+    const data = await res.json();
+    if (data.success) {
+      boxComentario5.value = "";
+      cargarComentarios5(); 
+    } else {
+      alert("Error al enviar comentario: " + data.message);
+    }
+  } catch (err) {
+    console.error("Error al enviar comentario ventana 5:", err);
+  }
+};
+
+// Asignar eventos
+btnEnviar5.addEventListener("click", enviarComentario5);
+boxComentario5.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    enviarComentario5();
+  }
+});
+
+//ventana 6
+const comentarios6 = document.querySelector(".socialComentarios6");
+const OpenComentarios6 = document.getElementById("OpenComentarios6");
+const clouseComent6 = document.getElementById("closeComen6");
+
+OpenComentarios6.addEventListener("click", () => {
+  comentarios6.classList.add("show");
+  cargarComentarios6(); 
+});
+
+
+ 
+  clouseComent6.addEventListener("click", () => {
+    comentarios6.classList.remove("show");
+  });
+
+const listaComentarios6 = document.getElementById("listaComentarios6");
+const boxComentario6 = document.getElementById("boxComentario6");
+const btnEnviar6 = document.getElementById("btnEnviar6");
+const idVentana6 = comentarios6.dataset.id;
+
+
+async function cargarComentarios6() {
+  listaComentarios6.innerHTML = "";
+  try {
+    const res = await fetch(`http://localhost:3000/comentarios/${idVentana6}`);
+    const comentariosServidor = await res.json();
+
+    comentariosServidor.forEach((c) => {
+      const div = document.createElement("div");
+      div.classList.add("comentario-item");
+      div.innerHTML = `
+        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="user">
+        <div class="comentario-contenido">
+          <h4>${c.usuario}</h4>
+          <small>${new Date(c.fecha).toLocaleString()}</small>
+          <p>${c.comentario}</p>
+        </div>
+      `;
+      listaComentarios6.appendChild(div);
+    });
+  } catch (err) {
+    console.error("Error al cargar comentarios ventana 6:", err);
+  }
+}
+
+const enviarComentario6 = async () => {
+  const texto = boxComentario6.value.trim();
+  if (!texto) return;
+
+  try {
+    const res = await fetch("http://localhost:3000/comentarios", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        id_ventana: idVentana6,
+        usuario: usuario,
+        comentario: texto,
+      }),
+    });
+
+    const data = await res.json();
+    if (data.success) {
+      boxComentario6.value = "";
+      cargarComentarios6(); 
+    } else {
+      alert("Error al enviar comentario: " + data.message);
+    }
+  } catch (err) {
+    console.error("Error al enviar comentario ventana 6:", err);
+  }
+};
+
+// Asignar eventos
+btnEnviar6.addEventListener("click", enviarComentario6);
+boxComentario6.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    enviarComentario6();
+  }
+});
+
+//ventana 7
+const comentarios7 = document.querySelector(".socialComentarios7");
+const OpenComentarios7 = document.getElementById("OpenComentarios7");
+const clouseComent7 = document.getElementById("closeComen7");
+
+OpenComentarios7.addEventListener("click", () => {
+  comentarios7.classList.add("show");
+  cargarComentarios7(); 
+});
+
+
+ 
+  clouseComent7.addEventListener("click", () => {
+    comentarios7.classList.remove("show");
+  });
+
+const listaComentarios7 = document.getElementById("listaComentarios7");
+const boxComentario7 = document.getElementById("boxComentario7");
+const btnEnviar7 = document.getElementById("btnEnviar7");
+const idVentana7 = comentarios7.dataset.id;
+
+
+async function cargarComentarios7() {
+  listaComentarios7.innerHTML = "";
+  try {
+    const res = await fetch(`http://localhost:3000/comentarios/${idVentana7}`);
+    const comentariosServidor = await res.json();
+
+    comentariosServidor.forEach((c) => {
+      const div = document.createElement("div");
+      div.classList.add("comentario-item");
+      div.innerHTML = `
+        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="user">
+        <div class="comentario-contenido">
+          <h4>${c.usuario}</h4>
+          <small>${new Date(c.fecha).toLocaleString()}</small>
+          <p>${c.comentario}</p>
+        </div>
+      `;
+      listaComentarios7.appendChild(div);
+    });
+  } catch (err) {
+    console.error("Error al cargar comentarios ventana 7:", err);
+  }
+}
+
+const enviarComentario7 = async () => {
+  const texto = boxComentario7.value.trim();
+  if (!texto) return;
+
+  try {
+    const res = await fetch("http://localhost:3000/comentarios", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        id_ventana: idVentana7,
+        usuario: usuario,
+        comentario: texto,
+      }),
+    });
+
+    const data = await res.json();
+    if (data.success) {
+      boxComentario7.value = "";
+      cargarComentarios7(); 
+    } else {
+      alert("Error al enviar comentario: " + data.message);
+    }
+  } catch (err) {
+    console.error("Error al enviar comentario ventana 7:", err);
+  }
+};
+
+// Asignar eventos
+btnEnviar7.addEventListener("click", enviarComentario7);
+boxComentario7.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    enviarComentario7();
+  }
+});
+
+//ventana 8
+const comentarios8 = document.querySelector(".socialComentarios8");
+const OpenComentarios8 = document.getElementById("OpenComentarios8");
+const clouseComent8 = document.getElementById("closeComen8");
+
+OpenComentarios8.addEventListener("click", () => {
+  comentarios8.classList.add("show");
+  cargarComentarios8(); 
+});
+
+
+ 
+  clouseComent8.addEventListener("click", () => {
+    comentarios8.classList.remove("show");
+  });
+
+const listaComentarios8 = document.getElementById("listaComentarios8");
+const boxComentario8 = document.getElementById("boxComentario8");
+const btnEnviar8 = document.getElementById("btnEnviar8");
+const idVentana8 = comentarios8.dataset.id;
+
+
+async function cargarComentarios8() {
+  listaComentarios8.innerHTML = "";
+  try {
+    const res = await fetch(`http://localhost:3000/comentarios/${idVentana8}`);
+    const comentariosServidor = await res.json();
+
+    comentariosServidor.forEach((c) => {
+      const div = document.createElement("div");
+      div.classList.add("comentario-item");
+      div.innerHTML = `
+        <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="user">
+        <div class="comentario-contenido">
+          <h4>${c.usuario}</h4>
+          <small>${new Date(c.fecha).toLocaleString()}</small>
+          <p>${c.comentario}</p>
+        </div>
+      `;
+      listaComentarios8.appendChild(div);
+    });
+  } catch (err) {
+    console.error("Error al cargar comentarios ventana 8:", err);
+  }
+}
+
+const enviarComentario8 = async () => {
+  const texto = boxComentario8.value.trim();
+  if (!texto) return;
+
+  try {
+    const res = await fetch("http://localhost:3000/comentarios", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        id_ventana: idVentana8,
+        usuario: usuario,
+        comentario: texto,
+      }),
+    });
+
+    const data = await res.json();
+    if (data.success) {
+      boxComentario8.value = "";
+      cargarComentarios8(); 
+    } else {
+      alert("Error al enviar comentario: " + data.message);
+    }
+  } catch (err) {
+    console.error("Error al enviar comentario ventana 8:", err);
+  }
+};
+
+// Asignar eventos
+btnEnviar8.addEventListener("click", enviarComentario8);
+boxComentario8.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+    enviarComentario8();
+  }
+});
+
 });
 
 
   
 //Ventana 2
-
 const ventanaArtice2 = document.getElementById('ventanaArtice2');
 const InfArtice2 = document.getElementById('InfArtice2');
 const closeVen2 = document.getElementById('closeVen2');

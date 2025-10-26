@@ -702,7 +702,10 @@ html, body {
 }
 
 /* --- Ventana de comentarios modal --- */
-.socialComentarios {
+.socialComentarios, .socialComentarios2, 
+.socialComentarios3,.socialComentarios4,
+.socialComentarios5,.socialComentarios6,
+.socialComentarios7,.socialComentarios8 {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -722,8 +725,31 @@ html, body {
 .socialComentarios.show {
   transform: translateY(0);
 }
-
-.Header-comentarios {
+.socialComentarios2.show {
+  transform: translateY(0);
+}
+.socialComentarios3.show {
+  transform: translateY(0);
+}
+.socialComentarios4.show {
+  transform: translateY(0);
+}
+.socialComentarios5.show {
+  transform: translateY(0);
+}
+.socialComentarios6.show {
+  transform: translateY(0);
+}
+.socialComentarios7.show {
+  transform: translateY(0);
+}
+.socialComentarios8.show {
+  transform: translateY(0);
+}
+.Header-comentarios,.Header-comentarios2,
+.Header-comentarios3,.Header-comentarios4,
+.Header-comentarios5,.Header-comentarios6,
+.Header-comentarios7,.Header-comentarios8 {
   text-align: center;
   padding-top: 8px;
   position: relative;
@@ -733,8 +759,40 @@ html, body {
   color: black;
   margin-bottom: 5px;
 }
+.Header-comentarios2 h3 {
+  color: black;
+  margin-bottom: 5px;
+}
+.Header-comentarios3 h3 {
+  color: black;
+  margin-bottom: 5px;
+}
+.Header-comentarios4 h3 {
+  color: black;
+  margin-bottom: 5px;
+}
+.Header-comentarios5 h3 {
+  color: black;
+  margin-bottom: 5px;
+}
+.Header-comentarios6 h3 {
+  color: black;
+  margin-bottom: 5px;
+}
+.Header-comentarios7 h3 {
+  color: black;
+  margin-bottom: 5px;
+}
+.Header-comentarios8 h3 {
+  color: black;
+  margin-bottom: 5px;
+}
 
-.header-line {
+
+.header-line, .header-line2,
+.header-line3,.header-line4,
+.header-line5,.header-line6,
+.header-line7,.header-line8 {
   border-radius: 20px;
   width: 60px;
   height: 5px;
@@ -742,7 +800,10 @@ html, body {
   background-color: #afac9c;
 }
 
-.CloseComen {
+.CloseComen, .CloseComen2,
+.CloseComen3,.CloseComen4,
+.CloseComen5,.CloseComen6,
+.CloseComen7,.CloseComen8 {
   position: absolute;
   top: 10px;
   right: 15px;
@@ -758,9 +819,54 @@ html, body {
   border-radius: 5px;
   padding: 2px 6px;
 }
+.CloseComen2:hover {
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  padding: 2px 6px;
+}
+.CloseComen3:hover {
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  padding: 2px 6px;
+}
+.CloseComen4:hover {
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  padding: 2px 6px;
+}
+.CloseComen5:hover {
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  padding: 2px 6px;
+}
+.CloseComen6:hover {
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  padding: 2px 6px;
+}
+.CloseComen7:hover {
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  padding: 2px 6px;
+}
+.CloseComen8:hover {
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+  padding: 2px 6px;
+}
+
 
 /* --- Contenedor de comentarios --- */
-.Comentarisos {
+.Comentarisos, .Comentarisos2, .Comentarisos3,
+.Comentarisos4,.Comentarisos5,.Comentarisos6,
+.Comentarisos7,.Comentarisos8{
   flex: 1;
   overflow-y: auto;
   padding: 12px;
@@ -774,13 +880,66 @@ html, body {
 .Comentarisos::-webkit-scrollbar {
   width: 6px;
 }
+.Comentarisos2::-webkit-scrollbar {
+  width: 6px;
+}
+.Comentarisos3::-webkit-scrollbar {
+  width: 6px;
+}
+.Comentarisos4::-webkit-scrollbar {
+  width: 6px;
+}
+.Comentarisos5::-webkit-scrollbar {
+  width: 6px;
+}
+.Comentarisos6::-webkit-scrollbar {
+  width: 6px;
+}
+.Comentarisos7::-webkit-scrollbar {
+  width: 6px;
+}
+.Comentarisos8::-webkit-scrollbar {
+  width: 6px;
+}
 .Comentarisos::-webkit-scrollbar-thumb {
   background-color: #dbdbdb;
   border-radius: 10px;
 }
+.Comentarisos2::-webkit-scrollbar-thumb {
+  background-color: #dbdbdb;
+  border-radius: 10px;
+}
+.Comentarisos3::-webkit-scrollbar-thumb {
+  background-color: #dbdbdb;
+  border-radius: 10px;
+}
+.Comentarisos4::-webkit-scrollbar-thumb {
+  background-color: #dbdbdb;
+  border-radius: 10px;
+}
+.Comentarisos5::-webkit-scrollbar-thumb {
+  background-color: #dbdbdb;
+  border-radius: 10px;
+}
+.Comentarisos6::-webkit-scrollbar-thumb {
+  background-color: #dbdbdb;
+  border-radius: 10px;
+}
+.Comentarisos7::-webkit-scrollbar-thumb {
+  background-color: #dbdbdb;
+  border-radius: 10px;
+}
+.Comentarisos8::-webkit-scrollbar-thumb {
+  background-color: #dbdbdb;
+  border-radius: 10px;
+}
+
 
 /* --- Sección de input de comentario --- */
-.Sección-comentarios {
+.Sección-comentarios, .Sección-comentarios2,
+.Sección-comentarios3,.Sección-comentarios4,
+.Sección-comentarios5,.Sección-comentarios6,
+.Sección-comentarios7,.Sección-comentarios8{
   position: absolute;
   bottom: 10px;
   left: 50%;
@@ -804,6 +963,70 @@ html, body {
   outline: none;
   font-size: 14px;
 }
+.Sección-comentarios2 input {
+  flex: 1;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  background-color: #f1f1f1;
+  outline: none;
+  font-size: 14px;
+}
+.Sección-comentarios3 input {
+  flex: 1;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  background-color: #f1f1f1;
+  outline: none;
+  font-size: 14px;
+}
+.Sección-comentarios4 input {
+  flex: 1;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  background-color: #f1f1f1;
+  outline: none;
+  font-size: 14px;
+}
+.Sección-comentarios5 input {
+  flex: 1;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  background-color: #f1f1f1;
+  outline: none;
+  font-size: 14px;
+}
+.Sección-comentarios6 input {
+  flex: 1;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  background-color: #f1f1f1;
+  outline: none;
+  font-size: 14px;
+}
+.Sección-comentarios7 input {
+  flex: 1;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  background-color: #f1f1f1;
+  outline: none;
+  font-size: 14px;
+}
+.Sección-comentarios8 input {
+  flex: 1;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  background-color: #f1f1f1;
+  outline: none;
+  font-size: 14px;
+}
+
 
 .Sección-comentarios button {
   background-color: #037251;
@@ -816,9 +1039,104 @@ html, body {
   transition: background-color 0.3s ease;
 }
 
+.Sección-comentarios2 button {
+  background-color: #037251;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+.Sección-comentarios3 button {
+  background-color: #037251;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+.Sección-comentarios4 button {
+  background-color: #037251;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+.Sección-comentarios5 button {
+  background-color: #037251;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+.Sección-comentarios6 button {
+  background-color: #037251;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+.Sección-comentarios7 button {
+  background-color: #037251;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+.Sección-comentarios8 button {
+  background-color: #037251;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
 .Sección-comentarios button:hover {
   background-color: #025a40;
 }
+
+.Sección-comentarios2 button:hover {
+  background-color: #025a40;
+}
+
+.Sección-comentarios3 button:hover {
+  background-color: #025a40;
+}
+.Sección-comentarios4 button:hover {
+  background-color: #025a40;
+}
+.Sección-comentarios5 button:hover {
+  background-color: #025a40;
+}
+.Sección-comentarios6 button:hover {
+  background-color: #025a40;
+}
+.Sección-comentarios7 button:hover {
+  background-color: #025a40;
+}
+.Sección-comentarios8 button:hover {
+  background-color: #025a40;
+}
+
+
 
 /* --- Cada comentario --- */
 .comentario-item {

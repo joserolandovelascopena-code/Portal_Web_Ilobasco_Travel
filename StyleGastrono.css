@@ -1373,6 +1373,7 @@ ul {
 
 
 #foodCarousel {
+  display: block;
   margin-top: 200px;
   position: relative;
   max-width: 100%;
