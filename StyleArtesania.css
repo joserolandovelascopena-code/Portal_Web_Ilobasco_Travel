@@ -28,6 +28,11 @@ body {
   display: inline-block;
 
  }
+ .Parrafo_Footer{
+ color: white;
+ font-size: 14px;
+}
+
 /*Menú*/
 
 /*menu bar*/
@@ -1793,6 +1798,16 @@ label{
   display: none;
   z-index: 800;
   
+}
+.Parrafo_Footer{
+ color: white;
+}
+.footer-contenedor{
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap:10px ;/* Espaciado en tre columnas*/
+ align-items:flex-start ;
+ justify-content: center;
 }
 
 @keyframes spin {

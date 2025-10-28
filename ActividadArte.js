@@ -67,6 +67,7 @@ const data = [
         },
           {
           name: "Guia turística",
+          img: "Imagenes_proyecto2/Heliconias4.jpg",
           url: "GuiaTuristica.html",
         },
       

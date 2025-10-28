@@ -17,6 +17,11 @@ body {
 p{
   color: #000;
 }
+
+.Parrafo_Footer{
+ color: white;
+ font-size: 14px;
+}
 /*Menú*/
 
 /*menu bar*/
@@ -1540,7 +1545,16 @@ label{
 .lugar {
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
-
+.Parrafo_Footer{
+ color: white;
+}
+.footer-contenedor{
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap:10px ;/* Espaciado en tre columnas*/
+ align-items:flex-start ;
+ justify-content: center;
+}
 
 @keyframes spin {
   0% { transform: rotate(0deg); }

@@ -43,6 +43,10 @@ p{
 .Mas-enlaces{
   display: none;
 }
+.Parrafo_Footer{
+ color: white;
+ font-size: 14px;
+}
 
 /* --- MODAL LATERAL --- */
 #modal-menu {
@@ -5614,7 +5618,8 @@ margin-top: 6px;
 }
 
 /*Reseñas*/
-.Reseñas {
+.Reseñas,.Reseñas2,.Reseñas3,.Reseñas4,.Reseñas5,
+.Reseñas6,.Reseñas7,.Reseñas8 {
   background-color: #ffffff;
   border-radius: 15px;
   padding: 20px;
@@ -5622,8 +5627,9 @@ margin-top: 6px;
   height: 100%;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
-.contenedor-reseñas {
- 
+.contenedor-reseñas,.contenedor-reseñas2,.contenedor-reseñas3,
+.contenedor-reseñas4, .contenedor-reseñas5,.contenedor-reseñas6, 
+.contenedor-reseñas7,.contenedor-reseñas8    {
   grid-template-columns: 1fr;
   height: 100%;
  
@@ -5634,8 +5640,53 @@ margin-top: 6px;
   letter-spacing: 0.5px;
   padding: 0px 8px 4px;
 }
+.Header-reseña2 h3 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  padding: 0px 8px 4px;
+}
+.Header-reseña3 h3 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  padding: 0px 8px 4px;
+}
+.Header-reseña4 h3 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  padding: 0px 8px 4px;
+}
+.Header-reseña5 h3 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  padding: 0px 8px 4px;
+}
+.Header-reseña6 h3 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  padding: 0px 8px 4px;
+}
+.Header-reseña7 h3 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  padding: 0px 8px 4px;
+}
+.Header-reseña8 h3 {
+  margin: 0;
+  font-size: 18px;
+  letter-spacing: 0.5px;
+  padding: 0px 8px 4px;
+}
 
-#closeReseña {
+
+#closeReseña,#closeReseña2,#closeReseña3,
+#closeReseña4,#closeReseña5,#closeReseña6,
+#closeReseña7,#closeReseña8 {
   right: 20px;
   top: 10px;
   font-size: 24px;
@@ -6077,7 +6128,16 @@ label{
   margin-left: 18px;
 }
 
-
+.Parrafo_Footer{
+ color: white;
+}
+.footer-contenedor{
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap:10px ;/* Espaciado en tre columnas*/
+ align-items:flex-start ;
+ justify-content: center;
+}
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }

@@ -22,6 +22,10 @@ p{
   margin: auto;
   font-family:'Inter','Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+.Parrafo_Footer{
+ color: white;
+ font-size: 14px;
+}
 /*menu bar*/
 #buscador2 {
   display: none;
@@ -1800,7 +1804,16 @@ label{
   z-index: 800;
   
 }
-
+.Parrafo_Footer{
+ color: white;
+}
+.footer-contenedor{
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap:10px ;/* Espaciado en tre columnas*/
+ align-items:flex-start ;
+ justify-content: center;
+}
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }

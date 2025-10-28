@@ -65,7 +65,6 @@ const data = [
           name: "Comida Local",
           img: "Imagenes_Proyecto/Pupusas-Busqueda.png",
           url: "Gastronomía.html",
-        
         },
       ];
 
