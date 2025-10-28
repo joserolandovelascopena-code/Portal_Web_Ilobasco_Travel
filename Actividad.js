@@ -966,25 +966,26 @@ boxComentario8.addEventListener("keypress", (e) => {
 });
 
 
+
 document.addEventListener("DOMContentLoaded", () => {
+  // ==================== VENTANA 1 ====================
   const resenaModal = document.querySelector(".SocialReseña");
   const openResenaBtn = document.getElementById("OpenReseña");
   const closeResenaBtn = document.getElementById("closeReseña");
+  const estrellas = document.querySelectorAll(".Estrellas i");
+  const enviarBtn = document.getElementById("Enviar-reseña");
 
-  // Abrir modal y cargar reseñas
-  openResenaBtn?.addEventListener("click", () => {
+
+  openResenaBtn.addEventListener("click", () => {
     resenaModal.classList.add("show");
     const idSitio = resenaModal.dataset.id;
-    cargarResenas(idSitio);
+    cargarResenas(idSitio, "#listaReseñas"); 
   });
 
-  // Cerrar modal
-  closeResenaBtn?.addEventListener("click", () => {
+  closeResenaBtn.addEventListener("click", () => {
     resenaModal.classList.remove("show");
   });
 
-  // Selección de estrellas
-  const estrellas = document.querySelectorAll(".Estrellas i");
   estrellas.forEach((estrella, index) => {
     estrella.addEventListener("click", () => {
       estrellas.forEach((e, i) => {
@@ -994,13 +995,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Enviar reseña
-  document.getElementById("Enviar-reseña").addEventListener("click", async () => {
+  enviarBtn.addEventListener("click", async () => {
     const idSitio = resenaModal.dataset.id;
     const usuario = "Visitante";
-    const titulo = document.getElementById("boxTitulo").value.trim();
-    const resena = document.getElementById("boxreseña").value.trim();
-    const calificacion = document.querySelectorAll(".Estrellas i.active").length;
+    const titulo = resenaModal.querySelector("#boxTitulo").value.trim();
+    const resena = resenaModal.querySelector("#boxreseña").value.trim();
+    const calificacion = resenaModal.querySelectorAll(".Estrellas i.active").length;
 
     if (!titulo || !resena || calificacion === 0) {
       alert("Por favor, completa todos los campos y selecciona una calificación.");
@@ -1011,18 +1011,16 @@ document.addEventListener("DOMContentLoaded", () => {
       const response = await fetch("http://localhost:3000/resenas", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ id_sitio: idSitio, usuario, titulo, resena, calificacion })
+        body: JSON.stringify({ id_sitio: idSitio, usuario, titulo, resena, calificacion }),
       });
 
       const data = await response.json();
-
       if (data.success) {
         alert("Reseña guardada correctamente");
-        cargarResenas(idSitio);
+        cargarResenas(idSitio, "#listaReseñas");
 
-        // Limpiar inputs
-        document.getElementById("boxTitulo").value = "";
-        document.getElementById("boxreseña").value = "";
+        resenaModal.querySelector("#boxTitulo").value = "";
+        resenaModal.querySelector("#boxreseña").value = "";
         estrellas.forEach(e => { e.classList.remove("active"); e.style.color = "#e7e6e4"; });
       } else {
         alert("Error al guardar la reseña: " + data.message);
@@ -1032,17 +1030,454 @@ document.addEventListener("DOMContentLoaded", () => {
       alert("Error de conexión con el servidor");
     }
   });
+
+  // ==================== VENTANA 2 ====================
+  const resenaModal2 = document.querySelector(".SocialReseña2");
+  const openResenaBtn2 = document.getElementById("OpenReseña2");
+  const closeResenaBtn2 = document.getElementById("closeReseña2");
+  const estrellas2 = document.querySelectorAll(".Estrellas2 i");
+  const enviarBtn2 = document.getElementById("Enviar-reseña2");
+
+  openResenaBtn2.addEventListener("click", () => {
+    resenaModal2.classList.add("show");
+    const idSitio = resenaModal2.dataset.id;
+    cargarResenas(idSitio, "#listaReseñas2");
+  });
+
+  closeResenaBtn2.addEventListener("click", () => {
+    resenaModal2.classList.remove("show");
+  });
+
+  estrellas2.forEach((estrella, index) => {
+    estrella.addEventListener("click", () => {
+      estrellas2.forEach((e, i) => {
+        e.classList.toggle("active", i <= index);
+        e.style.color = i <= index ? "#ffc107" : "#e7e6e4";
+      });
+    });
+  });
+
+  enviarBtn2.addEventListener("click", async () => {
+    const idSitio = resenaModal2.dataset.id;
+    const usuario = "Visitante";
+    const titulo = resenaModal2.querySelector("#boxTitulo2").value.trim();
+    const resena = resenaModal2.querySelector("#boxreseña2").value.trim();
+    const calificacion = resenaModal2.querySelectorAll(".Estrellas2 i.active").length;
+
+    if (!titulo || !resena || calificacion === 0) {
+      alert("Por favor, completa todos los campos y selecciona una calificación.");
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost:3000/resenas", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id_sitio: idSitio, usuario, titulo, resena, calificacion }),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        alert("Reseña guardada correctamente");
+        cargarResenas(idSitio, "#listaReseñas2");
+
+        resenaModal2.querySelector("#boxTitulo2").value = "";
+        resenaModal2.querySelector("#boxreseña2").value = "";
+        estrellas2.forEach(e => { e.classList.remove("active"); e.style.color = "#e7e6e4"; });
+      } else {
+        alert("Error al guardar la reseña: " + data.message);
+      }
+    } catch (error) {
+      console.error("Error de conexión:", error);
+      alert("Error de conexión con el servidor");
+    }
+  });
+
+
+   // ==================== VENTANA 3 ====================
+  const resenaModal3 = document.querySelector(".SocialReseña3");
+  const openResenaBtn3 = document.getElementById("OpenReseña3");
+  const closeResenaBtn3 = document.getElementById("closeReseña3");
+  const estrellas3 = document.querySelectorAll(".Estrellas3 i");
+  const enviarBtn3 = document.getElementById("Enviar-reseña3");
+
+  openResenaBtn3.addEventListener("click", () => {
+    resenaModal3.classList.add("show");
+    const idSitio = resenaModal3.dataset.id;
+    cargarResenas(idSitio, "#listaReseñas3");
+  });
+
+  closeResenaBtn3.addEventListener("click", () => {
+    resenaModal3.classList.remove("show");
+  });
+
+  estrellas3.forEach((estrella, index) => {
+    estrella.addEventListener("click", () => {
+      estrellas3.forEach((e, i) => {
+        e.classList.toggle("active", i <= index);
+        e.style.color = i <= index ? "#ffc107" : "#e7e6e4";
+      });
+    });
+  });
+
+  enviarBtn3.addEventListener("click", async () => {
+    const idSitio = resenaModal3.dataset.id;
+    const usuario = "Visitante";
+    const titulo = resenaModal3.querySelector("#boxTitulo3").value.trim();
+    const resena = resenaModal3.querySelector("#boxreseña3").value.trim();
+    const calificacion = resenaModal3.querySelectorAll(".Estrellas3 i.active").length;
+
+    if (!titulo || !resena || calificacion === 0) {
+      alert("Por favor, completa todos los campos y selecciona una calificación.");
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost:3000/resenas", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id_sitio: idSitio, usuario, titulo, resena, calificacion }),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        alert("Reseña guardada correctamente");
+        cargarResenas(idSitio, "#listaReseñas3");
+
+        resenaModal3.querySelector("#boxTitulo2").value = "";
+        resenaModal3.querySelector("#boxreseña2").value = "";
+        estrellas3.forEach(e => { e.classList.remove("active"); e.style.color = "#e7e6e4"; });
+      } else {
+        alert("Error al guardar la reseña: " + data.message);
+      }
+    } catch (error) {
+      console.error("Error de conexión:", error);
+      alert("Error de conexión con el servidor");
+    }
+
+
+  });
+
+   // ==================== VENTANA 4 ====================
+  const resenaModal4 = document.querySelector(".SocialReseña4");
+  const openResenaBtn4 = document.getElementById("OpenReseña4");
+  const closeResenaBtn4 = document.getElementById("closeReseña4");
+  const estrellas4 = document.querySelectorAll(".Estrellas4 i");
+  const enviarBtn4 = document.getElementById("Enviar-reseña4");
+
+  openResenaBtn4.addEventListener("click", () => {
+    resenaModal4.classList.add("show");
+    const idSitio = resenaModal4.dataset.id;
+    cargarResenas(idSitio, "#listaReseñas4");
+  });
+
+  closeResenaBtn4.addEventListener("click", () => {
+    resenaModal4.classList.remove("show");
+  });
+
+  estrellas4.forEach((estrella, index) => {
+    estrella.addEventListener("click", () => {
+      estrellas4.forEach((e, i) => {
+        e.classList.toggle("active", i <= index);
+        e.style.color = i <= index ? "#ffc107" : "#e7e6e4";
+      });
+    });
+  });
+
+  enviarBtn4.addEventListener("click", async () => {
+    const idSitio = resenaModal4.dataset.id;
+    const usuario = "Visitante";
+    const titulo = resenaModal4.querySelector("#boxTitulo4").value.trim();
+    const resena = resenaModal4.querySelector("#boxreseña4").value.trim();
+    const calificacion = resenaModal4.querySelectorAll(".Estrellas4 i.active").length;
+
+    if (!titulo || !resena || calificacion === 0) {
+      alert("Por favor, completa todos los campos y selecciona una calificación.");
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost:3000/resenas", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id_sitio: idSitio, usuario, titulo, resena, calificacion }),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        alert("Reseña guardada correctamente");
+        cargarResenas(idSitio, "#listaReseñas4");
+
+        resenaModal4.querySelector("#boxTitulo4").value = "";
+        resenaModal4.querySelector("#boxreseña4").value = "";
+        estrellas4.forEach(e => { e.classList.remove("active"); e.style.color = "#e7e6e4"; });
+      } else {
+        alert("Error al guardar la reseña: " + data.message);
+      }
+    } catch (error) {
+      console.error("Error de conexión:", error);
+      alert("Error de conexión con el servidor");
+    }
+  });
+
+  // ==================== VENTANA 5 ====================
+  const resenaModal5 = document.querySelector(".SocialReseña5");
+  const openResenaBtn5 = document.getElementById("OpenReseña5");
+  const closeResenaBtn5 = document.getElementById("closeReseña5");
+  const estrellas5 = document.querySelectorAll(".Estrellas5 i");
+  const enviarBtn5 = document.getElementById("Enviar-reseña5");
+
+  openResenaBtn5.addEventListener("click", () => {
+    resenaModal5.classList.add("show");
+    const idSitio = resenaModal5.dataset.id;
+    cargarResenas(idSitio, "#listaReseñas5");
+  });
+
+  closeResenaBtn5.addEventListener("click", () => {
+    resenaModal5.classList.remove("show");
+  });
+
+  estrellas5.forEach((estrella, index) => {
+    estrella.addEventListener("click", () => {
+      estrellas5.forEach((e, i) => {
+        e.classList.toggle("active", i <= index);
+        e.style.color = i <= index ? "#ffc107" : "#e7e6e4";
+      });
+    });
+  });
+
+  enviarBtn5.addEventListener("click", async () => {
+    const idSitio = resenaModal5.dataset.id;
+    const usuario = "Visitante";
+    const titulo = resenaModal5.querySelector("#boxTitulo5").value.trim();
+    const resena = resenaModal5.querySelector("#boxreseña5").value.trim();
+    const calificacion = resenaModal5.querySelectorAll(".Estrellas5 i.active").length;
+
+    if (!titulo || !resena || calificacion === 0) {
+      alert("Por favor, completa todos los campos y selecciona una calificación.");
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost:3000/resenas", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id_sitio: idSitio, usuario, titulo, resena, calificacion }),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        alert("Reseña guardada correctamente");
+        cargarResenas(idSitio, "#listaReseñas5");
+
+        resenaModal5.querySelector("#boxTitulo5").value = "";
+        resenaModal5.querySelector("#boxreseña5").value = "";
+        estrellas5.forEach(e => { e.classList.remove("active"); e.style.color = "#e7e6e4"; });
+      } else {
+        alert("Error al guardar la reseña: " + data.message);
+      }
+    } catch (error) {
+      console.error("Error de conexión:", error);
+      alert("Error de conexión con el servidor");
+    }
+  });
+
+  // ==================== VENTANA 6 ====================
+  const resenaModal6 = document.querySelector(".SocialReseña6");
+  const openResenaBtn6 = document.getElementById("OpenReseña6");
+  const closeResenaBtn6 = document.getElementById("closeReseña6");
+  const estrellas6 = document.querySelectorAll(".Estrellas6 i");
+  const enviarBtn6 = document.getElementById("Enviar-reseña6");
+
+  openResenaBtn6.addEventListener("click", () => {
+    resenaModal6.classList.add("show");
+    const idSitio = resenaModal6.dataset.id;
+    cargarResenas(idSitio, "#listaReseñas6");
+  });
+
+  closeResenaBtn6.addEventListener("click", () => {
+    resenaModal6.classList.remove("show");
+  });
+
+  estrellas6.forEach((estrella, index) => {
+    estrella.addEventListener("click", () => {
+      estrellas6.forEach((e, i) => {
+        e.classList.toggle("active", i <= index);
+        e.style.color = i <= index ? "#ffc107" : "#e7e6e4";
+      });
+    });
+  });
+
+  enviarBtn6.addEventListener("click", async () => {
+    const idSitio = resenaModal6.dataset.id;
+    const usuario = "Visitante";
+    const titulo = resenaModal6.querySelector("#boxTitulo6").value.trim();
+    const resena = resenaModal6.querySelector("#boxreseña6").value.trim();
+    const calificacion = resenaModal6.querySelectorAll(".Estrellas6 i.active").length;
+
+    if (!titulo || !resena || calificacion === 0) {
+      alert("Por favor, completa todos los campos y selecciona una calificación.");
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost:3000/resenas", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id_sitio: idSitio, usuario, titulo, resena, calificacion }),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        alert("Reseña guardada correctamente");
+        cargarResenas(idSitio, "#listaReseñas6");
+
+        resenaModal6.querySelector("#boxTitulo6").value = "";
+        resenaModal6.querySelector("#boxreseña6").value = "";
+        estrellas6.forEach(e => { e.classList.remove("active"); e.style.color = "#e7e6e4"; });
+      } else {
+        alert("Error al guardar la reseña: " + data.message);
+      }
+    } catch (error) {
+      console.error("Error de conexión:", error);
+      alert("Error de conexión con el servidor");
+    }
+  });
+
+  // ==================== VENTANA 7 ====================
+  const resenaModal7 = document.querySelector(".SocialReseña7");
+  const openResenaBtn7 = document.getElementById("OpenReseña7");
+  const closeResenaBtn7 = document.getElementById("closeReseña7");
+  const estrellas7 = document.querySelectorAll(".Estrellas7 i");
+  const enviarBtn7 = document.getElementById("Enviar-reseña7");
+
+  openResenaBtn7.addEventListener("click", () => {
+    resenaModal7.classList.add("show");
+    const idSitio = resenaModal7.dataset.id;
+    cargarResenas(idSitio, "#listaReseñas7");
+  });
+
+  closeResenaBtn7.addEventListener("click", () => {
+    resenaModal7.classList.remove("show");
+  });
+
+  estrellas7.forEach((estrella, index) => {
+    estrella.addEventListener("click", () => {
+      estrellas7.forEach((e, i) => {
+        e.classList.toggle("active", i <= index);
+        e.style.color = i <= index ? "#ffc107" : "#e7e6e4";
+      });
+    });
+  });
+
+  enviarBtn7.addEventListener("click", async () => {
+    const idSitio = resenaModal7.dataset.id;
+    const usuario = "Visitante";
+    const titulo = resenaModal7.querySelector("#boxTitulo7").value.trim();
+    const resena = resenaModal7.querySelector("#boxreseña7").value.trim();
+    const calificacion = resenaModal7.querySelectorAll(".Estrellas7 i.active").length;
+
+    if (!titulo || !resena || calificacion === 0) {
+      alert("Por favor, completa todos los campos y selecciona una calificación.");
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost:3000/resenas", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id_sitio: idSitio, usuario, titulo, resena, calificacion }),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        alert("Reseña guardada correctamente");
+        cargarResenas(idSitio, "#listaReseñas7");
+
+        resenaModal7.querySelector("#boxTitulo7").value = "";
+        resenaModal7.querySelector("#boxreseña7").value = "";
+        estrellas7.forEach(e => { e.classList.remove("active"); e.style.color = "#e7e6e4"; });
+      } else {
+        alert("Error al guardar la reseña: " + data.message);
+      }
+    } catch (error) {
+      console.error("Error de conexión:", error);
+      alert("Error de conexión con el servidor");
+    }
+  });
+
+  // ==================== VENTANA 8 ====================
+  const resenaModal8 = document.querySelector(".SocialReseña8");
+  const openResenaBtn8 = document.getElementById("OpenReseña8");
+  const closeResenaBtn8 = document.getElementById("closeReseña8");
+  const estrellas8 = document.querySelectorAll(".Estrellas8 i");
+  const enviarBtn8 = document.getElementById("Enviar-reseña8");
+
+  openResenaBtn8.addEventListener("click", () => {
+    resenaModal8.classList.add("show");
+    const idSitio = resenaModal8.dataset.id;
+    cargarResenas(idSitio, "#listaReseñas8");
+  });
+
+  closeResenaBtn8.addEventListener("click", () => {
+    resenaModal8.classList.remove("show");
+  });
+
+  estrellas8.forEach((estrella, index) => {
+    estrella.addEventListener("click", () => {
+      estrellas8.forEach((e, i) => {
+        e.classList.toggle("active", i <= index);
+        e.style.color = i <= index ? "#ffc107" : "#e7e6e4";
+      });
+    });
+  });
+
+  enviarBtn8.addEventListener("click", async () => {
+    const idSitio = resenaModal8.dataset.id;
+    const usuario = "Visitante";
+    const titulo = resenaModal8.querySelector("#boxTitulo8").value.trim();
+    const resena = resenaModal8.querySelector("#boxreseña8").value.trim();
+    const calificacion = resenaModal8.querySelectorAll(".Estrellas8 i.active").length;
+
+    if (!titulo || !resena || calificacion === 0) {
+      alert("Por favor, completa todos los campos y selecciona una calificación.");
+      return;
+    }
+
+    try {
+      const response = await fetch("http://localhost:3000/resenas", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id_sitio: idSitio, usuario, titulo, resena, calificacion }),
+      });
+
+      const data = await response.json();
+      if (data.success) {
+        alert("Reseña guardada correctamente");
+        cargarResenas(idSitio, "#listaReseñas8");
+
+        resenaModal8.querySelector("#boxTitulo8").value = "";
+        resenaModal8.querySelector("#boxreseña8").value = "";
+        estrellas8.forEach(e => { e.classList.remove("active"); e.style.color = "#e7e6e4"; });
+      } else {
+        alert("Error al guardar la reseña: " + data.message);
+      }
+    } catch (error) {
+      console.error("Error de conexión:", error);
+      alert("Error de conexión con el servidor");
+    }
+  });
+
 });
 
-// Función para cargar reseñas
-async function cargarResenas(idSitio) {
-  const lista = document.getElementById("listaReseñas");
+//  FUNCION GENERAL 
+async function cargarResenas(idSitio, listaSelector) {
+  const lista = document.querySelector(listaSelector);
   lista.innerHTML = "<h3>Reseñas</h3>";
 
   try {
     const response = await fetch(`http://localhost:3000/resenas/${idSitio}`);
-    const resenas = await response.json();
-
+    const resenas = await response.json(); // Devuelve array directamente
     if (!Array.isArray(resenas) || resenas.length === 0) {
       lista.innerHTML += "<p>No hay reseñas todavía.</p>";
       return;
@@ -1064,6 +1499,9 @@ async function cargarResenas(idSitio) {
     lista.innerHTML += "<p>Error al cargar reseñas.</p>";
   }
 }
+
+
+
 
 
 
@@ -1717,7 +2155,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
-
 // ---------- Login ----------
 const loginForm = modal.querySelector("form");
 const loginLoader = document.getElementById("loader");
@@ -1727,16 +2164,18 @@ loginForm.addEventListener("submit", async (e) => {
   loginLoader.style.display = "block";
 
   const usuario = loginForm.elements["usuario"]?.value || loginForm.elements["email"]?.value;
-  const contraseña = loginForm.elements["contraseña"].value;
+  const contrasena = loginForm.elements["contrasena"].value;
 
   try {
     const res = await fetch("http://localhost:3000/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ usuario, contraseña }),
+      body: JSON.stringify({ usuario, contrasena }), // ✅ corregido
     });
+
     const data = await res.json();
     alert(data.message);
+
     if (data.success) {
       modal.classList.remove("show");
       document.body.style.overflow = "auto";
@@ -1761,16 +2200,18 @@ registroForm.addEventListener("submit", async (e) => {
   const usuario = registroForm.elements["usuario"].value;
   const correo = registroForm.elements["correo"].value;
   const telefono = registroForm.elements["telefono"].value;
-  const contraseña = registroForm.elements["contraseña"].value;
+  const contrasena = registroForm.elements["contrasena"].value;
 
   try {
     const res = await fetch("http://localhost:3000/registrar", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ nombre, usuario, correo, telefono, contraseña }),
+      body: JSON.stringify({ nombre, usuario, correo, telefono, contrasena }),
     });
+
     const data = await res.json();
     alert(data.message);
+
     if (data.success) {
       modal2.classList.remove("show");
       document.body.style.overflow = "auto";
