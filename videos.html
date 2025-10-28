@@ -30,11 +30,128 @@
     <link rel="stylesheet" href="styleVideos.css" />
   </head>
   <body>
-    <nav>
-      <a href="#inicio">Inicio</a>
-      <a href="#videos">Videos</a>
-      <a href="#sobre">Sobre Ilobasco</a>
+    <div class="EsculecerSearch"></div>
+    <div id="Menu-movil">
+      <div class="menu-btn" onclick="abrirMenuMovil()">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+    <div class="search-container">
+      <input
+        type="text"
+        id="search-input"
+        placeholder="Buscar..."
+        autocomplete="off"
+      />
+      <div id="suggestions"></div>
+    </div>
+    <div class="Contenedor_Lupa">
+      <h4>Busca en IloTravel</h4>
+      <i class="fas fa-arrow-left" id="Volver_Bsucador"></i>
+      <hr />
+    </div>
+    <i class="fas fa-search" id="Lupa-Movil"></i>
+
+    <nav class="nav-main">
+      <div id="header-movil">
+        <span class="closeMenu-movil" id="Close_memu_movil">&times;</span>
+      </div>
+
+      <ul class="nav-menu">
+        <!-- enlaces visibles -->
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li><a href="#">Historia</a></li>
+        <li><a href="#">Cultura</a></li>
+        <li><a href="#">Comercio Local</a></li>
+        <!-- menú desplegable -->
+        <li class="dropdown">
+          <a href="#" id="verMas">Más ▾</a>
+          <ul class="dropdown-menu">
+            <li>
+              <a
+                href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/Gastronom%C3%ADa.html"
+                >Gastronomía</a
+              >
+            </li>
+            <li><a href="#">Sitios Turísticos</a></li>
+            <li><a href="#">Festividades</a></li>
+            <li><a href="#">Hospedajes</a></li>
+            <li>
+              <a
+                href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/GuiaTuristica.html"
+                >Guía práctica</a
+              >
+            </li>
+            <li>
+              <a
+                href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/ContactoIlobascoTRV.html"
+                >Contacto</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <button class="btnFooter openLogin">
+            <span class="Text_btn">
+              <i class="fa-solid fa-user"></i>
+              <!-- Ícono de usuario -->
+              Iniciar sesión
+            </span>
+          </button>
+        </li>
+      </ul>
     </nav>
+
+    <!-- MODAL LATERAL (SOLO PARA MÓVILES) -->
+    <div id="modal-menu">
+      <div id="header-movil">
+        <span class="closeModal" id="closeModal3">&times;</span>
+      </div>
+      <ul class="modal-nav">
+        <li>
+          <button class="btnsesión openLogin">
+            <span class="Text_btn2">
+              <i class="fa-solid fa-user"></i>
+              <!-- Ícono de usuario -->
+              Iniciar sesión
+            </span>
+          </button>
+        </li>
+
+        <hr id="movil-hr2" />
+
+        <!-- copia el mismo contenido de nav-main -->
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li><a href="#">Historia</a></li>
+        <li><a href="#">Cultura</a></li>
+        <li><a href="#">Comercio Local</a></li>
+
+        <li>
+          <a href="Gastronomía.html">Gastronomía</a>
+        </li>
+        <li><a href="#">Sitios Turísticos</a></li>
+        <li><a href="#">Festividades</a></li>
+        <li><a href="#">Hospedajes</a></li>
+        <li><a href="GuiaTuristica.html">Guía práctica</a></li>
+        <li>
+          <a href="ContactoIlobascoTRV.html">Contacto</a>
+        </li>
+
+        <hr id="movil-hr2" />
+
+        <li><a href="#">Foro</a></li>
+        <li><a href="#">Comentarios</a></li>
+        <hr id="movil-hr2" />
+        <li><a href="#">Ilobasco Travel</a></li>
+        <li><a>Atención al usuario:</a></li>
+        <li id="correo"><a>joseroladovelascopeña@gmail.com</a></li>
+      </ul>
+    </div>
 
     <header id="inicio">
       <h1>Ilobasco Travel</h1>
@@ -57,8 +174,11 @@
           allowfullscreen
         ></iframe>
         <div class="video-info">
-          <h3>Paseo Cultural</h3>
-          <p>Descubre las artesanías únicas que hacen famoso a Ilobasco.</p>
+          <h3>Descubre Ilobasco:</h3>
+          <p>
+            Introdución cultuarl y historica de Ilobasco, en Ilobasco, Cabañas
+            Oeste.
+          </p>
         </div>
       </div>
       <div class="videos">
@@ -132,8 +252,156 @@
       </p>
     </section>
 
-    <footer>
-      © 2025 <span>Ilobasco Travel</span> | Portal turístico salvadoreño
-    </footer>
+    <div class="footer-link">
+      <section class="btn_social_sección">
+        <button>Ilobasco Travel</button>
+      </section>
+      <footer class="footer-contenedor">
+        <ul>
+          <li>
+            <a href="#"><h3>Mas Información</h3></a>
+          </li>
+          <li>
+            <a href="ContactoIlobascoTRV.html">Contacto</a>
+          </li>
+          <li>
+            <a href="GuiaTuristica.html">Guía Turística</a>
+          </li>
+          <li>
+            <a href="joserolandovelascopena@gmail.com">Correo</a>
+          </li>
+
+          <li>
+            <a href="ContactoIlobascoTRV.html"
+              >Quieres ser socio de <strong>Ilobasco Travel</strong><br />
+              mas información en 👇</a
+            >
+          </li>
+        </ul>
+        <!--Footer 2-->
+        <ul>
+          <li>
+            <a href="#"><h3>Empresas Mencionadas</h3></a>
+          </li>
+          <li></li>
+          <li>
+            <a href="https://www.facebook.com/TiestosRestaurante?locale=es_LA"
+              >Tiestos</a
+            >
+          </li>
+          <li>
+            <a href="https://www.facebook.com/josemar.lecordonbleu">JoseMar</a>
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/p/ASE-Heliconias-100064030479450/?locale=es_LA"
+              >Heliconias</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/profile.php?id=61558010531877&sk=photos"
+              >El Volado</a
+            >
+          </li>
+          <li>
+            <a href="https://www.facebook.com/LaCasaDeLaHacienda?locale=es_LA"
+              >Casa la Hacienda</a
+            >
+          </li>
+        </ul>
+
+        <!--Footer 3-->
+        <ul>
+          <li>
+            <a><h3 style="color: white">Más Empresas</h3></a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/1000burgerss">Mil Burger</a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/profile.php?id=100063883339658"
+              >Artisan</a
+            >
+          </li>
+        </ul>
+        <!--footer 4-->
+        <ul>
+          <li>
+            <a href="#"><h3>Política</h3></a>
+          </li>
+          <p class="Parrafo_Footer">
+            Derechos reservados del portal Iloasco Travel©
+          </p>
+        </ul>
+      </footer>
+      <!--Redes sociales-->
+      <section class="social">
+        <div class="links">
+          <a href="#"><li class="fab fa-facebook-f"></li></a>
+          <a href="#"><li class="fab fa-instagram"></li></a>
+          <a href="#"> <li class="fab fa-whatsapp"></li></a>
+        </div>
+      </section>
+      <footer class="footer">
+        <h3>Ilobasco Travel Copyright©</h3>
+      </footer>
+    </div>
+
+    <!--Registrarse-->
+    <div id="RegistroModal" class="modal-registro">
+      <div class="modal-content2">
+        <div class="modal-header2">
+          <div class="modal-title2">
+            <img src="Imagenes_Proyecto/icono.png" alt="icono" class="icono" />
+            <span>Registro</span>
+          </div>
+          <span class="closeRegistro" id="closeModal2">&times;</span>
+        </div>
+        <section id="SPA">
+          <section id="Inf-sesión2">
+            <h3>Unete a Ilobasco Travel</h3>
+            <hr />
+
+            <p>
+              Descubre lo mejor de Ilobasco. Unete a nosotros, accede a rutas
+              únicas, recomendaciones, y una experiencia completa.<br />
+            </p>
+
+            <p id="enlace_Sesion">
+              Si ya tienes una cuenta inicia sesión con tu correo electrónico.
+            </p>
+          </section>
+          <div class="modal-body-Registro">
+            <form>
+              <label for="text">Ingresa tu nombre*</label>
+              <input type="text" placeholder="Nombre" required /><br />
+              <label for="usuario">Crea un nombre de usuario*</label>
+              <input type="text" placeholder="Usuario" required /><br />
+              <label for="email">Correo electrónico*</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                required
+              /><br />
+              <label for="tel">Teléfono*</label>
+              <input
+                type="tel"
+                id="telefono"
+                pattern="[0-9]{8,15}"
+                placeholder="Teléfono"
+                required
+              /><br />
+              <label for="password">Crea una contraseña*</label><br />
+              <input type="password" placeholder="Contraseña" required /><br />
+              <button type="submit" class="btn-submit2">Aceptar</button>
+            </form>
+            <div class="loader2" id="loader2"></div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="ActivadadVideo.js"></script>
   </body>
 </html>

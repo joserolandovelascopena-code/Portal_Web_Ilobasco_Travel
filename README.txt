@@ -48,6 +48,7 @@ Características Principales:
 4. Footer con enlaces, redes sociales y derechos de autor.
 5. Modales de inicio de sesión y registro de usuarios.
 6. Mapas de ubicación integrados con Google Maps.
+7. Videos de Youtube
 7. Diseño responsivo y moderno, adaptado a dispositivos móviles y escritorio.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 Estructura de Archivos:
@@ -60,6 +61,7 @@ Estructura de Archivos:
 │  ├─ Gastronomía.html       --> Página de gastronomía local
 │  ├─ GuiaTuristica.html     --> Página de guía Práctica
 │  ├─ Contacto.html          --> Página de Contacto
+│  ├─ Videos.html            --> Página de Videos de Iloasco
 │  ├─ Actividad.js           --> Script principal para carruseles, modales y calificación, menú
 │  ├─ ActividadArte.js       --> Script principal para carruseles, modales, menú
 │  ├─ ActividadContac.js     --> Script principal para carruseles, modales, menú
@@ -70,6 +72,8 @@ Estructura de Archivos:
 │  ├─ styleContacto.css      --> Estilos generales de la pagina Contacto
 │  ├─ styleGastrono.css      --> Estilos generales de la pagina gastronomía
 │  ├─ GuiaPractic.css        --> Estilos generales de la pagina GuiaTuristica
+│  ├─ styleVideos.css        --> Estilos generales de la pagina Videos
+
 
 
 Estructura de Portal web:
@@ -91,7 +95,12 @@ index.html (Inicio)
 │     ├── Artesanías
 │     └── Gastronomía
 │     ├── Contacto
-
+└── Videos
+│     ├── Home
+│     ├── Artesanías
+│     └── Gastronomía
+│     ├── Guía Práctica
+│ 
 └── Contacto
 │     ├── Home
 │     ├── Artesanías
