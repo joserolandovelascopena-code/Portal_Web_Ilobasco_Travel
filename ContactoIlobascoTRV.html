@@ -53,7 +53,7 @@
             >Home</a
           >
         </li>
-        <li><a href="videos.html">Videos</a></li>
+        <li><a href="Videos2.html">Videos</a></li>
         <li>
           <a href="Artesanias-.html">Artesanías</a>
         </li>
@@ -109,7 +109,7 @@
 
         <!-- copia el mismo contenido de nav-main -->
         <li><a href="index.html">Home</a></li>
-        <li><a href="videos.html">Videos</a></li>
+        <li><a href="Videos2.html">Videos</a></li>
         <li>
           <a href="Artesanias-.html">Artesanías</a>
         </li>
@@ -488,6 +488,122 @@
       <footer class="footer">
         <h3>Ilobasco Travel Copyright©</h3>
       </footer>
+    </div>
+
+    <!-- Modal iniciar sesión -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <!-- Encabezado estilo ventana -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <img src="Imagenes_Proyecto/icono.png" alt="icono" class="icono" />
+            <span>Login</span>
+          </div>
+          <span
+            onclick="CerrarOverlay(event)"
+            onclick="cerrarModal()"
+            class="close"
+            id="closeModal"
+            >&times;</span
+          >
+        </div>
+        <section id="Inf-sesión">
+          <h3>Inicio de sesión de usuarios</h3>
+          <hr />
+
+          <p>
+            Si tienes una cuenta, inicia sesión con tu correo electrónico o
+            numero de teléfono.
+          </p>
+        </section>
+        <div class="modal-body">
+          <form>
+            <input type="text" placeholder="Usuario" required /><br />
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="password" placeholder="Contraseña" required /><br />
+            <button type="submit" class="btn-submit">Iniciar sesión</button>
+          </form>
+        </div>
+        <nav id="menu-login">
+          <div class="Vmodal-registro">
+            <p>¿No tienes cuenta?</p>
+            <h4>Crear cuenta</h4>
+          </div>
+          <ul id="VmodalHelp" onclick="abrirModal2()">
+            <p>
+              ¿Necesitas ayuda?
+              <i
+                class="fas fa-chevron-down"
+                id="chevron"
+                onclick="Chevron_down_up()"
+              ></i>
+            </p>
+          </ul>
+          <div class="loader" id="loader"></div>
+
+          <ul class="modal-sesión">
+            <li><p>Olvidades tu Contraseña</p></li>
+            <li><p>Termios y condiciones</p></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!--Registrarse-->
+    <div id="RegistroModal" class="modal-registro">
+      <div class="modal-content2">
+        <div class="modal-header2">
+          <div class="modal-title2">
+            <img src="Imagenes_Proyecto/icono.png" alt="icono" class="icono" />
+            <span>Registro</span>
+          </div>
+          <span class="closeRegistro" id="closeModal2">&times;</span>
+        </div>
+        <section id="SPA">
+          <section id="Inf-sesión2">
+            <h3>Unete a Ilobasco Travel</h3>
+            <hr />
+
+            <p>
+              Descubre lo mejor de Ilobasco. Unete a nosotros, accede a rutas
+              únicas, recomendaciones, y una experiencia completa.
+            </p>
+
+            <p id="enlace_Sesion">
+              Si ya tienes una cuenta inicia sesión con tu correo electrónico.
+            </p>
+          </section>
+          <div class="modal-body-Registro">
+            <form>
+              <label for="text">Ingresa tu nombre*</label>
+              <input type="text" placeholder="Nombre" required /><br />
+              <label for="usuario">Crea un nombre de usuario*</label>
+              <input type="text" placeholder="Usuario" required /><br />
+              <label for="email">Correo electrónico*</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Email"
+                required
+              /><br />
+              <label for="tel">Teléfono*</label>
+              <input
+                type="tel"
+                id="telefono"
+                pattern="[0-9]{8,15}"
+                placeholder="Teléfono"
+                required
+              /><br />
+              <label for="password">Crea una contraseña*</label><br />
+              <input type="password" placeholder="Contraseña" required /><br />
+              <button type="submit" class="btn-submit2">Aceptar</button>
+            </form>
+            <div class="animaciónLoder">
+              <div class="loader2" id="loader2"></div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
 
     <!-- Modal iniciar sesión -->

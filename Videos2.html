@@ -1,19 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Ilobasco Travel</title>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+    <title>Videos sobre Ilobasco</title>
+    <link rel="stylesheet" href="Stylevideo.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
@@ -27,24 +18,25 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styleVideos.css" />
   </head>
   <body>
-    <div class="EsculecerSearch"></div>
-    <div id="Menu-movil">
-      <div class="menu-btn" onclick="abrirMenuMovil()">
-        <i class="fas fa-bars"></i>
+    <section id="Caja-container">
+      <div class="EsculecerSearch"></div>
+      <div id="Menu-movil">
+        <div class="menu-btn" onclick="abrirMenuMovil()">
+          <i class="fas fa-bars"></i>
+        </div>
       </div>
-    </div>
-    <div class="search-container">
-      <input
-        type="text"
-        id="search-input"
-        placeholder="Buscar..."
-        autocomplete="off"
-      />
-      <div id="suggestions"></div>
-    </div>
+      <div class="search-container">
+        <input
+          type="text"
+          id="search-input"
+          placeholder="Buscar..."
+          autocomplete="off"
+        />
+        <div id="suggestions"></div>
+      </div>
+    </section>
     <div class="Contenedor_Lupa">
       <h4>Busca en IloTravel</h4>
       <i class="fas fa-arrow-left" id="Volver_Bsucador"></i>
@@ -59,31 +51,25 @@
 
       <ul class="nav-menu">
         <!-- enlaces visibles -->
+        <li><a href="index.html">Home</a></li>
         <li>
-          <a href="index.html">Home</a>
+          <a href="Artesanias-.html">Artesanías</a>
         </li>
-        <li><a href="#">Historia</a></li>
-        <li><a href="#">Cultura</a></li>
+        <li>
+          <a
+            href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/Gastronom%C3%ADa.html"
+            >Gastronomía</a
+          >
+        </li>
+
         <li><a href="#">Comercio Local</a></li>
         <!-- menú desplegable -->
         <li class="dropdown">
           <a href="#" id="verMas">Más ▾</a>
           <ul class="dropdown-menu">
-            <li>
-              <a
-                href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/Gastronom%C3%ADa.html"
-                >Gastronomía</a
-              >
-            </li>
-            <li><a href="#">Sitios Turísticos</a></li>
             <li><a href="#">Festividades</a></li>
             <li><a href="#">Hospedajes</a></li>
-            <li>
-              <a
-                href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/GuiaTuristica.html"
-                >Guía práctica</a
-              >
-            </li>
+            <li><a href="GuiaTuristica.html">Guía práctica</a></li>
             <li>
               <a
                 href="file:///C:/Users/MINEDUCYT/Documents/investigaciones/Portal_Web_Turismo/ContactoIlobascoTRV.html"
@@ -124,11 +110,11 @@
         <hr id="movil-hr2" />
 
         <!-- copia el mismo contenido de nav-main -->
-        <li>
-          <a href="index.html">Home</a>
-        </li>
-        <li><a href="#">Historia</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="#">Cultura</a></li>
+        <li>
+          <a href="Artesanias-.html">Artesanías</a>
+        </li>
         <li><a href="#">Comercio Local</a></li>
 
         <li>
@@ -182,6 +168,59 @@
         </div>
       </div>
       <div class="videos">
+        <div class="video-card">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/auA0EjuAepI?si=ZQWbI5X90x3OocQn"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <div class="video-info">
+            <h3>Festividades</h3>
+            <p>Desfiles de 15 de septiembre, en el Municipio de Ilobasco</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/17NhnSXcu8c?si=HlZt5bW8LcVqCsyv"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <div class="video-info">
+            <h3>Heliconias del Bosque</h3>
+            <p>
+              Recorrido por Jardín Heliconias y Restaurante, ubicado en Ilobasco
+              Cabañas.
+            </p>
+          </div>
+        </div>
+        <div class="video-card">
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/17NhnSXcu8c?si=HlZt5bW8LcVqCsyv"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen
+          ></iframe>
+          <div class="video-info">
+            <h3>Pueblo Artesanal Iloabasco</h3>
+            <p>
+              Conoce sus artesanías de nuestros artesanos lucales de Ilobasco.
+            </p>
+          </div>
+        </div>
         <div class="video-card">
           <iframe
             width="560"
@@ -348,6 +387,65 @@
       </footer>
     </div>
 
+    <!-- Modal iniciar sesión -->
+    <div id="loginModal" class="modal">
+      <div class="modal-content">
+        <!-- Encabezado estilo ventana -->
+        <div class="modal-header">
+          <div class="modal-title">
+            <img src="Imagenes_Proyecto/icono.png" alt="icono" class="icono" />
+            <span>Login</span>
+          </div>
+          <span
+            onclick="CerrarOverlay(event)"
+            onclick="cerrarModal()"
+            class="close"
+            id="closeModal"
+            >&times;</span
+          >
+        </div>
+        <section id="Inf-sesión">
+          <h3>Inicio de sesión de usuarios</h3>
+          <hr />
+
+          <p>
+            Si tienes una cuenta, inicia sesión con tu correo electrónico o
+            numero de teléfono.
+          </p>
+        </section>
+        <div class="modal-body">
+          <form>
+            <input type="text" placeholder="Usuario" required /><br />
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="password" placeholder="Contraseña" required /><br />
+            <button type="submit" class="btn-submit">Iniciar sesión</button>
+          </form>
+        </div>
+        <nav id="menu-login">
+          <div class="Vmodal-registro">
+            <p>¿No tienes cuenta?</p>
+            <h4>Crear cuenta</h4>
+          </div>
+          <ul id="VmodalHelp" onclick="abrirModal2()">
+            <p>
+              ¿Necesitas ayuda?
+              <i
+                class="fas fa-chevron-down"
+                id="chevron"
+                onclick="Chevron_down_up()"
+              ></i>
+            </p>
+          </ul>
+          <div class="loader" id="loader"></div>
+
+          <ul class="modal-sesión">
+            <li><p>Olvidades tu Contraseña</p></li>
+            <li><p>Termios y condiciones</p></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
     <!--Registrarse-->
     <div id="RegistroModal" class="modal-registro">
       <div class="modal-content2">
@@ -365,7 +463,7 @@
 
             <p>
               Descubre lo mejor de Ilobasco. Unete a nosotros, accede a rutas
-              únicas, recomendaciones, y una experiencia completa.<br />
+              únicas, recomendaciones, y una experiencia completa.
             </p>
 
             <p id="enlace_Sesion">
@@ -397,11 +495,46 @@
               <input type="password" placeholder="Contraseña" required /><br />
               <button type="submit" class="btn-submit2">Aceptar</button>
             </form>
-            <div class="loader2" id="loader2"></div>
+            <div class="animaciónLoder">
+              <div class="loader2" id="loader2"></div>
+            </div>
           </div>
         </section>
       </div>
     </div>
+
+    <!-- Botón flotante para abrir barra lateral -->
+    <div class="tool-btn" id="openToolBar">
+      <i class="fas fa-palette"></i>
+    </div>
+
+    <!-- Barra lateral -->
+    <div class="tool-bar" id="toolBar">
+      <div class="tool-header">
+        <i class="fas fa-cog"></i>
+        <span>Herramientas</span>
+        <div class="tool-close" id="closeToolBar">&times;</div>
+      </div>
+      <div class="tool-options">
+        <div class="tool-opt" data-bg="#ffffff" data-color="#222222">
+          <i class="fas fa-sun"></i>
+          <span>Fondo Claro</span>
+        </div>
+        <div class="tool-opt" data-bg="#222222" data-color="#ffffff">
+          <i class="fas fa-moon"></i>
+          <span>Modo Oscuro</span>
+        </div>
+        <div class="tool-opt" data-bg="#e6f7ff" data-color="#222222">
+          <i class="fas fa-water"></i>
+          <span>Fondo Azul</span>
+        </div>
+        <div class="tool-opt" data-bg="#e6ffe6" data-color="#222222">
+          <i class="fas fa-leaf"></i>
+          <span>Fondo Verde</span>
+        </div>
+      </div>
+    </div>
+
     <script src="ActivadadVideo.js"></script>
   </body>
 </html>

@@ -234,12 +234,13 @@ const form = modal.querySelector("form");
 const loader = document.getElementById("loader");
 
 form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  loader.style.display = "block"; 
+  e.preventDefault(); // evitar recarga
+  loader.style.display = "block"; // mostrar loader
 
+  // Simular proceso de envío
   setTimeout(() => {
     loader.style.display = "none";
-    alert("Has hiniciado sesión"); 
+    alert("Has hiniciado sesión"); // reemplaza con lógica real
     modal.classList.remove("show");
     cerrarModal();
   }, 2000);
@@ -247,16 +248,6 @@ form.addEventListener("submit", (e) => {
 
 
 //Registro
-document.getElementById("enlace_Sesion").addEventListener("click", () => {
-  const Btn_sesión = document.getElementById("Iniciar-sesion");
-  const  OpenBtn_sesión = document.getElementById("enlace_Sesion");
-
-  OpenBtn_sesión.addEventListener("click", () => {
-  Btn_sesión.classList.toggle("show")
-});
-  
-});
-
 document.querySelector(".Vmodal-registro").addEventListener("click", () => {
   document.querySelector(".nav-menu").classList.toggle("show");
 });
@@ -264,7 +255,6 @@ document.querySelector(".Vmodal-registro").addEventListener("click", () => {
 const modal2 = document.getElementById("RegistroModal");
 const openBtn2 = document.querySelector(".Vmodal-registro");
 const closeBtn2 = document.getElementById("closeModal2");
-const CerraRegistro = document.getElementById("Iniciar-sesion")
 
 
 openBtn2.addEventListener("click", () => {
@@ -273,11 +263,6 @@ openBtn2.addEventListener("click", () => {
 });
 
 closeBtn2.addEventListener("click", () => {
-  modal2.classList.remove("show");
-  cerrarModal2();
-});
-
-CerraRegistro.addEventListener("click", () => {
   modal2.classList.remove("show");
   cerrarModal2();
 });
@@ -298,13 +283,39 @@ form2.addEventListener("submit", (e) => {
   e.preventDefault(); // evitar recarga
   loader2.style.display = "block"; // mostrar loader
 
-
+  // Simular proceso de envío
   setTimeout(() => {
     loader2.style.display = "none";
-    alert("Cuenta creada"); 
+    alert("Cuenta creada"); // reemplaza con lógica real
     modal2.classList.remove("show");
     cerrarModal2();
   }, 2000);
 });
 
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const openBtn = document.getElementById("openToolBar");
+  const toolBar = document.getElementById("toolBar");
+  const closeBtn = document.getElementById("closeToolBar");
+  const options = document.querySelectorAll(".tool-opt");
+
+  openBtn.addEventListener("click", () => toolBar.classList.add("show"));
+  closeBtn.addEventListener("click", () => toolBar.classList.remove("show"));
+
+  options.forEach((opt) => {
+    opt.addEventListener("click", () => {
+      const bg = opt.getAttribute("data-bg");
+      const color = opt.getAttribute("data-color");
+      if (bg) document.body.style.backgroundColor = bg;
+      if (color) document.body.style.color = color;
+    });
+  });
+ window.onclick = (event) => {
+  if (event.target === toolBar) {  // <- corregido
+    toolBar.classList.remove("show");
+  }
+}
+
+});
 
