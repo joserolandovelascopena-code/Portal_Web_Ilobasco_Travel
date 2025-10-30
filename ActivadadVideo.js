@@ -293,7 +293,6 @@ form2.addEventListener("submit", (e) => {
 });
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const openBtn = document.getElementById("openToolBar");
   const toolBar = document.getElementById("toolBar");
@@ -316,6 +315,5 @@ document.addEventListener("DOMContentLoaded", () => {
     toolBar.classList.remove("show");
   }
 }
-
 });
 

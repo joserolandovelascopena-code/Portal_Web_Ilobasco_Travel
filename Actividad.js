@@ -14,6 +14,31 @@ document.addEventListener("click", (e) => {
   }
 });
 
+//Estilos de pagina
+
+document.addEventListener("DOMContentLoaded", () => {
+  const openBtn = document.getElementById("openToolBar");
+  const toolBar = document.getElementById("toolBar");
+  const closeBtn = document.getElementById("closeToolBar");
+  const options = document.querySelectorAll(".tool-opt");
+
+  openBtn.addEventListener("click", () => toolBar.classList.add("show"));
+  closeBtn.addEventListener("click", () => toolBar.classList.remove("show"));
+
+  options.forEach((opt) => {
+    opt.addEventListener("click", () => {
+      const bg = opt.getAttribute("data-bg");
+      const color = opt.getAttribute("data-color");
+      if (bg) document.body.style.backgroundColor = bg;
+      if (color) document.body.style.color = color;
+    });
+  });
+ window.onclick = (event) => {
+  if (event.target === toolBar) {  // <- corregido
+    toolBar.classList.remove("show");
+  }
+}
+})
 //Menu de un movil
 document.addEventListener("DOMContentLoaded", () => {
   const menuBtn = document.querySelector(".menu-btn");
