@@ -58,8 +58,6 @@
                 >Gastronomía</a
               >
             </li>
-            <li><a href="#">Festividades</a></li>
-            <li><a href="#">Hospedajes</a></li>
             <li><a href="GuiaTuristica.html">Guía práctica</a></li>
             <li>
               <a
@@ -111,9 +109,6 @@
         <li>
           <a href="Gastronomía.html">Gastronomía</a>
         </li>
-        <li><a href="#">Sitios Turísticos</a></li>
-        <li><a href="#">Festividades</a></li>
-        <li><a href="#">Hospedajes</a></li>
         <li><a href="GuiaTuristica.html">Guía práctica</a></li>
         <li>
           <a href="ContactoIlobascoTRV.html">Contacto</a>
@@ -122,11 +117,22 @@
         <hr id="movil-hr2" />
 
         <li><a href="#">Foro</a></li>
-        <li><a href="#">Comentarios</a></li>
         <hr id="movil-hr2" />
         <li><a href="#">Ilobasco Travel</a></li>
-        <li><a>Atención al usuario:</a></li>
-        <li id="correo"><a>joseroladovelascopeña@gmail.com</a></li>
+        <li>
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=joseroladovelascopeña@gmail.com&su=Hola%20Jose&body=Este%20es%20un%20mensaje%20de%20prueba"
+            >Atención al usuario:</a
+          >
+        </li>
+        <li id="correo">
+          <a
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=joseroladovelascopeña@gmail.com&su=Hola%20Jose&body=Este%20es%20un%20mensaje%20de%20prueba"
+            target="_blank"
+          >
+            Enviar correo</a
+          >
+        </li>
       </ul>
     </div>
 
@@ -229,8 +235,8 @@
           </div>
         </div>
 
-        <div class="hero-buttons">
-          <a href="#lugares" class="btn-primary">
+        <div class="hero-buttons" id="openRestaurantModal">
+          <a class="btn-primary">
             Explorar lugares <i class="fa-solid fa-location-dot"></i>
           </a>
           <a href="#gastronomia" class="btn-outline">
@@ -238,6 +244,62 @@
           </a>
         </div>
       </section>
+      <!-- MODAL -->
+      <div id="restaurantModal" class="restaurant-modal">
+        <div class="restaurant-modal-content">
+          <span id="closeRestaurantModal" class="restaurant-close"
+            >&times;</span
+          >
+          <h2>Restaurantes en Ilobasco, Cabañas 🍴</h2>
+          <p>
+            Descubre los mejores lugares para disfrutar la gastronomía local.
+          </p>
+          <ul class="restaurant-list">
+            <li>
+              <a
+                href="https://www.facebook.com/RestauranteElBuenSaborIlobasco"
+                target="_blank"
+              >
+                <i class="fa-solid fa-utensils"></i> Restaurante El Buen Sabor
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/LaCasonaDeIlobasco"
+                target="_blank"
+              >
+                <i class="fa-solid fa-mug-hot"></i> La Casona de Ilobasco
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/CafeyPanIlobasco"
+                target="_blank"
+              >
+                <i class="fa-solid fa-coffee"></i> Café & Pan Ilobasco
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/PupuseriaLaFamiliaIlobasco"
+                target="_blank"
+              >
+                <i class="fa-solid fa-bowl-food"></i> Pupusería La Familia
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://www.facebook.com/AntojitosTipicosIlobasco"
+                target="_blank"
+              >
+                <i class="fa-solid fa-pepper-hot"></i> Antojitos Típicos Doña
+                Mary
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
       <!--Info carrusel para moviles-->
 
       <main id="foodCarousel">
@@ -341,11 +403,6 @@
               quesillo, y más.
             </p>
           </div>
-          <div class="pusition-btnGTNM">
-            <button class="btn-Gastro" onclick="nextSlide()">
-              <a href="#">Leer más</a>
-            </button>
-          </div>
         </div>
         <div id="Seccion">
           <img src="Imagenes_Proyecto/polloGisa.png" alt="imagen comida" />
@@ -356,11 +413,6 @@
               guisado, Jugosas piezas de pollo se bañan en una rica salsa casera
               con papas, zanahorias.
             </p>
-          </div>
-          <div class="pusition-btnGTNM">
-            <button class="btn-Gastro" onclick="nextSlide()">
-              <a href="#">Leer más</a>
-            </button>
           </div>
         </div>
 
@@ -374,11 +426,6 @@
               pasilla, con tiras crujientes de tortilla.
             </p>
           </div>
-          <div class="pusition-btnGTNM">
-            <button class="btn-Gastro" onclick="nextSlide()">
-              <a href="#">Leer más</a>
-            </button>
-          </div>
         </div>
         <div id="Seccion">
           <img src="Imagenes_Proyecto/Hamburguesa.png" alt="imagen comida" />
@@ -388,11 +435,6 @@
               Disfruta del placer sencillo y delicioso de nuestra 'Clásica
               Americana'. Una jugosa hamburguesa de carne 100% de res,
             </p>
-          </div>
-          <div class="pusition-btnGTNM">
-            <button class="btn-Gastro" onclick="nextSlide()">
-              <a href="#">Leer más</a>
-            </button>
           </div>
         </div>
         <div id="Seccion" class="seccion2-1">
@@ -405,11 +447,6 @@
               quesillo, y más.
             </p>
           </div>
-          <div class="pusition-btnGTNM">
-            <button class="btn-Gastro" onclick="nextSlide()">
-              <a href="#">Leer más</a>
-            </button>
-          </div>
         </div>
 
         <div id="Seccion" class="seccion2-2">
@@ -421,11 +458,6 @@
               guisado, Jugosas piezas de pollo se bañan en una rica salsa casera
               con papas, zanahorias.
             </p>
-          </div>
-          <div class="pusition-btnGTNM">
-            <button class="btn-Gastro" onclick="nextSlide()">
-              <a href="#">Leer más</a>
-            </button>
           </div>
         </div>
       </section>

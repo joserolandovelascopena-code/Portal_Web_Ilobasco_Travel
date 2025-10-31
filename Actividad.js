@@ -258,6 +258,39 @@ const observer = new IntersectionObserver((entradas) => {
 elementos.forEach(el => observer.observe(el));
 
 
+//Noticias Ilobasco 
+
+document.addEventListener("DOMContentLoaded", () => {
+  const openNoticias = document.querySelectorAll(".openNoticias");
+  const modalNoticias = document.getElementById("modal-noticias");
+  const closeNoticias = document.getElementById("closeNoticias");
+
+  // Agregar evento a todos los botones
+  openNoticias.forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault(); // Evita que el enlace dentro del botón recargue la página
+      modalNoticias.classList.add("show");
+      document.body.style.overflow = "hidden"; // Evita scroll del fondo
+    });
+  });
+
+  // Cerrar con el botón "X"
+  closeNoticias.addEventListener("click", () => {
+    modalNoticias.classList.remove("show");
+    document.body.style.overflow = "";
+  });
+
+  // Cerrar al hacer clic fuera del contenido
+  modalNoticias.addEventListener("click", (e) => {
+    if (e.target === modalNoticias) {
+      modalNoticias.classList.remove("show");
+      document.body.style.overflow = "";
+    }
+  });
+});
+
+
+
 // Ventanas de Actividades
 
 const ventanaArtice1 = document.getElementById('ventanaArtice1');

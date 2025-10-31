@@ -349,3 +349,29 @@ btnNext.addEventListener("click", () => mostrarSlide(index + 0.5));
       inde = (inde + 1) % slides.length;
       showSlide(inde);
     });
+
+
+
+
+
+  // Elementos principales del modal
+  const restaurantModal = document.getElementById("restaurantModal");
+  const openRestaurantModal = document.getElementById("openRestaurantModal");
+  const closeRestaurantModal = document.getElementById("closeRestaurantModal");
+
+  // Abrir modal
+  openRestaurantModal.addEventListener("click", () => {
+    restaurantModal.classList.add("show");
+  });
+
+  // Cerrar modal al hacer clic en la X
+  closeRestaurantModal.addEventListener("click", () => {
+    restaurantModal.classList.remove("show");
+  });
+
+  // Cerrar modal si se hace clic fuera del contenido
+  window.addEventListener("click", (e) => {
+    if (e.target === restaurantModal) {
+      restaurantModal.classList.remove("show");
+    }
+  });
