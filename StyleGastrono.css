@@ -333,7 +333,7 @@ display: none;
     to {opacity: 1;}
   }
 
-  /* ===== CONTENIDO ===== */
+  
   .restaurant-modal-content {
     position: relative;
     background: rgba(255, 255, 255, 0.15);
@@ -359,7 +359,7 @@ display: none;
     }
   }
 
-  /* ===== CABECERA ===== */
+
   .restaurant-modal-content h2 {
     font-size: 1.6rem;
     margin-bottom: 10px;
@@ -377,9 +377,9 @@ display: none;
   /* ===== BOTÓN DE CIERRE ===== */
   .restaurant-close {
     position: absolute;
-    top: 18px;
+    top: 10px;
     right: 25px;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     color: rgba(255,255,255,0.85);
     cursor: pointer;
     transition: 0.3s ease;
@@ -390,7 +390,7 @@ display: none;
     transform: rotate(90deg);
   }
 
-  /* ===== LISTA ===== */
+  
   .restaurant-list {
     list-style: none;
     padding: 0;
