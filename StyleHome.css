@@ -4827,7 +4827,7 @@ ul {
 
 #modal-menu.active {
 
-  transform: translateX(-95%); /* se desliza a la vista */
+  transform: translateX(-96.4%); /* se desliza a la vista */
   opacity: 1;
   pointer-events: auto;
 
@@ -6457,7 +6457,7 @@ label{
         
 #modal-menu.active {
 
-  transform: translateX(-97.4%); /* se desliza a la vista */
+  transform: translateX(-97.5%); /* se desliza a la vista */
   opacity: 1;
   pointer-events: auto;
 
